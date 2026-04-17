@@ -97,20 +97,29 @@
 <a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#about">About</a>
 <a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#contact">Contact</a>
 </div>
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-stone-50/95 backdrop-blur-md shadow-lg z-50 border-t border-stone-200">
+<div class="flex flex-col px-6 py-4 gap-4">
+<a class="text-emerald-800 font-semibold py-2 border-b border-stone-100" href="#home" onclick="closeMobileMenu()">Home</a>
+<a class="text-stone-600 py-2 border-b border-stone-100" href="#tours" onclick="closeMobileMenu()">Tours</a>
+<a class="text-stone-600 py-2 border-b border-stone-100" href="#about" onclick="closeMobileMenu()">About</a>
+<a class="text-stone-600 py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+</div>
 <div class="flex items-center gap-4">
 <a class="hidden sm:block px-6 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container transition-all active:scale-95" href="#contact">Book Now</a>
 <a class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors" href="https://wa.me/855976453855">
 <span class="material-symbols-outlined" data-icon="chat">chat</span>
 </a>
-<button class="md:hidden p-2 text-emerald-900">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<button class="md:hidden p-2 text-emerald-900" id="mobile-menu-btn" aria-label="Open menu">
+<span class="material-symbols-outlined" data-icon="menu" id="mobile-menu-icon">menu</span>
 </button>
 </div>
 </nav>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden" id="home">
+<section class="relative min-h-[60vh] md:min-h-[921px] flex items-center overflow-hidden" id="home">
 <div class="absolute inset-0 z-0">
 <img alt="Angkor Wat Morning" class="w-full h-full object-cover" data-alt="dramatic wide angle shot of angkor wat temple at dawn with golden sunlight reflecting in the water lily pond and lush jungle surrounding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjerOeiYy5H85CTHy4MTsuivgjXeRgEJWBr-OrveU93G39QM0eX9Li6Dypig67W6_ORpbW1wGIk28xexIcfkTl7VkHDiUx309mE2OGI-S_6poxR3G5X0Xo6fBXggXGv1qW_d_rNEyZcriIsSYiYBw1_rZrvju7rweGMWzOX-2C66xupD0gnEqebAWKteoYPltZYMSI8GdvV1-UysxCYf8thj2taINmi5iZQgNUqpgV9r_elAejmr2EdfniEpdvFnUIzCf5CD3l7pc"/>
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
@@ -145,7 +154,7 @@
 <!-- Real photo: Leng Chea Heng with his Hyundai H1 minivan on the Angkor road -->
 <img alt="Leng Chea Heng with his Hyundai H1 minivan" class="w-full h-full object-cover" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/driver-selfie-car_5eb0fe0f.jpeg"/>
 </div>
-<div class="absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
+<div class="hidden sm:block absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
 <p class="font-serif text-2xl text-on-secondary-container">12+ Years Experience</p>
 <p class="text-on-secondary-container/80 text-sm mt-2">Guiding travelers through the heart of Angkor since 2012.</p>
 </div>
@@ -185,9 +194,9 @@
 <h2 class="text-4xl font-serif text-primary mb-4">Curated Experiences</h2>
 <p class="text-on-surface-variant max-w-2xl mx-auto">From the majestic temples to the floating villages, choose the journey that speaks to you.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[700px]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[700px]">
 <!-- Primary Tour -->
-<div class="md:col-span-2 group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
+<div class="h-64 md:h-auto md:col-span-2 group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
 <img alt="Angkor Tour" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="atmospheric view of angkor wat towers at sunset with soft orange light and dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAICdNoqdN8CjW7wlRtcspQcp07jO20dh6mtymUDXeBh_VblHOuwiH4c2nKOH3T0wlAfLuX1uu4AU032cPEQxGMKVE4vxxRDTfMK7MD-nUeuh3-yd05PH3A1fUAbSbX0wL3nPfas4nrVym_5zRmoVtUweZ3XChzKqR-5VRZ7QRD4FJOY32uxRHtPGDB1lYz7oWqnpoj54yN-RMIyARVb6hrrmlmwVW_TVcGw9sMXSJDgsyhjA5RINE4HJwJkxsRMKpT1jFLsX36G0"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -197,7 +206,7 @@
 </div>
 </div>
 <!-- Airport Transfer -->
-<div class="group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
+<div class="h-48 md:h-auto group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
 <img alt="Airport" class="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="modern airport terminal interior with soft light and minimalist architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqfuHBKdO8KLJ4H3W9txqz3gIJjvxMXWgTxWw7QZXJNa64Y_KKXti3Og9hmUzWFmr-1sCi6h0v76UlXeqmMrNFVgrYd1scDp09ZBMUn_qFDuPtaUPRVnlAeiaERdub9WnRnvLwtRFJ_b6IXI7BgHfPxItoal-mfRodUrxtRNLV3HGEedRjoA54Sao5BBN12b9RUiFJHVtH_KiaMQyeYYMS0cEnR-NaMSHyowafCU6_ugzqqs6SGAeo4italMzdqkAhPXAp-AcHNH0"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -206,7 +215,7 @@
 </div>
 </div>
 <!-- City Sightseeing -->
-<div class="group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
+<div class="h-48 md:h-auto group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
 <img alt="City Sightseeing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant street scene in siem reap with colorful market stalls and local tuk-tuks at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6K2CwWZ0Go5a1pbwfuwXOaiMbSw2W3vcNQbEM6jH6h0UVa_SUflXn7d4uS29uEhyCltqCUOaXo1WlbI4Gr6jbD8rH-lJwEEXzOzQiVuxLagJDPKiVLOVzujCdImQMRtSyxiM7o8wIgpswCKWw8hlTuNWqBMgjDSEJOyva62wXkRBke8gYYNNpfVppSk4MFl_0uAVuXkXPIDoV8vX33hgYBMmMuoxsOKXdE8PdCGtxBbvbCcRS0DMmPX0cOIhhpxUZTma6n1hWhhw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -215,7 +224,7 @@
 </div>
 </div>
 <!-- Day Trips -->
-<div class="md:col-span-2 group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
+<div class="h-48 md:h-auto md:col-span-2 group relative overflow-hidden rounded-2xl bg-surface-container-high transition-transform duration-500 hover:-translate-y-2">
 <img alt="Day Trips" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="peaceful view of a cambodian floating village on tonle sap lake with wooden houses and small boats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEucB4DmomSVyhV0YEKDniGwso7tToytPhTlRT1IHclL9IUeLg6mRsxsN1bspbyrlb0kZJtSGctFKxF4JVNEMtrxWJ7LbKURFMWaHBRmzLBzLfGUu1Mlwud2jXvSOMJ4xbDH-IkU1PQ0LMMIeuHtbKOU6zI5iwfCi8dRS0WD7N3mX5oZ-RiDN2KyI3pPwLTLzpUNg2uxCFntRhkdlSECVYTh0TTi9qZG_zEqsp9mYWC8QQgLwsVHYE0mb6AOa2hVUMcF7-Hc13uNY"/>
 <div class="absolute inset-0 bg-gradient-to-t from-tertiary-container/90 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-8">
@@ -327,7 +336,7 @@
 <!-- Masonry-style 5-photo grid -->
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 <!-- Large left: airport farewell group -->
-<div class="col-span-2 md:col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-md h-72 md:h-full">
+<div class="col-span-2 md:col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-md h-64 md:h-full">
 <img alt="Driver with guests at Siem Reap airport departure" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-airport1_492cfe83.jpeg"/>
 </div>
 <!-- Top centre: airport selfie -->
@@ -530,4 +539,26 @@
             </div>
 </div>
 </footer>
+<script>
+// Mobile menu toggle
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+const icon = document.getElementById('mobile-menu-icon');
+function closeMobileMenu() {
+  menu.classList.add('hidden');
+  icon.textContent = 'menu';
+}
+if (btn) {
+  btn.addEventListener('click', function() {
+    const isHidden = menu.classList.toggle('hidden');
+    icon.textContent = isHidden ? 'menu' : 'close';
+  });
+}
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+</script>
 </body></html>
