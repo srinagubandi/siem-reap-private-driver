@@ -588,6 +588,19 @@
 <label class="text-sm font-bold text-primary tracking-wide uppercase">Message</label>
 <textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="How can I help you?" rows="4" name="message"></textarea>
 </div>
+<!-- WhatsApp number field — optional but helps Leng reply faster -->
+<div class="space-y-2">
+  <label class="text-sm font-bold text-primary tracking-wide uppercase">WhatsApp Number <span class="text-on-surface-variant font-normal normal-case">(optional — for faster replies)</span></label>
+  <div class="flex items-center gap-3 bg-surface-container-low border-none rounded-lg px-4 focus-within:ring-2 focus-within:ring-secondary/20 transition-all">
+    <span class="material-symbols-outlined text-secondary text-xl select-none" data-icon="chat">chat</span>
+    <input
+      class="flex-1 bg-transparent py-4 outline-none text-on-surface placeholder:text-on-surface-variant/50"
+      name="whatsapp"
+      placeholder="e.g. +1 555 123 4567"
+      type="tel"
+    />
+  </div>
+</div>
 <button class="w-full py-5 bg-secondary text-on-secondary rounded-lg font-bold text-lg hover:brightness-110 shadow-lg transition-all active:scale-[0.98]" type="submit">
                                 Send Inquiry
                             </button>
