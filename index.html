@@ -15,6 +15,20 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/apple-touch-icon_7dd11e30.png"/>
 <link rel="manifest" href="data:application/json,%7B%22name%22%3A%22Angkor+Drivers%22%2C%22short_name%22%3A%22Angkor+Drivers%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fd2xsxph8kpxj0f.cloudfront.net%2F310519663082775454%2FGQgBcDybkWFAzatrraqA3Q%2Fandroid-chrome-192x192_91497de7.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fd2xsxph8kpxj0f.cloudfront.net%2F310519663082775454%2FGQgBcDybkWFAzatrraqA3Q%2Fandroid-chrome-512x512_56e448ce.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%2C%22theme_color%22%3A%22%23f5f0e8%22%2C%22background_color%22%3A%22%23f5f0e8%22%7D"/>
 <meta name="theme-color" content="#1a4731"/>
+<!-- =============================================
+     SEO: Canonical + hreflang tags
+     Tells Google which URL is the authoritative version
+     and which language variants exist for this page.
+     - en  → https://angkordrivers.com/ (English, default)
+     - fr  → https://angkordrivers.com/fr.html (French)
+     - zh-Hans → https://angkordrivers.com/zh.html (Simplified Chinese)
+     - x-default → fallback for unmatched languages
+     ============================================= -->
+<link rel="canonical" href="https://angkordrivers.com/"/>
+<link rel="alternate" hreflang="en" href="https://angkordrivers.com/"/>
+<link rel="alternate" hreflang="fr" href="https://angkordrivers.com/fr.html"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://angkordrivers.com/zh.html"/>
+<link rel="alternate" hreflang="x-default" href="https://angkordrivers.com/"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -117,7 +131,23 @@
 <a class="text-stone-600 py-2 border-b border-stone-100" href="#about" onclick="closeMobileMenu()">About</a>
 <a class="text-stone-600 py-2 border-b border-stone-100" href="#reviews" onclick="closeMobileMenu()">Reviews</a>
 <a class="text-stone-600 py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
+<!-- Mobile language switcher -->
+<div class="flex items-center gap-2 pt-2 border-t border-stone-100">
+  <a href="/" class="flex items-center gap-1 px-3 py-1.5 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm">🇬🇧 EN</a>
+  <a href="/fr.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇫🇷 FR</a>
+  <a href="/zh.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇨🇳 中文</a>
 </div>
+</div>
+</div>
+<!-- =============================================
+     LANGUAGE SWITCHER
+     Flag emoji + language name. Active page is highlighted.
+     UK flag (🇬🇧) for English per brand requirement.
+     ============================================= -->
+<div class="hidden md:flex items-center gap-1 border border-stone-200 rounded-lg px-2 py-1 bg-stone-50">
+  <a href="/" class="flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm" title="English" aria-label="Switch to English">🇬🇧 <span>EN</span></a>
+  <a href="/fr.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="Français" aria-label="Passer en français">🇫🇷 <span>FR</span></a>
+  <a href="/zh.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="中文" aria-label="切换到中文">🇨🇳 <span>中文</span></a>
 </div>
 <div class="flex items-center gap-4">
 <a class="hidden sm:block px-6 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container transition-all active:scale-95" href="#contact">Book Now</a>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Angkor Drivers | Chauffeur Privé &amp; Guide Local – Siem Reap</title>
+<meta name="description" content="Chauffeur privé et guide local à Siem Reap. Circuits personnalisés dans les temples d'Angkor, transferts aéroport et expériences locales avec Leng Cheaheng."/>
+<!-- =============================================
+     FAVICONS — all sizes for browser, iOS, Android
+     ============================================= -->
+<link rel="icon" type="image/x-icon" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/favicon_230a6208.ico"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/favicon-16x16_0b061167.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/favicon-32x32_528a2b2e.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/apple-touch-icon_7dd11e30.png"/>
+<meta name="theme-color" content="#1a4731"/>
+<!-- =============================================
+     SEO: Canonical + hreflang tags
+     - fr  → https://angkordrivers.com/fr.html (this page)
+     - en  → https://angkordrivers.com/ (English)
+     - zh-Hans → https://angkordrivers.com/zh.html (Chinese)
+     - x-default → fallback
+     ============================================= -->
+<link rel="canonical" href="https://angkordrivers.com/fr.html"/>
+<link rel="alternate" hreflang="en" href="https://angkordrivers.com/"/>
+<link rel="alternate" hreflang="fr" href="https://angkordrivers.com/fr.html"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://angkordrivers.com/zh.html"/>
+<link rel="alternate" hreflang="x-default" href="https://angkordrivers.com/"/>
+<!-- Tailwind CDN — same version as main site -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts — same as main site -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind config — identical colour tokens to main site -->
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-container": "#fe9e74",
+          "surface-container-low": "#f6f3ec",
+          "background": "#fcf9f2",
+          "surface-container-highest": "#e5e2db",
+          "secondary": "#944926",
+          "on-secondary": "#ffffff",
+          "on-secondary-container": "#773311",
+          "surface": "#fcf9f2",
+          "on-surface-variant": "#42493e",
+          "outline-variant": "#c2c9bb",
+          "on-primary": "#ffffff",
+          "primary": "#154212",
+          "primary-container": "#2d5a27",
+          "on-primary-container": "#9dd090",
+          "surface-container": "#f1eee7",
+          "surface-container-high": "#ebe8e1",
+          "surface-container-lowest": "#ffffff",
+          "on-surface": "#1c1c18",
+        },
+        borderRadius: { DEFAULT: "0.5rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        fontFamily: { headline: ["Noto Serif"], body: ["Manrope"], label: ["Manrope"] }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .font-serif { font-family: 'Noto Serif', serif; }
+  .font-sans  { font-family: 'Manrope', sans-serif; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-sans">
+
+<!-- =============================================
+     NAVIGATION
+     ============================================= -->
+<header class="bg-stone-50/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 w-full">
+  <div class="text-2xl font-serif font-bold text-emerald-900">Angkor Drivers</div>
+  <!-- Desktop nav links -->
+  <div class="hidden md:flex items-center gap-8">
+    <a class="text-emerald-800 font-semibold border-b-2 border-orange-800 pb-1" href="#home">Accueil</a>
+    <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#tours">Circuits</a>
+    <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#about">À propos</a>
+    <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#reviews">Avis</a>
+    <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#contact">Contact</a>
+  </div>
+  <!-- Mobile menu dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-stone-50/95 backdrop-blur-md shadow-lg z-50 border-t border-stone-200">
+    <div class="flex flex-col px-6 py-4 gap-4">
+      <a class="text-emerald-800 font-semibold py-2 border-b border-stone-100" href="#home" onclick="closeMobileMenu()">Accueil</a>
+      <a class="text-stone-600 py-2 border-b border-stone-100" href="#tours" onclick="closeMobileMenu()">Circuits</a>
+      <a class="text-stone-600 py-2 border-b border-stone-100" href="#about" onclick="closeMobileMenu()">À propos</a>
+      <a class="text-stone-600 py-2 border-b border-stone-100" href="#reviews" onclick="closeMobileMenu()">Avis</a>
+      <a class="text-stone-600 py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <!-- Mobile language switcher -->
+      <div class="flex items-center gap-2 pt-2 border-t border-stone-100">
+        <a href="/" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇬🇧 EN</a>
+        <a href="/fr.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm">🇫🇷 FR</a>
+        <a href="/zh.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇨🇳 中文</a>
+      </div>
+    </div>
+  </div>
+  <!-- Language switcher + CTA -->
+  <div class="hidden md:flex items-center gap-1 border border-stone-200 rounded-lg px-2 py-1 bg-stone-50">
+    <a href="/" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="English">🇬🇧 <span>EN</span></a>
+    <a href="/fr.html" class="flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm" title="Français">🇫🇷 <span>FR</span></a>
+    <a href="/zh.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="中文">🇨🇳 <span>中文</span></a>
+  </div>
+  <div class="flex items-center gap-4">
+    <a class="hidden sm:block px-6 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:brightness-110 transition-all active:scale-95" href="#contact">Réserver</a>
+    <a class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors" href="https://wa.me/855976453855">
+      <span class="material-symbols-outlined" data-icon="chat">chat</span>
+    </a>
+    <button class="md:hidden p-2 text-emerald-900" id="mobile-menu-btn" aria-label="Ouvrir le menu">
+      <span class="material-symbols-outlined" data-icon="menu" id="mobile-menu-icon">menu</span>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section class="relative min-h-[60vh] md:min-h-[700px] flex items-center overflow-hidden" id="home">
+  <div class="absolute inset-0 z-0">
+    <img alt="Angkor Wat au lever du soleil" class="w-full h-full object-cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjerOeiYy5H85CTHy4MTsuivgjXeRgEJWBr-OrveU93G39QM0eX9Li6Dypig67W6_ORpbW1wGIk28xexIcfkTl7VkHDiUx309mE2OGI-S_6poxR3G5X0Xo6fBXggXGv1qW_d_rNEyZcriIsSYiYBw1_rZrvju7rweGMWzOX-2C66xupD0gnEqebAWKteoYPltZYMSI8GdvV1-UysxCYf8thj2taINmi5iZQgNUqpgV9r_elAejmr2EdfniEpdvFnUIzCf5CD3l7pc"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-7xl font-serif tracking-tight text-primary leading-tight mb-6">
+        Chauffeur Privé à <span class="text-secondary italic">Siem Reap</span>
+      </h1>
+      <p class="text-xl text-on-surface-variant mb-10 font-sans leading-relaxed">
+        Découvrez le Cambodge avec un expert local. Circuits personnalisés dans les temples, transferts aéroport sans stress et lieux cachés connus seulement des habitants.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a class="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-on-secondary rounded-lg font-bold shadow-lg hover:brightness-110 transition-all active:scale-95" href="https://wa.me/855976453855">
+          <span class="material-symbols-outlined" data-icon="chat">chat</span>
+          Message WhatsApp
+        </a>
+        <a class="inline-flex items-center gap-3 px-8 py-4 bg-surface-container-highest text-primary rounded-lg font-bold hover:bg-surface-container-high transition-all" href="tel:+855976453855">
+          <span class="material-symbols-outlined" data-icon="call">call</span>
+          Appeler
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     ABOUT
+     ============================================= -->
+<section class="py-24 bg-surface-container-low" id="about">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img alt="Leng Chea Heng avec son véhicule" class="w-full h-full object-cover"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/driver-selfie-car_5eb0fe0f.jpeg"/>
+        </div>
+        <div class="hidden sm:block absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
+          <p class="font-serif text-2xl text-on-secondary-container">12+ ans d'expérience</p>
+          <p class="text-on-secondary-container/80 text-sm mt-2">Guide et chauffeur depuis 2012.</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-4xl font-serif text-primary mb-8 leading-tight">Rencontrez Leng Cheaheng</h2>
+        <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+          <p>Bonjour, je suis <strong>Leng Cheaheng</strong>. Je suis né et j'ai grandi à Siem Reap. Enfant, j'explorais les temples d'Angkor et mes grands-parents me racontaient les histoires des rois khmers et de ceux qui ont bâti ces merveilles. Cette curiosité ne m'a jamais quitté.</p>
+          <p>Je conduis et guide des voyageurs depuis plus de 12 ans. Ce que je préfère dans ce métier, c'est encore de voir quelqu'un découvrir Angkor Wat au lever du soleil pour la première fois. Ce moment ne perd jamais de sa magie.</p>
+          <p>Conduire, c'est aussi ma façon de prendre soin de ma famille. Ma femme, ma fille, et notre petit garçon qui arrive bientôt. Chaque trajet, je le fais à fond. Quand vous réservez avec moi, vous soutenez une vraie famille, pas une entreprise.</p>
+          <p>Je parle couramment anglais, je connais chaque route et chaque endroit caché, et je suis toujours à l'heure. La voiture est propre et la climatisation est puissante. Mais surtout, je veux que vous aimiez Siem Reap autant que moi.</p>
+          <ul class="grid grid-cols-2 gap-4 pt-4">
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span><span>Chauffeur agréé</span></li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="translate">translate</span><span>Anglais courant</span></li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span><span>Rythme flexible</span></li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span><span>Conseils locaux</span></li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="family_restroom">family_restroom</span><span>Valeurs familiales</span></li>
+            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="history_edu">history_edu</span><span>Patrimoine khmer</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     TOURS
+     ============================================= -->
+<section class="py-24" id="tours">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-serif text-primary mb-4">Expériences à la Carte</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto">Des temples d'Angkor aux villages flottants du Tonlé Sap, voici les circuits que je propose le plus souvent.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Grand Angkor -->
+      <div class="group relative overflow-hidden rounded-2xl bg-surface-container-high h-64 transition-transform duration-500 hover:-translate-y-2">
+        <img alt="Circuit Angkor" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAICdNoqdN8CjW7wlRtcspQcp07jO20dh6mtymUDXeBh_VblHOuwiH4c2nKOH3T0wlAfLuX1uu4AU032cPEQxGMKVE4vxxRDTfMK7MD-nUeuh3-yd05PH3A1fUAbSbX0wL3nPfas4nrVym_5zRmoVtUweZ3XChzKqR-5VRZ7QRD4FJOY32uxRHtPGDB1lYz7oWqnpoj54yN-RMIyARVb6hrrmlmwVW_TVcGw9sMXSJDgsyhjA5RINE4HJwJkxsRMKpT1jFLsX36G0"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+          <h3 class="text-2xl font-serif text-white mb-1">Grand Circuit d'Angkor</h3>
+          <p class="text-white/80 text-sm mb-3">Journée complète à Angkor Wat, Bayon et Ta Prohm, avec option lever du soleil.</p>
+          <a href="#contact" class="inline-flex items-center text-secondary-container font-bold hover:underline text-sm">Détails &amp; Tarifs <span class="material-symbols-outlined ml-1 text-base" data-icon="arrow_forward">arrow_forward</span></a>
+        </div>
+      </div>
+      <!-- Airport transfer -->
+      <div class="group relative overflow-hidden rounded-2xl bg-surface-container-high h-64 transition-transform duration-500 hover:-translate-y-2">
+        <img alt="Transfert aéroport" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-airport1_492cfe83.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+          <h3 class="text-2xl font-serif text-white mb-1">Transferts Aéroport</h3>
+          <p class="text-white/80 text-sm mb-3">Prise en charge ou dépose ponctuelle entre l'aéroport et votre hôtel.</p>
+          <a href="#contact" class="inline-flex items-center text-secondary-container font-bold hover:underline text-sm">Réserver <span class="material-symbols-outlined ml-1 text-base" data-icon="arrow_forward">arrow_forward</span></a>
+        </div>
+      </div>
+      <!-- Custom -->
+      <div class="group relative overflow-hidden rounded-2xl bg-surface-container-high h-64 transition-transform duration-500 hover:-translate-y-2">
+        <img alt="Excursion sur mesure" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0xyxFYUUpgBbeuFRsj8-PSkPGpHMv7EDxQxnq-wkcWPf3YcZircvI4_WOWG_OL9CEl9aBdQCVZhQk14uStcvrJL6GoTttSvoNhJTknb0d3pnw9R6clC5DkGI3mXw2AVBEi2Fakq-3BSYestP09Vu1o9YHqgMP35qtKuRkF8QK_Dzx57I3wLQHKY_Q_2z6uNn7i5S-DyaPAocx2REH91B1mBm2nkgvuk_Jyj7GaNXORyAPgqGizId3-7pOcLFoS7sNDRczP812W8"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+          <h3 class="text-2xl font-serif text-white mb-1">Excursions sur Mesure</h3>
+          <p class="text-white/80 text-sm mb-3">Kulen, Tonlé Sap, Koh Ker, marchés locaux et bien d'autres destinations.</p>
+          <a href="#contact" class="inline-flex items-center text-secondary-container font-bold hover:underline text-sm">Planifier <span class="material-symbols-outlined ml-1 text-base" data-icon="arrow_forward">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     ANGKOR TEMPLES
+     ============================================= -->
+<section class="py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-serif text-primary text-center mb-16">Les Merveilles d'Angkor</h2>
+    <!-- Angkor Wat -->
+    <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
+      <div class="lg:w-3/5 order-2 lg:order-1">
+        <img alt="Angkor Wat" class="w-full h-[400px] object-cover rounded-xl shadow-lg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAwPF2037wy1Y7xFMHgsnOrutuxGPGtCyyYGISA7HeeGOLJwTH4B-dqWfsjrHvEmwyZGspQt_YluwNrphfAmg4DKWPrNY5yYmFbcs8WsOwdp_zuDhYEsmm7sKbTcpfXU2T6EZYJpA7LIa3G1VX3z0dY9_Qf_8QxJz0z14ZpGJXzFxvnEM32cMTGtclCeTkdVktmxBaBVEQ7WZx1IQNfRLYGlZGLbOvhjvq_5a-48V4FIFWV61Wcja-ktMoGKF9CnvOlm2KCwjr-_I"/>
+      </div>
+      <div class="lg:w-2/5 order-1 lg:order-2">
+        <span class="text-secondary font-bold tracking-widest text-sm uppercase">À ne pas manquer</span>
+        <h3 class="text-4xl font-serif text-primary mt-2 mb-6">Angkor Wat</h3>
+        <p class="text-on-surface-variant leading-relaxed">Le plus grand monument religieux du monde. Leng recommande d'arriver vers 4 h 45 pour admirer le lever du soleil au-dessus du bassin de réflexion. On explore les bas-reliefs pendant que la plupart des touristes sont encore au petit-déjeuner.</p>
+      </div>
+    </div>
+    <!-- Bayon -->
+    <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
+      <div class="lg:w-2/5">
+        <span class="text-secondary font-bold tracking-widest text-sm uppercase">Les Visages de Pierre</span>
+        <h3 class="text-4xl font-serif text-primary mt-2 mb-6">Temple du Bayon</h3>
+        <p class="text-on-surface-variant leading-relaxed">Situé dans Angkor Thom, Bayon est célèbre pour ses 216 immenses visages de pierre sculptés dans ses tours. La lumière du matin sur le grès est difficile à décrire. Apportez un appareil photo.</p>
+      </div>
+      <div class="lg:w-3/5">
+        <img alt="Bayon" class="w-full h-[400px] object-cover rounded-xl shadow-lg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQxzh7TaD5T09vQj3CnbbkFyP6aYQ2O-EUAvblOJc3Zy1b8eIp81cb5Mq8ef6ccC_ife7SrdinkKpjyV97bDMISi1gKwdq2WiiJsJF8nKG1j7s7TCe4H3YzYCi0aeLt4rRifPgPG2ryOuHH2oW4dlnq6fEhEjoCUPwzU0qSa3ihPOSIuxTEc01ZeLId3uXC4-0Igv5TC0ndPAB-ooVdOE8DnJs_2gsIFLCnicSqjU_Qtj2xtdAx0MZq5WMZcTWh7w3AdMtPdobFzo"/>
+      </div>
+    </div>
+    <!-- Ta Prohm -->
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <div class="lg:w-3/5 order-2 lg:order-1">
+        <img alt="Ta Prohm" class="w-full h-[400px] object-cover rounded-xl shadow-lg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0xyxFYUUpgBbeuFRsj8-PSkPGpHMv7EDxQxnq-wkcWPf3YcZircvI4_WOWG_OL9CEl9aBdQCVZhQk14uStcvrJL6GoTttSvoNhJTknb0d3pnw9R6clC5DkGI3mXw2AVBEi2Fakq-3BSYestP09Vu1o9YHqgMP35qtKuRkF8QK_Dzx57I3wLQHKY_Q_2z6uNn7i5S-DyaPAocx2REH91B1mBm2nkgvuk_Jyj7GaNXORyAPgqGizId3-7pOcLFoS7sNDRczP812W8"/>
+      </div>
+      <div class="lg:w-2/5 order-1 lg:order-2">
+        <span class="text-secondary font-bold tracking-widest text-sm uppercase">La Jungle et l'Histoire</span>
+        <h3 class="text-4xl font-serif text-primary mt-2 mb-6">Ta Prohm</h3>
+        <p class="text-on-surface-variant leading-relaxed">Ta Prohm a été laissé presque tel qu'il a été trouvé. D'immenses racines d'arbres traversent les murs. C'est un spectacle unique au monde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     TESTIMONIALS
+     ============================================= -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="reviews">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-16">
+      <h2 class="text-4xl font-serif text-primary mb-2">Ce que disent les clients</h2>
+      <p class="text-on-surface-variant">En leurs propres mots.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
+        <div class="flex text-secondary-container mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="italic text-on-surface-variant mb-6 text-lg">« La meilleure décision de notre voyage. Ponctuel, aimable et son anglais est excellent. Il connaissait tous les meilleurs endroits pour éviter la foule à Angkor Wat. »</p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-stone-200 rounded-full"></div>
+          <div><p class="font-bold">Sarah &amp; James</p><p class="text-xs text-on-surface-variant/60">Londres, Royaume-Uni</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
+        <div class="flex text-secondary-container mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="italic text-on-surface-variant mb-6 text-lg">« Bien plus qu'un simple chauffeur, il est devenu un ami. Une expérience vraiment authentique. »</p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-stone-200 rounded-full"></div>
+          <div><p class="font-bold">David Chen</p><p class="text-xs text-on-surface-variant/60">Singapour</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
+        <div class="flex text-secondary-container mb-4">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="italic text-on-surface-variant mb-6 text-lg">« La voiture était impeccable et la climatisation nous a sauvé de la chaleur cambodgienne. Il avait toujours de l'eau fraîche et des serviettes humides prêtes pour nous. »</p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-stone-200 rounded-full"></div>
+          <div><p class="font-bold">Elena Rodriguez</p><p class="text-xs text-on-surface-variant/60">Madrid, Espagne</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CONTACT
+     ============================================= -->
+<section class="py-24" id="contact">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+      <!-- Left panel: contact info -->
+      <div class="lg:w-1/2 p-12 bg-emerald-950 text-white flex flex-col justify-between">
+        <div>
+          <h2 class="text-4xl font-serif mb-6">Nous Contacter</h2>
+          <p class="text-white/70 mb-12 text-lg">Envoyez votre date d'arrivée et ce que vous recherchez. Je réponds à chaque message en moins de 2 heures.</p>
+          <div class="space-y-8">
+            <a class="flex items-center gap-6 group" href="https://wa.me/855976453855">
+              <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-white" data-icon="chat">chat</span>
+              </div>
+              <div>
+                <p class="text-sm text-white/50 font-bold uppercase tracking-widest">WhatsApp</p>
+                <p class="text-xl">+855 97 645 3855</p>
+              </div>
+            </a>
+            <a class="flex items-center gap-6 group" href="https://t.me/LengCheaHeng">
+              <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-white" data-icon="send">send</span>
+              </div>
+              <div>
+                <p class="text-sm text-white/50 font-bold uppercase tracking-widest">Telegram</p>
+                <p class="text-xl">@LengCheaHeng</p>
+              </div>
+            </a>
+            <a class="flex items-center gap-6 group" href="mailto:henglengchea592@gmail.com">
+              <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors">
+                <span class="material-symbols-outlined text-white" data-icon="mail">mail</span>
+              </div>
+              <div>
+                <p class="text-sm text-white/50 font-bold uppercase tracking-widest">E-mail</p>
+                <p class="text-xl">henglengchea592@gmail.com</p>
+              </div>
+            </a>
+            <div class="flex items-center gap-6">
+              <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-white" data-icon="location_on">location_on</span>
+              </div>
+              <div>
+                <p class="text-sm text-white/50 font-bold uppercase tracking-widest">Lieu</p>
+                <p class="text-xl">Siem Reap, Cambodge</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right panel: form -->
+      <div class="lg:w-1/2 p-12">
+        <!-- Formspree: submissions emailed to henglengchea592@gmail.com -->
+        <form class="space-y-8" action="https://formspree.io/f/xlganyvl" method="POST">
+          <input type="hidden" name="_next" value="https://angkordrivers.com/thank-you.html"/>
+          <input type="hidden" name="_subject" value="Nouvelle demande de réservation - Angkor Drivers"/>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-primary tracking-wide uppercase">Prénom</label>
+              <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Votre prénom" type="text" name="name"/>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-primary tracking-wide uppercase">E-mail</label>
+              <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Votre e-mail" type="email" name="email" required/>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-primary tracking-wide uppercase">Dates de voyage</label>
+            <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="ex. 15 – 20 octobre" type="text" name="dates"/>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-primary tracking-wide uppercase">Type de service</label>
+            <select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" name="service">
+              <option>Circuit complet</option>
+              <option>Transfert aéroport uniquement</option>
+              <option>Itinéraire personnalisé</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-primary tracking-wide uppercase">Message</label>
+            <textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Comment puis-je vous aider ?" rows="4" name="message"></textarea>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-primary tracking-wide uppercase">Numéro WhatsApp <span class="text-on-surface-variant font-normal normal-case">(optionnel, pour répondre plus vite)</span></label>
+            <div class="flex items-center gap-3 bg-surface-container-low border-none rounded-lg px-4 focus-within:ring-2 focus-within:ring-secondary/20 transition-all">
+              <span class="material-symbols-outlined text-secondary text-xl select-none" data-icon="chat">chat</span>
+              <input class="flex-1 bg-transparent py-4 outline-none text-on-surface placeholder:text-on-surface-variant/50" name="whatsapp" placeholder="ex. +33 6 12 34 56 78" type="tel"/>
+            </div>
+          </div>
+          <button class="w-full py-5 bg-secondary text-on-secondary rounded-lg font-bold text-lg hover:brightness-110 shadow-lg transition-all active:scale-[0.98]" type="submit">
+            Envoyer la demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="bg-stone-100 border-t border-stone-200">
+  <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="text-center md:text-left">
+      <div class="text-lg font-serif font-bold text-emerald-900 mb-2">Angkor Drivers</div>
+      <p class="font-sans text-sm tracking-wide text-stone-500">© 2025 Angkor Drivers. Chauffeur et guide local agréé, Siem Reap.</p>
+    </div>
+    <div class="flex gap-8">
+      <a class="text-stone-500 hover:text-emerald-700 transition-colors" href="https://wa.me/855976453855">WhatsApp</a>
+      <a class="text-stone-500 hover:text-emerald-700 transition-colors" href="https://t.me/LengCheaHeng">Telegram</a>
+      <a class="text-stone-500 hover:text-emerald-700 transition-colors" href="tel:+855976453855">Téléphone</a>
+    </div>
+    <div class="flex items-center gap-2 text-stone-400 text-sm italic">
+      <span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+      Fait avec soin à Siem Reap
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+const icon = document.getElementById('mobile-menu-icon');
+function closeMobileMenu() {
+  menu.classList.add('hidden');
+  icon.textContent = 'menu';
+}
+if (btn) {
+  btn.addEventListener('click', function() {
+    const isHidden = menu.classList.toggle('hidden');
+    icon.textContent = isHidden ? 'menu' : 'close';
+  });
+}
+document.addEventListener('click', function(e) {
+  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+</script>
+</body>
+</html>
