@@ -117,63 +117,200 @@
 </head>
 <body class="bg-background text-on-surface font-sans selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- Top Navigation Bar -->
-<header class="bg-stone-50/80 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
-<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 w-full">
-<div class="text-2xl font-serif font-bold text-emerald-900">Siem Reap Concierge</div>
-<!-- Desktop Links -->
-<div class="hidden md:flex items-center space-gap-8 gap-8">
-<a class="text-emerald-800 font-semibold border-b-2 border-orange-800 pb-1" href="#home">Home</a>
-<a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#tours">Tours</a>
-<a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#about">About</a>
-<a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#reviews">Reviews</a>
-<a class="text-stone-600 hover:text-emerald-900 transition-colors duration-300" href="#contact">Contact</a>
-</div>
-<!-- Mobile Menu Dropdown -->
-<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-stone-50/95 backdrop-blur-md shadow-lg z-50 border-t border-stone-200">
-<div class="flex flex-col px-6 py-4 gap-4">
-<a class="text-emerald-800 font-semibold py-2 border-b border-stone-100" href="#home" onclick="closeMobileMenu()">Home</a>
-<a class="text-stone-600 py-2 border-b border-stone-100" href="#tours" onclick="closeMobileMenu()">Tours</a>
-<a class="text-stone-600 py-2 border-b border-stone-100" href="#about" onclick="closeMobileMenu()">About</a>
-<a class="text-stone-600 py-2 border-b border-stone-100" href="#reviews" onclick="closeMobileMenu()">Reviews</a>
-<a class="text-stone-600 py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
-<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-stone-100">
-  <a href="/" class="flex items-center gap-1.5 px-3 py-2 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm">🇬🇧 EN</a>
-  <a href="/fr.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇫🇷 FR</a>
-  <a href="/zh.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇨🇳 中文</a>
-  <a href="/ko.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇰🇷 한국어</a>
-  <a href="/ja.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇯🇵 日本語</a>
-  <a href="/vi.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇻🇳 Tiếng Việt</a>
-  <a href="/th.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇹🇭 ภาษาไทย</a>
-  <a href="/de.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇩🇪 DE</a>
-</div>
-</div>
-</div>
 <!-- =============================================
-     LANGUAGE SWITCHER
-     Flag emoji + language name. Active page is highlighted.
-     UK flag (🇬🇧) for English per brand requirement.
+     NAVIGATION
+     Desktop: Logo | Nav links | Language dropdown | Book Now | WhatsApp
+     Mobile:  Logo | WhatsApp | Contact | Hamburger
+     Hamburger drawer: Chat (WhatsApp), Language grid, Contact
+     All paths root-relative — works on GitHub Pages + custom domain
      ============================================= -->
-<div class="hidden md:flex items-center gap-0.5 border border-stone-200 rounded-lg px-1 py-1 bg-stone-50 flex-wrap">
-  <a href="/" class="flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-xs" title="EN">🇬🇧 <span class="hidden sm:inline">EN</span></a>
-  <a href="/fr.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="FR">🇫🇷 <span class="hidden sm:inline">FR</span></a>
-  <a href="/zh.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="中文">🇨🇳 <span class="hidden sm:inline">中文</span></a>
-  <a href="/ko.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="한국어">🇰🇷 <span class="hidden sm:inline">한국어</span></a>
-  <a href="/ja.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="日本語">🇯🇵 <span class="hidden sm:inline">日本語</span></a>
-  <a href="/vi.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="Tiếng Việt">🇻🇳 <span class="hidden sm:inline">Tiếng Việt</span></a>
-  <a href="/th.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="ภาษาไทย">🇹🇭 <span class="hidden sm:inline">ภาษาไทย</span></a>
-  <a href="/de.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="DE">🇩🇪 <span class="hidden sm:inline">DE</span></a>
-</div>
-<div class="flex items-center gap-4">
-<a class="hidden sm:block px-6 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container transition-all active:scale-95" href="#contact">Book Now</a>
-<a class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors" href="https://wa.me/855976453855">
-<span class="material-symbols-outlined" data-icon="chat">chat</span>
-</a>
-<button class="md:hidden p-2 text-emerald-900" id="mobile-menu-btn" aria-label="Open menu">
-<span class="material-symbols-outlined" data-icon="menu" id="mobile-menu-icon">menu</span>
-</button>
-</div>
-</nav>
+<header class="bg-stone-50/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-stone-100">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <a href="/" class="font-serif font-bold text-emerald-900 text-lg leading-tight shrink-0">Angkor<br class="hidden sm:block"/> Drivers</a>
+
+    <!-- Desktop nav links (hidden on mobile) -->
+    <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+      <a class="text-emerald-800 font-semibold border-b-2 border-orange-700 pb-0.5" href="#home">Home</a>
+      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#tours">Tours</a>
+      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#about">About</a>
+      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#reviews">Reviews</a>
+      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#contact">Contact</a>
+    </div>
+
+    <!-- Desktop right side: Language dropdown + Book Now + WhatsApp -->
+    <div class="hidden lg:flex items-center gap-3 shrink-0">
+
+      <!-- Language dropdown -->
+      <div class="relative" id="lang-dropdown-wrapper">
+        <button
+          id="lang-btn"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label="Select language"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 bg-white text-stone-700 hover:bg-stone-50 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
+        >
+          <span class="text-base">🇬🇧</span>
+          <span>EN</span>
+          <svg class="w-3.5 h-3.5 text-stone-400 transition-transform duration-200" id="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <!-- Dropdown panel — opens below button, 2-column grid -->
+        <div
+          id="lang-panel"
+          role="menu"
+          class="hidden absolute right-0 top-full mt-2 w-64 bg-white border border-stone-200 rounded-xl shadow-xl z-50 p-2"
+        >
+          <div class="grid grid-cols-2 gap-1">
+          <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇬🇧 EN</a>
+          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇫🇷 FR</a>
+          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇳 中文</a>
+          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
+          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
+          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
+          <a href="/th.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
+          <a href="/de.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Now CTA -->
+      <a href="#contact" class="px-4 py-2 bg-emerald-900 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors active:scale-95">Book Now</a>
+
+      <!-- WhatsApp icon -->
+      <a href="https://wa.me/855976453855" aria-label="Chat on WhatsApp" class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors">
+        <span class="material-symbols-outlined text-xl">chat</span>
+      </a>
+    </div>
+
+    <!-- Mobile right side: WhatsApp + Contact + Hamburger -->
+    <div class="flex lg:hidden items-center gap-2 shrink-0">
+      <a href="https://wa.me/855976453855" aria-label="Chat on WhatsApp" class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors">
+        <span class="material-symbols-outlined text-xl">chat</span>
+      </a>
+      <a href="#contact" onclick="closeMobileDrawer()" class="px-3 py-1.5 bg-emerald-900 text-white rounded-lg font-semibold text-xs hover:bg-emerald-800 transition-colors active:scale-95">Contact</a>
+      <button
+        id="mobile-menu-btn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors"
+      >
+        <!-- Hamburger icon (shown when closed) -->
+        <svg id="hamburger-icon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <!-- Close icon (shown when open) -->
+        <svg id="close-icon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- Mobile drawer — slides down below header -->
+  <!-- Contains: Chat (WhatsApp), Language grid, Contact -->
+  <div
+    id="mobile-drawer"
+    class="hidden lg:hidden border-t border-stone-100 bg-stone-50/98 backdrop-blur-md shadow-lg"
+  >
+    <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-5">
+
+      <!-- Chat on WhatsApp -->
+      <a href="https://wa.me/855976453855" class="flex items-center gap-3 px-4 py-3 bg-emerald-900 text-white rounded-xl font-semibold text-sm hover:bg-emerald-800 transition-colors active:scale-[0.98]">
+        <span class="material-symbols-outlined text-xl">chat</span>
+        Chat on WhatsApp
+      </a>
+
+      <!-- Language selection -->
+      <div>
+        <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-2 px-1">Language</p>
+        <div class="grid grid-cols-2 gap-1.5">
+          <a href="/" class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-emerald-100 text-emerald-900 font-semibold text-sm">🇬🇧 EN</a>
+          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇫🇷 FR</a>
+          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇨🇳 中文</a>
+          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇰🇷 한국어</a>
+          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇯🇵 日本語</a>
+          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇻🇳 Tiếng Việt</a>
+          <a href="/th.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇹🇭 ภาษาไทย</a>
+          <a href="/de.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm transition-colors">🇩🇪 DE</a>
+        </div>
+      </div>
+
+      <!-- Contact / Book -->
+      <a href="#contact" onclick="closeMobileDrawer()" class="flex items-center justify-center gap-2 px-4 py-3 border-2 border-emerald-900 text-emerald-900 rounded-xl font-semibold text-sm hover:bg-emerald-50 transition-colors active:scale-[0.98]">
+        <span class="material-symbols-outlined text-xl">mail</span>
+        Contact
+      </a>
+
+    </div>
+  </div>
 </header>
+
+<script>
+// ── Language dropdown (desktop) ──────────────────────────────────────────────
+(function() {
+  var btn    = document.getElementById('lang-btn');
+  var panel  = document.getElementById('lang-panel');
+  var chev   = document.getElementById('lang-chevron');
+  if (!btn || !panel) return;
+
+  function openPanel() {
+    panel.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    chev.style.transform = 'rotate(180deg)';
+  }
+  function closePanel() {
+    panel.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    chev.style.transform = '';
+  }
+
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    panel.classList.contains('hidden') ? openPanel() : closePanel();
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', function(e) {
+    var wrapper = document.getElementById('lang-dropdown-wrapper');
+    if (wrapper && !wrapper.contains(e.target)) closePanel();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePanel();
+  });
+})();
+
+// ── Mobile hamburger drawer ──────────────────────────────────────────────────
+function closeMobileDrawer() {
+  var drawer  = document.getElementById('mobile-drawer');
+  var btn     = document.getElementById('mobile-menu-btn');
+  var hamIcon = document.getElementById('hamburger-icon');
+  var closeIc = document.getElementById('close-icon');
+  if (!drawer) return;
+  drawer.classList.add('hidden');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+  if (hamIcon) hamIcon.classList.remove('hidden');
+  if (closeIc) closeIc.classList.add('hidden');
+}
+
+(function() {
+  var btn     = document.getElementById('mobile-menu-btn');
+  var drawer  = document.getElementById('mobile-drawer');
+  var hamIcon = document.getElementById('hamburger-icon');
+  var closeIc = document.getElementById('close-icon');
+  if (!btn || !drawer) return;
+
+  btn.addEventListener('click', function() {
+    var isHidden = drawer.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isHidden));
+    hamIcon.classList.toggle('hidden', !isHidden);
+    closeIc.classList.toggle('hidden', isHidden);
+  });
+})();
+</script>
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-[60vh] md:min-h-[921px] flex items-center overflow-hidden" id="home">
@@ -752,26 +889,5 @@
             </div>
 </div>
 </footer>
-<script>
-// Mobile menu toggle
-const btn = document.getElementById('mobile-menu-btn');
-const menu = document.getElementById('mobile-menu');
-const icon = document.getElementById('mobile-menu-icon');
-function closeMobileMenu() {
-  menu.classList.add('hidden');
-  icon.textContent = 'menu';
-}
-if (btn) {
-  btn.addEventListener('click', function() {
-    const isHidden = menu.classList.toggle('hidden');
-    icon.textContent = isHidden ? 'menu' : 'close';
-  });
-}
-// Close menu when clicking outside
-document.addEventListener('click', function(e) {
-  if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
-    closeMobileMenu();
-  }
-});
-</script>
+
 </body></html>
