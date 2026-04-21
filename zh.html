@@ -152,6 +152,50 @@
   <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.057 23.428a.75.75 0 0 0 .916.916l5.57-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.355l-.355-.212-3.683.975.99-3.595-.232-.372A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
 </svg>
       </a>
+      <!-- Mobile language dropdown (always visible in header) -->
+      <div class="relative lg:hidden" id="mobile-lang-wrapper">
+        <button
+          id="mobile-lang-btn"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label="Select language"
+          class="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-stone-200 bg-white text-stone-700 hover:bg-stone-50 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
+        >
+          <span class="text-base leading-none">🇨🇳</span>
+          <svg class="w-3 h-3 text-stone-400 transition-transform duration-200" id="mobile-lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <!-- Mobile language panel — opens below, right-aligned -->
+        <div
+          id="mobile-lang-panel"
+          role="menu"
+          class="hidden absolute right-0 top-full mt-2 w-48 bg-white border border-stone-200 rounded-xl shadow-xl z-50 p-2"
+        >
+          <div class="grid grid-cols-1 gap-0.5">
+          <a href="/" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇬🇧 EN</a>
+          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇫🇷 FR</a>
+          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-emerald-100 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇨🇳 中文</a>
+          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
+          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
+          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
+          <a href="/th.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
+          <a href="/de.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
+          </div>
+        </div>
+      </div>
+      <script>
+      // Mobile language dropdown
+      (function() {
+        var btn   = document.getElementById('mobile-lang-btn');
+        var panel = document.getElementById('mobile-lang-panel');
+        var chev  = document.getElementById('mobile-lang-chevron');
+        if (!btn || !panel) return;
+        function openML() { panel.classList.remove('hidden'); btn.setAttribute('aria-expanded','true'); chev.style.transform='rotate(180deg)'; }
+        function closeML() { panel.classList.add('hidden'); btn.setAttribute('aria-expanded','false'); chev.style.transform=''; }
+        btn.addEventListener('click', function(e) { e.stopPropagation(); panel.classList.contains('hidden') ? openML() : closeML(); });
+        document.addEventListener('click', function(e) { var w=document.getElementById('mobile-lang-wrapper'); if(w&&!w.contains(e.target)) closeML(); });
+        document.addEventListener('keydown', function(e) { if(e.key==='Escape') closeML(); });
+      })();
+      </script>
       <a href="#contact" onclick="closeMobileDrawer()" class="px-3 py-1.5 bg-emerald-900 text-white rounded-lg font-semibold text-xs hover:bg-emerald-800 transition-colors active:scale-95">联系</a>
       <button
         id="mobile-menu-btn"
