@@ -28,6 +28,11 @@
 <link rel="alternate" hreflang="en" href="https://angkordrivers.com/"/>
 <link rel="alternate" hreflang="fr" href="https://angkordrivers.com/fr.html"/>
 <link rel="alternate" hreflang="zh-Hans" href="https://angkordrivers.com/zh.html"/>
+<link rel="alternate" hreflang="ko" href="https://angkordrivers.com/ko.html"/>
+<link rel="alternate" hreflang="ja" href="https://angkordrivers.com/ja.html"/>
+<link rel="alternate" hreflang="vi" href="https://angkordrivers.com/vi.html"/>
+<link rel="alternate" hreflang="th" href="https://angkordrivers.com/th.html"/>
+<link rel="alternate" hreflang="de" href="https://angkordrivers.com/de.html"/>
 <link rel="alternate" hreflang="x-default" href="https://angkordrivers.com/"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -131,11 +136,15 @@
 <a class="text-stone-600 py-2 border-b border-stone-100" href="#about" onclick="closeMobileMenu()">About</a>
 <a class="text-stone-600 py-2 border-b border-stone-100" href="#reviews" onclick="closeMobileMenu()">Reviews</a>
 <a class="text-stone-600 py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
-<!-- Mobile language switcher -->
-<div class="flex items-center gap-2 pt-2 border-t border-stone-100">
-  <a href="/" class="flex items-center gap-1 px-3 py-1.5 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm">🇬🇧 EN</a>
-  <a href="/fr.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇫🇷 FR</a>
-  <a href="/zh.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-stone-600 hover:bg-stone-100 text-sm">🇨🇳 中文</a>
+<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-stone-100">
+  <a href="/" class="flex items-center gap-1.5 px-3 py-2 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm">🇬🇧 EN</a>
+  <a href="/fr.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇫🇷 FR</a>
+  <a href="/zh.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇨🇳 中文</a>
+  <a href="/ko.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇰🇷 한국어</a>
+  <a href="/ja.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇯🇵 日本語</a>
+  <a href="/vi.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇻🇳 Tiếng Việt</a>
+  <a href="/th.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇹🇭 ภาษาไทย</a>
+  <a href="/de.html" class="flex items-center gap-1.5 px-3 py-2 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors">🇩🇪 DE</a>
 </div>
 </div>
 </div>
@@ -144,10 +153,15 @@
      Flag emoji + language name. Active page is highlighted.
      UK flag (🇬🇧) for English per brand requirement.
      ============================================= -->
-<div class="hidden md:flex items-center gap-1 border border-stone-200 rounded-lg px-2 py-1 bg-stone-50">
-  <a href="/" class="flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-sm" title="English" aria-label="Switch to English">🇬🇧 <span>EN</span></a>
-  <a href="/fr.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="Français" aria-label="Passer en français">🇫🇷 <span>FR</span></a>
-  <a href="/zh.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-sm transition-colors" title="中文" aria-label="切换到中文">🇨🇳 <span>中文</span></a>
+<div class="hidden md:flex items-center gap-0.5 border border-stone-200 rounded-lg px-1 py-1 bg-stone-50 flex-wrap">
+  <a href="/" class="flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 text-emerald-900 font-semibold text-xs" title="EN">🇬🇧 <span class="hidden sm:inline">EN</span></a>
+  <a href="/fr.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="FR">🇫🇷 <span class="hidden sm:inline">FR</span></a>
+  <a href="/zh.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="中文">🇨🇳 <span class="hidden sm:inline">中文</span></a>
+  <a href="/ko.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="한국어">🇰🇷 <span class="hidden sm:inline">한국어</span></a>
+  <a href="/ja.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="日本語">🇯🇵 <span class="hidden sm:inline">日本語</span></a>
+  <a href="/vi.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="Tiếng Việt">🇻🇳 <span class="hidden sm:inline">Tiếng Việt</span></a>
+  <a href="/th.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="ภาษาไทย">🇹🇭 <span class="hidden sm:inline">ภาษาไทย</span></a>
+  <a href="/de.html" class="flex items-center gap-1 px-2 py-1 rounded-md text-stone-600 hover:bg-stone-100 text-xs transition-colors" title="DE">🇩🇪 <span class="hidden sm:inline">DE</span></a>
 </div>
 <div class="flex items-center gap-4">
 <a class="hidden sm:block px-6 py-2 bg-primary text-on-primary rounded-lg font-semibold hover:bg-primary-container transition-all active:scale-95" href="#contact">Book Now</a>
@@ -195,7 +209,7 @@
 <div class="relative">
 <div class="rounded-2xl overflow-hidden shadow-2xl">
 <!-- Real photo: Leng Chea Heng with his Hyundai H1 minivan on the Angkor road -->
-<img alt="Leng Chea Heng with his Hyundai H1 minivan" class="w-full h-full object-cover" src="https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/driver-selfie-car_5eb0fe0f.jpeg"/>
+<img alt="Leng Chea Heng with his Hyundai H1 minivan" class="w-full h-full object-cover" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/tQxmWuMifWpTMlAz.jpeg"/>
 </div>
 <div class="hidden sm:block absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
 <p class="font-serif text-2xl text-on-secondary-container">12+ Years Experience</p>
