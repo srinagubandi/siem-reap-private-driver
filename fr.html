@@ -143,6 +143,40 @@
     }
   }
   </script>
+  <style>
+    /* ── Shared nav / lang-strip styles (matches new language pages) ── */
+    .lang-bar-wrap{position:relative;background:#1a3a2a;border-bottom:1px solid rgba(201,168,76,.25);}
+    .lang-bar{display:flex;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;gap:2px;padding:6px 44px;}
+    .lang-bar::-webkit-scrollbar{display:none;}
+    .lang-arrow{position:absolute;top:50%;transform:translateY(-50%);background:#1a3a2a;border:none;color:#c9a84c;font-size:18px;font-weight:700;width:36px;height:100%;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;}
+    .lang-arrow:hover{background:#0f2218;}
+    .lang-arrow.left{left:0;}
+    .lang-arrow.right{right:0;}
+    .lang-bar a{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;color:rgba(255,255,255,.75);font-size:13px;white-space:nowrap;text-decoration:none;transition:all .2s;}
+    .lang-bar a:hover{background:rgba(201,168,76,.15);color:#fff;}
+    .lang-bar a.active{background:rgba(201,168,76,.2);color:#c9a84c;font-weight:600;}
+    nav{background:#1a3a2a;position:sticky;top:0;z-index:50;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+    .nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.4rem;color:#c9a84c;font-weight:700;text-decoration:none;}
+    .nav-links{display:flex;gap:8px;align-items:center;}
+    .nav-links a{color:rgba(255,255,255,.8);text-decoration:none;padding:6px 12px;border-radius:6px;font-size:.9rem;transition:all .2s;}
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,.1);}
+    .nav-cta{background:#c9a84c;color:#1a3a2a !important;font-weight:700 !important;padding:8px 20px !important;border-radius:8px !important;}
+    .nav-cta:hover{background:#b8963e !important;}
+    .hamburger{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:8px;}
+    @media(max-width:768px){.nav-links{display:none;}.hamburger{display:block;}}
+    .mobile-drawer{display:none;position:fixed;inset:0;z-index:200;}
+    .mobile-drawer.open{display:flex;}
+    .drawer-overlay{position:absolute;inset:0;background:rgba(0,0,0,.6);}
+    .drawer-panel{position:relative;width:280px;background:#1a3a2a;height:100%;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:8px;}
+    .drawer-close{align-self:flex-end;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;margin-bottom:16px;}
+    .drawer-panel a{color:rgba(255,255,255,.85);text-decoration:none;padding:10px 14px;border-radius:8px;font-size:1rem;transition:all .2s;}
+    .drawer-panel a:hover{background:rgba(255,255,255,.1);color:#fff;}
+    .drawer-lang-title{color:#c9a84c;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 14px 8px;}
+    .drawer-lang-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+    .drawer-lang-grid a{font-size:.85rem;padding:6px 10px;}
+    .drawer-lang-grid a.active{background:rgba(201,168,76,.2);color:#c9a84c;font-weight:600;}
+  </style>
 </head>
 <body class="bg-background text-on-surface font-sans">
 
@@ -156,235 +190,94 @@
      Hamburger drawer: Chat (WhatsApp), Language grid, Contact
      All paths root-relative — works on GitHub Pages + custom domain
      ============================================= -->
-<header class="bg-stone-50/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-stone-100">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+<!-- ── Language Strip ─────────────────────────────────────────────── -->
+<div class="lang-bar-wrap">
+  <button class="lang-arrow left" id="langLeft" aria-label="scroll left">&#8249;</button>
+  <div class="lang-bar" id="langBar">
+    <a href="/" class="">🇬🇧 EN</a>
+    <a href="/fr.html" class="active">🇫🇷 FR</a>
+    <a href="/zh.html" class="">🇨🇳 中文</a>
+    <a href="/ko.html" class="">🇰🇷 한국어</a>
+    <a href="/ja.html" class="">🇯🇵 日本語</a>
+    <a href="/de.html" class="">🇩🇪 DE</a>
+    <a href="/es.html" class="">🇪🇸 ES</a>
+    <a href="/vi.html" class="">🇻🇳 Tiếng Việt</a>
+    <a href="/it.html" class="">🇮🇹 IT</a>
+    <a href="/pt.html" class="">🇵🇹 PT</a>
+    <a href="/ru.html" class="">🇷🇺 RU</a>
+    <a href="/th.html" class="">🇹🇭 ภาษาไทย</a>
+    <a href="/nl.html" class="">🇳🇱 NL</a>
+    <a href="/id.html" class="">🇮🇩 ID</a>
+    <a href="/sv.html" class="">🇸🇪 SV</a>
+    <a href="/pl.html" class="">🇵🇱 PL</a>
+    <a href="/ar.html" class="">🇸🇦 AR</a>
+    <a href="/cs.html" class="">🇨🇿 CS</a>
+  </div>
+  <button class="lang-arrow right" id="langRight" aria-label="scroll right">&#8250;</button>
+</div>
 
-    <!-- Logo -->
-    <a href="/" class="font-serif font-bold text-emerald-900 text-lg leading-tight shrink-0">Angkor<br class="hidden sm:block"/> Drivers</a>
-
-    <!-- Desktop nav links (hidden on mobile) -->
-    <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-      <a class="text-emerald-800 font-semibold border-b-2 border-orange-700 pb-0.5" href="#home">Accueil</a>
-      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#tours">Tours</a>
-      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#about">À propos</a>
-      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#reviews">Avis</a>
-      <a class="text-stone-600 hover:text-emerald-900 transition-colors" href="#contact">Contact</a>
+<!-- ── Navigation ─────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Angkor Drivers</a>
+    <div class="nav-links">
+      <a href="#home">Accueil</a>
+      <a href="#tours">Circuits</a>
+      <a href="#about">À propos</a>
+      <a href="#reviews">Avis</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/855976453855" class="nav-cta">Réserver</a>
     </div>
-
-    <!-- Desktop right side: Language dropdown + Book Now + WhatsApp -->
-    <div class="hidden lg:flex items-center gap-3 shrink-0">
-
-      <!-- Language dropdown -->
-      <div class="relative" id="lang-dropdown-wrapper">
-        <button
-          id="lang-btn"
-          aria-haspopup="true"
-          aria-expanded="false"
-          aria-label="Select language"
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 bg-white text-stone-700 hover:bg-stone-50 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
-        >
-          <span class="text-base">🇫🇷</span>
-          <span>FR</span>
-          <svg class="w-3.5 h-3.5 text-stone-400 transition-transform duration-200" id="lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
-        </button>
-        <!-- Dropdown panel — opens below button, 2-column grid -->
-        <div
-          id="lang-panel"
-          role="menu"
-          class="hidden absolute right-0 top-full mt-2 w-64 bg-white border border-stone-200 rounded-xl shadow-xl z-50 p-2"
-        >
-          <div class="grid grid-cols-2 gap-1">
-          <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇬🇧 EN</a>
-          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇫🇷 FR</a>
-          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇳 中文</a>
-          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
-          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
-          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
-          <a href="/th.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
-          <a href="/de.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
-          <a href="/es.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇪🇸 ES</a>
-          <a href="/it.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇹 IT</a>
-          <a href="/pt.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇹 PT</a>
-          <a href="/ru.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇷🇺 RU</a>
-          <a href="/nl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇳🇱 NL</a>
-          <a href="/pl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇱 PL</a>
-          <a href="/ar.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇦 AR</a>
-          <a href="/id.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇩 ID</a>
-          <a href="/sv.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇪 SV</a>
-          <a href="/cs.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇿 CS</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Book Now CTA -->
-      <a href="#contact" class="px-4 py-2 bg-emerald-900 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors active:scale-95">Réserver</a>
-
-      <!-- WhatsApp icon -->
-      <a href="https://wa.me/855976453855" aria-label="WhatsApp" class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.057 23.428a.75.75 0 0 0 .916.916l5.57-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.355l-.355-.212-3.683.975.99-3.595-.232-.372A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-</svg>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <a href="https://wa.me/855976453855" aria-label="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#25d366;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.886a.5.5 0 0 0 .611.611l6.031-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.77-.502-5.354-1.385l-.383-.22-3.97.968.988-3.87-.242-.396A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       </a>
-    </div>
-
-    <!-- Mobile right side: WhatsApp + Contact + Hamburger -->
-    <div class="flex lg:hidden items-center gap-2 shrink-0">
-      <a href="https://wa.me/855976453855" aria-label="WhatsApp" class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.057 23.428a.75.75 0 0 0 .916.916l5.57-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.355l-.355-.212-3.683.975.99-3.595-.232-.372A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-</svg>
+      <a href="#contact" aria-label="Contact" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
-      <!-- Mobile language dropdown (always visible in header) -->
-      <div class="relative lg:hidden" id="mobile-lang-wrapper">
-        <button
-          id="mobile-lang-btn"
-          aria-haspopup="true"
-          aria-expanded="false"
-          aria-label="Select language"
-          class="flex items-center gap-1 px-2 py-1.5 rounded-lg border border-stone-200 bg-white text-stone-700 hover:bg-stone-50 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
-        >
-          <span class="text-base leading-none">🇫🇷</span>
-          <svg class="w-3 h-3 text-stone-400 transition-transform duration-200" id="mobile-lang-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
-        </button>
-        <!-- Mobile language panel — opens below, right-aligned -->
-        <div
-          id="mobile-lang-panel"
-          role="menu"
-          class="hidden absolute right-0 top-full mt-2 w-48 bg-white border border-stone-200 rounded-xl shadow-xl z-50 p-2"
-        >
-          <div class="grid grid-cols-1 gap-0.5">
-          <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇬🇧 EN</a>
-          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇫🇷 FR</a>
-          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇳 中文</a>
-          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
-          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
-          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
-          <a href="/th.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
-          <a href="/de.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
-          <a href="/es.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇪🇸 ES</a>
-          <a href="/it.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇹 IT</a>
-          <a href="/pt.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇹 PT</a>
-          <a href="/ru.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇷🇺 RU</a>
-          <a href="/nl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇳🇱 NL</a>
-          <a href="/pl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇱 PL</a>
-          <a href="/ar.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇦 AR</a>
-          <a href="/id.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇩 ID</a>
-          <a href="/sv.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇪 SV</a>
-          <a href="/cs.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇿 CS</a>
-          <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇬🇧 EN</a>
-          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇫🇷 FR</a>
-          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇳 中文</a>
-          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
-          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
-          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
-          <a href="/th.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
-          <a href="/de.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
-          <a href="/es.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇪🇸 ES</a>
-          <a href="/it.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇹 IT</a>
-          <a href="/pt.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇹 PT</a>
-          <a href="/ru.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇷🇺 RU</a>
-          <a href="/nl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇳🇱 NL</a>
-          <a href="/pl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇱 PL</a>
-          <a href="/ar.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇦 AR</a>
-          <a href="/id.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇩 ID</a>
-          <a href="/sv.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇪 SV</a>
-          <a href="/cs.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇿 CS</a>
-          <a href="/sv.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇪 SV</a>
-          <a href="/cs.html" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇿 CS</a>
-
-          </div>
-        </div>
-      </div>
-      <script>
-      // Mobile language dropdown
-      (function() {
-        var btn   = document.getElementById('mobile-lang-btn');
-        var panel = document.getElementById('mobile-lang-panel');
-        var chev  = document.getElementById('mobile-lang-chevron');
-        if (!btn || !panel) return;
-        function openML() { panel.classList.remove('hidden'); btn.setAttribute('aria-expanded','true'); chev.style.transform='rotate(180deg)'; }
-        function closeML() { panel.classList.add('hidden'); btn.setAttribute('aria-expanded','false'); chev.style.transform=''; }
-        btn.addEventListener('click', function(e) { e.stopPropagation(); panel.classList.contains('hidden') ? openML() : closeML(); });
-        document.addEventListener('click', function(e) { var w=document.getElementById('mobile-lang-wrapper'); if(w&&!w.contains(e.target)) closeML(); });
-        document.addEventListener('keydown', function(e) { if(e.key==='Escape') closeML(); });
-      })();
-      </script>
-      <a href="https://wa.me/855976453855" aria-label="WhatsApp" class="p-2 rounded-full bg-green-500 hover:bg-green-600 transition-colors active:scale-95 flex items-center justify-content-center" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.886a.5.5 0 0 0 .611.611l6.031-1.471A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.943 0-3.77-.502-5.354-1.385l-.383-.22-3.97.968.988-3.87-.242-.396A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        </a>
-      <a href="#contact" onclick="closeMobileDrawer()" class="px-3 py-1.5 bg-emerald-900 text-white rounded-lg font-semibold text-xs hover:bg-emerald-800 transition-colors active:scale-95">Contact</a>
-      <button
-        id="mobile-menu-btn"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-        class="p-2 text-emerald-900 hover:bg-stone-100 rounded-full transition-colors"
-      >
-        <!-- Hamburger icon (shown when closed) -->
-        <svg id="hamburger-icon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <!-- Close icon (shown when open) -->
-        <svg id="close-icon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
     </div>
+  </div>
+</nav>
 
-  </nav>
-
-  <!-- Mobile drawer — slides down below header -->
-  <!-- Contains: Chat (WhatsApp), Language grid, Contact -->
-  <div
-    id="mobile-drawer"
-    class="hidden lg:hidden border-t border-stone-100 bg-stone-50/98 backdrop-blur-md shadow-lg"
-  >
-    <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-5">
-
-      <!-- Chat on WhatsApp -->
-      <a href="https://wa.me/855976453855" class="flex items-center gap-3 px-4 py-3 bg-emerald-900 text-white rounded-xl font-semibold text-sm hover:bg-emerald-800 transition-colors active:scale-[0.98]">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.858L.057 23.428a.75.75 0 0 0 .916.916l5.57-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.953-1.355l-.355-.212-3.683.975.99-3.595-.232-.372A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-</svg>
-        WhatsApp
-      </a>
-
-      <!-- Language selection -->
-      <div>
-        <p class="text-xs font-bold text-stone-400 uppercase tracking-widest mb-2 px-1">Language</p>
-        <div class="grid grid-cols-2 gap-1.5">
-          <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇬🇧 EN</a>
-          <a href="/fr.html" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-900 font-semibold text-sm whitespace-nowrap">🇫🇷 FR</a>
-          <a href="/zh.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇳 中文</a>
-          <a href="/ko.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇰🇷 한국어</a>
-          <a href="/ja.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇯🇵 日本語</a>
-          <a href="/vi.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇻🇳 Tiếng Việt</a>
-          <a href="/th.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇹🇭 ภาษาไทย</a>
-          <a href="/de.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇩🇪 DE</a>
-          <a href="/es.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇪🇸 ES</a>
-          <a href="/it.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇹 IT</a>
-          <a href="/pt.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇹 PT</a>
-          <a href="/ru.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇷🇺 RU</a>
-          <a href="/nl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇳🇱 NL</a>
-          <a href="/pl.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇵🇱 PL</a>
-          <a href="/ar.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇦 AR</a>
-          <a href="/id.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇮🇩 ID</a>
-          <a href="/sv.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇸🇪 SV</a>
-          <a href="/cs.html" class="flex items-center gap-2 px-3 py-2 rounded-lg text-stone-700 hover:bg-stone-100 text-sm whitespace-nowrap transition-colors">🇨🇿 CS</a>
-        </div>
-      </div>
-
-      <!-- Contact / Book -->
-      <a href="#contact" onclick="closeMobileDrawer()" class="flex items-center justify-center gap-2 px-4 py-3 border-2 border-emerald-900 text-emerald-900 rounded-xl font-semibold text-sm hover:bg-emerald-50 transition-colors active:scale-[0.98]">
-        <span class="material-symbols-outlined text-xl">mail</span>
-        Contact
-      </a>
-
+<!-- ── Mobile Drawer ───────────────────────────────────────────────── -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+    <a href="#home" class="drawer-link">Accueil</a>
+    <a href="#tours" class="drawer-link">Circuits</a>
+    <a href="#about" class="drawer-link">À propos</a>
+    <a href="#reviews" class="drawer-link">Avis</a>
+    <a href="#contact" class="drawer-link">Contact</a>
+    <a href="https://wa.me/855976453855" style="background:#c9a84c;color:#1a3a2a;font-weight:700;margin-top:8px;" class="drawer-link">Réserver</a>
+    <div class="drawer-lang-title">Language / Langue / 语言</div>
+    <div class="drawer-lang-grid">
+      <a href="/" class="">🇬🇧 EN</a>
+      <a href="/fr.html" class=" active">🇫🇷 FR</a>
+      <a href="/zh.html" class="">🇨🇳 中文</a>
+      <a href="/ko.html" class="">🇰🇷 한국어</a>
+      <a href="/ja.html" class="">🇯🇵 日本語</a>
+      <a href="/de.html" class="">🇩🇪 DE</a>
+      <a href="/es.html" class="">🇪🇸 ES</a>
+      <a href="/vi.html" class="">🇻🇳 Tiếng Việt</a>
+      <a href="/it.html" class="">🇮🇹 IT</a>
+      <a href="/pt.html" class="">🇵🇹 PT</a>
+      <a href="/ru.html" class="">🇷🇺 RU</a>
+      <a href="/th.html" class="">🇹🇭 ภาษาไทย</a>
+      <a href="/nl.html" class="">🇳🇱 NL</a>
+      <a href="/id.html" class="">🇮🇩 ID</a>
+      <a href="/sv.html" class="">🇸🇪 SV</a>
+      <a href="/pl.html" class="">🇵🇱 PL</a>
+      <a href="/ar.html" class="">🇸🇦 AR</a>
+      <a href="/cs.html" class="">🇨🇿 CS</a>
     </div>
   </div>
-</header>
+</div>
 
 <script>
 // ── Language dropdown (desktop) ──────────────────────────────────────────────
