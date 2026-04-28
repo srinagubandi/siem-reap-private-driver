@@ -442,28 +442,125 @@
 <body>
 
 <!-- Language Bar -->
-<div class="lang-bar">
-  <div class="container">
-    <a href="/">🇬🇧 EN</a>
-          <a href="/fr.html">🇫🇷 FR</a>
-          <a href="/zh.html">🇨🇳 中文</a>
-          <a href="/ko.html">🇰🇷 한국어</a>
-          <a href="/ja.html">🇯🇵 日本語</a>
-          <a href="/vi.html">🇻🇳 Tiếng Việt</a>
-          <a href="/th.html">🇹🇭 ภาษาไทย</a>
-          <a href="/de.html">🇩🇪 DE</a>
-          <a href="/es.html" class="active">🇪🇸 ES</a>
-          <a href="/it.html">🇮🇹 IT</a>
-          <a href="/pt.html">🇵🇹 PT</a>
-          <a href="/ru.html">🇷🇺 RU</a>
-          <a href="/nl.html">🇳🇱 NL</a>
-          <a href="/pl.html">🇵🇱 PL</a>
-          <a href="/ar.html">🇸🇦 AR</a>
-          <a href="/id.html">🇮🇩 ID</a>
-          <a href="/sv.html">🇸🇪 SV</a>
-          <a href="/cs.html">🇨🇿 CS</a>
+<!-- =============================================
+     LANGUAGE SWITCHER STRIP
+     Languages ordered by visitor volume to Siem Reap (most → least).
+     Left/right arrows scroll the strip. Active language is highlighted.
+     To reorder: change the order of <a> tags inside #lang-scroll.
+     ============================================= -->
+<div class="lang-bar-wrap" id="langBarWrap">
+  <!-- Left arrow — scrolls strip left -->
+  <button class="lang-arrow lang-arrow-left" id="langArrowLeft" aria-label="Scroll languages left" onclick="scrollLangBar(-1)">&#8249;</button>
+  <!-- Scrollable language strip -->
+  <div class="lang-scroll" id="langScroll">
+    <a href="/" class="lang-link">🇬🇧 EN</a>
+    <a href="/fr.html" class="lang-link">🇫🇷 FR</a>
+    <a href="/zh.html" class="lang-link">🇨🇳 中文</a>
+    <a href="/ko.html" class="lang-link">🇰🇷 한국어</a>
+    <a href="/ja.html" class="lang-link">🇯🇵 日本語</a>
+    <a href="/de.html" class="lang-link">🇩🇪 DE</a>
+    <a href="/es.html" class="lang-link active" aria-current="page">🇪🇸 ES</a>
+    <a href="/vi.html" class="lang-link">🇻🇳 Tiếng Việt</a>
+    <a href="/it.html" class="lang-link">🇮🇹 IT</a>
+    <a href="/pt.html" class="lang-link">🇵🇹 PT</a>
+    <a href="/ru.html" class="lang-link">🇷🇺 RU</a>
+    <a href="/th.html" class="lang-link">🇹🇭 ภาษาไทย</a>
+    <a href="/nl.html" class="lang-link">🇳🇱 NL</a>
+    <a href="/id.html" class="lang-link">🇮🇩 ID</a>
+    <a href="/sv.html" class="lang-link">🇸🇪 SV</a>
+    <a href="/pl.html" class="lang-link">🇵🇱 PL</a>
+    <a href="/ar.html" class="lang-link">🇸🇦 AR</a>
+    <a href="/cs.html" class="lang-link">🇨🇿 CS</a>
   </div>
+  <!-- Right arrow — scrolls strip right -->
+  <button class="lang-arrow lang-arrow-right" id="langArrowRight" aria-label="Scroll languages right" onclick="scrollLangBar(1)">&#8250;</button>
 </div>
+<style>
+  /* ── Language Switcher Strip ── */
+  .lang-bar-wrap {
+    background: var(--dark2);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    padding: 0;
+  }
+  .lang-arrow {
+    flex-shrink: 0;
+    background: var(--dark2);
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0 0.6rem;
+    cursor: pointer;
+    height: 100%;
+    min-height: 32px;
+    transition: color 0.15s, background 0.15s;
+    z-index: 2;
+  }
+  .lang-arrow:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+  .lang-arrow:disabled { opacity: 0.25; cursor: default; }
+  .lang-scroll {
+    display: flex;
+    gap: 0.15rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.3rem 0.25rem;
+    flex: 1;
+    min-width: 0;
+  }
+  .lang-scroll::-webkit-scrollbar { display: none; }
+  .lang-link {
+    flex-shrink: 0;
+    font-size: 0.70rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.22rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+  .lang-link:hover { background: rgba(212,175,55,0.15); color: var(--gold); }
+  .lang-link.active { background: var(--gold); color: var(--dark); }
+</style>
+<script>
+  /* ── Language Strip Arrow Scroll ── */
+  (function() {
+    var strip = document.getElementById('langScroll');
+    var btnL  = document.getElementById('langArrowLeft');
+    var btnR  = document.getElementById('langArrowRight');
+    var STEP  = 120; /* pixels per arrow click */
+
+    function updateArrows() {
+      if (!strip) return;
+      btnL.disabled = strip.scrollLeft <= 2;
+      btnR.disabled = strip.scrollLeft >= strip.scrollWidth - strip.clientWidth - 2;
+    }
+
+    window.scrollLangBar = function(dir) {
+      strip.scrollBy({ left: dir * STEP, behavior: 'smooth' });
+      setTimeout(updateArrows, 350);
+    };
+
+    /* Scroll active language into view on load */
+    var active = strip ? strip.querySelector('.lang-link.active') : null;
+    if (active) {
+      setTimeout(function() {
+        active.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+        updateArrows();
+      }, 100);
+    }
+
+    if (strip) strip.addEventListener('scroll', updateArrows);
+    window.addEventListener('load', updateArrows);
+  })();
+</script>
 
 <!-- Nav -->
 <nav>
