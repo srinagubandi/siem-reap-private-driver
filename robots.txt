@@ -1,0 +1,8 @@
+# robots.txt — angkordrivers.com
+# Allow all search engines to crawl all pages.
+# Sitemap is listed below for Google Search Console and Bing Webmaster Tools.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://angkordrivers.com/sitemap.xml
