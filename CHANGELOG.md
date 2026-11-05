@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-05 — New original photos and Tripadvisor icon
+
+Featured the supplied airport-family photograph in Moments with Guests and placed the supplied van-at-Angkor photograph with private transport/tour content. Replaced the Meet Leng Cheaheng profile photo with the supplied photograph of Leng beside his Hyundai van across all 18 language pages. Original files are committed under `images/`, without AI edits or changed pixels. The reference screenshot is not published.
+
+Added Tripadvisor's original owl-and-wordmark SVG to the above-the-fold rating badge, self-hosted under `assets/icons/` with source documentation. The badge retains its dated 5.0/5-from-6-reviews snapshot and official listing link. Scoped narrow-screen grid rules keep the date and review count readable, including long-language and RTL layouts.
+
+DeepSeek V4 Pro maximum reasoning produced the photo update, with Qwen3 Coder 480B used for focused coding repairs. Preserved all existing marketing copy, prices, contacts, booking settings, genuine Jeep photos, hidden Google Reviews state, and GitHub Pages-only hosting. The photo-update script has stable markers to avoid duplicate images when run again.
+
 ## 2026-11-05 — Hero rating badge refinement
 
 Added an above-the-fold, localized Tripadvisor rating badge linking to the supplied listing. It shows the verified 5.0/5 rating from 6 reviews with a dated snapshot label, not a live-widget claim. The unconfigured Google Reviews heading and setup area are intentionally hidden, with their copy retained for later configuration and the inactive Elfsight request removed.

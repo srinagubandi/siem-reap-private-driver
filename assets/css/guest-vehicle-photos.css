@@ -1,0 +1,47 @@
+/* Guest vehicle and original profile photo updates */
+.guest-featured-photo,
+.guest-van-photo {
+    display: block;
+    margin-inline: auto;
+}
+
+.guest-featured-photo {
+    max-width: 880px;
+}
+
+.guest-featured-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.guest-van-photo {
+    max-width: 480px;
+}
+
+.guest-van-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,.14);
+}
+
+.guest-van-photo figcaption {
+    margin-top: .75rem;
+    text-align: center;
+    font-size: .95rem;
+    color: rgba(0,0,0,.72);
+}
+
+.profile-photo-original {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
+.guest-featured-photo{margin-block:0 1.5rem}
+.guest-van-photo{margin-block:2rem 0}

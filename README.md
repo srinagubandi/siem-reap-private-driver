@@ -20,6 +20,8 @@ A dated snapshot shows **5.0/5 from 6 reviews, verified 2026-11-05**. It does no
 
 The five original CloudFront guest-gallery URLs no longer work. At the owner's request, the gallery now reuses the five genuine photographs already committed under `images/`: the couple, driver, temple guest, forest Jeeps, and Jeep fleet. Their existing localized descriptions are reused so the images are not mislabeled as airport or hotel photographs. The original image bytes and the Jeep section are preserved. No generated people or neutral placeholders are used.
 
+Three additional original photographs supplied on 5 November 2026 are kept under `images/`: `guest-family-airport-departures.jpg` is featured in Moments with Guests, `private-van-angkor-gate.jpg` appears with private transport/tour content rather than the Jeep section, and `leng-cheaheng-private-driver.jpg` replaces the profile image in Meet Leng Cheaheng. Image content and original bytes are preserved; the supplied mobile screenshot is only a reference and is not published.
+
 Other working legacy CDN images and the Google Fonts files have been copied into `assets/local/`. `asset-localisation-report.json` records their original URLs and local mapping. Production does not need the original media CDNs or Google Fonts endpoints.
 
 ## Development tools

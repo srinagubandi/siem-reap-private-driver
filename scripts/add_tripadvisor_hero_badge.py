@@ -63,7 +63,7 @@ def build_badge(data, filename):
     aria = html.escape(aria_tpl.format(date=date_raw), quote=True)
     badge = (
         f'''<a id='{BADGE_ID}' class='tripadvisor-hero-badge' href='{href}' target='_blank' rel='noopener' aria-label='{aria}'>'''
-        '''<span class='tripadvisor-hero-badge__main'><span class='tripadvisor-hero-badge__brand'>TripAdvisor</span>'''
+        '''<span class='tripadvisor-hero-badge__main'><span class="tripadvisor-hero-badge__brand"><img src="/assets/icons/tripadvisor-logo.svg" alt="Tripadvisor" width="96" height="21" decoding="async"></span>'''
         f'''<span class='tripadvisor-hero-badge__rating'>{r}</span><span class='tripadvisor-hero-badge__count'>{c}</span></span>'''
         f'''<span class='tripadvisor-hero-badge__date'><span class='tripadvisor-hero-badge__date-asof'>{asof_disp}</span> <span class='tripadvisor-hero-badge__date-value' dir='auto'>{date_disp}</span></span>'''
         '''<span class='tripadvisor-hero-badge__arrow' aria-hidden='true'>↗</span></a>'''

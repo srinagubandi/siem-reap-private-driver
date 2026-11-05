@@ -149,7 +149,8 @@
 <link rel="stylesheet" href="/assets/css/enhancements.css">
 <link rel="stylesheet" href="/assets/css/release-fixes.css">
 <noscript><style>.nav-links{display:flex!important;flex-wrap:wrap!important;height:auto!important;}.hamburger{display:none!important;}nav{position:static!important;}</style></noscript><link rel="stylesheet" href="/assets/css/tripadvisor-hero-badge.css">
-</head>
+
+<link rel='stylesheet' href='/assets/css/guest-vehicle-photos.css'></head>
 <body class="bg-background text-on-surface font-sans selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- Top Navigation Bar -->
 <!-- =============================================
@@ -258,7 +259,7 @@
 </div>
 <div class="container mx-auto px-6 relative z-10">
 <div class="max-w-2xl">
-<a id='tripadvisor-hero-badge' class='tripadvisor-hero-badge' href='https://www.tripadvisor.co.uk/Attraction_Review-g297390-d34664961-Reviews-Angkordrivers-Siem_Reap_Siem_Reap_Province.html' target='_blank' rel='noopener' aria-label='TripAdvisor: 6件のレビューに基づく5つ星中5.0の評価。評価日2026年11月5日。TripAdvisor公式ページを開きます。'><span class='tripadvisor-hero-badge__main'><span class='tripadvisor-hero-badge__brand'>TripAdvisor</span><span class='tripadvisor-hero-badge__rating'>5.0/5</span><span class='tripadvisor-hero-badge__count'>(6件のレビュー)</span></span><span class='tripadvisor-hero-badge__date'><span class='tripadvisor-hero-badge__date-asof'>評価日</span> <span class='tripadvisor-hero-badge__date-value' dir='auto'>2026年11月5日</span></span><span class='tripadvisor-hero-badge__arrow' aria-hidden='true'>↗</span></a><h1 class="text-5xl md:text-7xl font-serif tracking-tight text-primary leading-tight mb-6">
+<a id='tripadvisor-hero-badge' class='tripadvisor-hero-badge' href='https://www.tripadvisor.co.uk/Attraction_Review-g297390-d34664961-Reviews-Angkordrivers-Siem_Reap_Siem_Reap_Province.html' target='_blank' rel='noopener' aria-label='TripAdvisor: 6件のレビューに基づく5つ星中5.0の評価。評価日2026年11月5日。TripAdvisor公式ページを開きます。'><span class='tripadvisor-hero-badge__main'><span class="tripadvisor-hero-badge__brand"><img src="/assets/icons/tripadvisor-logo.svg" alt="Tripadvisor" width="96" height="21" decoding="async"></span><span class='tripadvisor-hero-badge__rating'>5.0/5</span><span class='tripadvisor-hero-badge__count'>(6件のレビュー)</span></span><span class='tripadvisor-hero-badge__date'><span class='tripadvisor-hero-badge__date-asof'>評価日</span> <span class='tripadvisor-hero-badge__date-value' dir='auto'>2026年11月5日</span></span><span class='tripadvisor-hero-badge__arrow' aria-hidden='true'>↗</span></a><h1 class="text-5xl md:text-7xl font-serif tracking-tight text-primary leading-tight mb-6">
                         シェムリアップの <span class="text-secondary italic">プライベートドライバー</span>
 </h1>
 <p class="text-xl text-on-surface-variant mb-10 font-sans leading-relaxed">
@@ -283,8 +284,8 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="relative">
 <div class="rounded-2xl overflow-hidden shadow-2xl">
-<!-- Real photo: Leng Chea Heng with his Hyundai H1 minivan on the Angkor road -->
-<img alt="Leng Chea Heng with his Hyundai H1 minivan" class="w-full h-full object-cover" src="/assets/local/images/e94e002bd1ea.jpeg"/>
+<!-- Original photo: Leng Chea Heng with his Hyundai H1 minivan -->
+<img alt='Leng Chea Heng with his Hyundai H1 minivan' class='profile-photo-original w-full h-auto' src='/images/leng-cheaheng-private-driver.jpg' width='1195' height='896' loading='lazy' decoding='async'>
 </div>
 <div class="hidden sm:block absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
 <p class="font-serif text-2xl text-on-secondary-container">12年以上の経験</p>
@@ -374,7 +375,12 @@
 <p class="text-white/70 text-sm mb-4">クーレン山、トンレサップ湖、または遠くのコー・ケー遺跡への日帰り旅行。</p>
 </div>
 </a>
-</div>
+</div><!-- guest-van-angkor-photo (idempotent marker) -->
+<figure class='guest-van-photo' id='guest-van-angkor-photo'>
+  <img src='/images/private-van-angkor-gate.jpg' alt='アンコール寺院の門のそばに駐車したプライベートバン' width='960' height='1280' loading='lazy' decoding='async'>
+  <figcaption>空港送迎</figcaption>
+</figure>
+
 </div>
 </section>
 <!-- Why Choose Me -->
@@ -479,13 +485,17 @@
 </div>
 </section>
 <!-- Photo Gallery: Real client moments -->
-<section class="py-20 bg-surface">
+<section id='guest-gallery' class="py-20 bg-surface">
 <div class="max-w-7xl mx-auto px-6">
 <div class="text-center mb-12">
 <h2 class="text-4xl font-serif text-primary mb-3">ゲストとの思い出</h2>
 <p class="text-on-surface-variant">実際の旅からの本物の写真。</p>
 </div>
 <!-- Masonry-style 5-photo grid -->
+<!-- guest-gallery-family-photo (idempotent marker) -->
+<figure class='guest-featured-photo' id='guest-family-photo'>
+  <img src='/images/guest-family-airport-departures.jpg' alt='国際線出発ロビーでドライバーと一緒のゲスト家族' width='1600' height='1200' loading='lazy' decoding='async'>
+</figure>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 <!-- Large left: airport farewell group -->
 <div class="col-span-2 md:col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-md h-64 md:h-full">
