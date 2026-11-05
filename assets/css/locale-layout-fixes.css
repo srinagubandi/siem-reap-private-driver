@@ -1,0 +1,18 @@
+#about ul.grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#about ul.grid > li {
+  min-width: 0;
+}
+
+#about ul.grid > li > span:last-child {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+#about ul.grid > li > span.material-symbols-outlined {
+  flex: none;
+}

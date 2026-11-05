@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-05 — All identified language-audit issues repaired
+
+Resolved the 320px Spanish, Portuguese, and Swedish bio benefit-label overflow with a shared, scoped shrink-and-wrap rule. Labels remain fully readable without hidden overflow, ellipses, or smaller text; icons retain their size.
+
+Localized the remaining City Discovery tour heading in Japanese, Vietnamese, Thai, German, Spanish, Italian, Portuguese, Russian, Dutch, Polish, Arabic, Indonesian, Swedish, and Czech. Existing French, Chinese, Korean, and English headings remain unchanged. Added an idempotent source-preserving repair script.
+
+Qwen3 Coder 480B implemented the repairs and Qwen3-VL 235B reviewed repaired 320px grids and all 18 tour headings. Preview checks passed all 18 languages at 320px, 390px, and 1440px: no horizontal page overflow, no badge/date/count overlap, preserved vertical centering and above-fold position, loaded original photos with natural aspect ratios, and Google Reviews still hidden. The three original photo files, other copy, prices, contacts, booking forms, metadata, and Tripadvisor snapshot remain unchanged. GitHub Pages-only hosting and no public Manus branding are retained.
+
 ## 2026-11-05 — Tripadvisor badge vertical centering
 
 Vertically centered the official logo, rating, and review count within the badge's main row using a narrowly scoped alignment rule from Qwen3 Coder 480B. Preserved the dated snapshot, date/arrow alignment, desktop one-row and mobile two-row layouts, RTL behavior, all content and photos, and GitHub Pages-only hosting. A fresh open-weight vision review checks the corrected badge with all 18 language pages.
