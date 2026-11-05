@@ -1,0 +1,23 @@
+# Changelog
+
+## 2026-11-05
+
+### Tripadvisor
+
+Replaced the unconfigured Tripadvisor placeholder with a dated 5.0/5 summary from 6 reviews, verified 2026-11-05, and linked the summary and review action to the supplied Angkordrivers listing. This is the owner-approved static plan, not a live widget. Service provider JSON-LD includes the real listing URL; no AggregateRating rich-result markup is added.
+
+### Photos and assets
+
+Reused the five genuine photographs from `images/` in the broken guest-gallery slots across all 18 language pages, using their existing localized descriptions. Original image files are unchanged. No generated people or placeholder photo tiles are used. Other working images, fonts, production CSS, JavaScript, and favicons are served from Git instead of legacy external media or runtime Tailwind/Google Fonts requests. Added matching SVG, PNG, ICO, Apple touch, and manifest icons.
+
+### Mobile and desktop
+
+Improved mobile hero readability and full-width actions, section spacing, headings, responsive cards, and booking fields. Added shared mobile drawer behavior with focus trapping, Escape/overlay dismissal, focus restoration, state attributes, and scroll locking. Language-strip scrolling respects RTL and reduced motion. Removed nonfunctional testimonial arrows and the incorrect decorative Tripadvisor bird. Added a no-JavaScript navigation fallback and viewport safe-area support.
+
+### Copy and booking
+
+Preserved visible marketing and translated copy outside the authorized Tripadvisor area. Removed only decorative icon text from inactive controls. Associated all six visible booking labels with their controls; retained the original Formspree endpoint, contact information, prices, and booking options. Google/Elfsight setup text remains unchanged and is documented as pending setup.
+
+### Release checks
+
+Structural checks cover all 18 canonical language pages. Chromium checks cover image loading, mobile drawer states, keyboard Escape/focus restoration, booking-label associations, representative narrow/desktop widths, and navigation without JavaScript. JSON-LD syntax is parsed separately. These checks do not claim legal accessibility compliance or guaranteed search-engine visibility.

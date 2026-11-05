@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that must be compiled with Tailwind */
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .font-serif { font-family: 'Noto Serif', serif; }
+  .font-sans { font-family: 'Manrope', sans-serif; }
+}

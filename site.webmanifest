@@ -1,0 +1,24 @@
+{
+  "name": "Angkor Drivers — Private Driver & Local Guide Siem Reap",
+  "short_name": "Angkor Drivers",
+  "description": "Private driver and local guide in Siem Reap, Cambodia. Angkor Wat tours, airport transfers, custom day trips.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fcf9f2",
+  "theme_color": "#154212",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

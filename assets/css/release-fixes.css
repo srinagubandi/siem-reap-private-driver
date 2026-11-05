@@ -1,0 +1,175 @@
+/* =============================================
+   Angkor Drivers — Release Fixes Layer
+   Loaded after enhancements.css (and Tailwind)
+   ============================================= */
+
+/* ---------- Nav controls: min 44px, 320px fit ---------- */
+.nav-inner {
+  padding: 0 16px;
+}
+.nav-inner > div:last-child {
+  gap: 4px;
+}
+.nav-inner > div:last-child > a,
+.nav-inner > div:last-child > button.hamburger {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.nav-inner a[aria-label="WhatsApp"],
+.nav-inner a[aria-label="Contact"] {
+  width: 44px;
+  height: 44px;
+}
+.nav-inner .hamburger {
+  width: 44px;
+  height: 44px;
+}
+@media (max-width: 420px) {
+  .nav-inner {
+    padding: 0 12px;
+  }
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- Drawer z-index & hide fixed controls ---------- */
+.mobile-drawer,
+#mobileDrawer {
+  z-index: 10000;
+}
+body:has(#mobileDrawer.open) a[style*="position: fixed"],
+body:has(#mobileDrawer.open) #mobile-book-bar {
+  display: none !important;
+}
+
+/* ---------- Floating WhatsApp FAB ---------- */
+a[href^="https://wa.me/855976453855"][target="_blank"][style*="position: fixed"] {
+  z-index: 9990 !important;
+  bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+  width: 56px;
+  height: 56px;
+}
+@media (min-width: 768px) {
+  a[href^="https://wa.me/855976453855"][target="_blank"][style*="position: fixed"] {
+    bottom: 24px !important;
+  }
+}
+
+/* Primary bar anchor min 44 */
+#mobile-book-bar a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Headings & long text safety ---------- */
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* ---------- Hero ---------- */
+@media (min-width: 768px) {
+  #home {
+    min-height: clamp(680px, 80vh, 820px);
+  }
+}
+@media (max-width: 767px) {
+  #home .absolute.inset-0.bg-gradient-to-r {
+    background: linear-gradient(
+      to bottom,
+      rgba(252, 249, 242, 0.95) 0%,
+      rgba(252, 249, 242, 0.95) 70%,
+      rgba(252, 249, 242, 0) 100%
+    ) !important;
+  }
+}
+
+/* ---------- Mobile section padding ---------- */
+@media (max-width: 767px) {
+  section.py-24,
+  section.py-20 {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* ---------- Contact form ---------- */
+input, select, textarea {
+  min-width: 0;
+}
+#contact .flex.items-center.gap-3 input[type="tel"] {
+  min-width: 0;
+}
+
+/* ---------- Footer ---------- */
+footer .flex.gap-8 a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  footer .flex.gap-8 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+}
+
+/* ---------- Tour cards: content-fit, no fixed height ---------- */
+@media (max-width: 767px) {
+  .grid.md\:h-\[700px\] > * {
+    height: auto !important;
+    min-height: 240px;
+  }
+  .grid.md\:h-\[700px\] .h-64 {
+    height: auto !important;
+    min-height: 240px;
+  }
+}
+
+/* ---------- Hide testimonial chevron controls ---------- */
+.hidden.md\:flex.gap-4 {
+  display: none !important;
+}
+
+/* ---------- RTL: no double-reverse ---------- */
+[dir="rtl"] .nav-inner {
+  flex-direction: row;
+}
+[dir="rtl"] .nav-links {
+  flex-direction: row;
+}
+
+/* ---------- Reduced motion: kill inline hover transform ---------- */
+@media (prefers-reduced-motion: reduce) {
+  a[style*="position: fixed"] {
+    transition: none !important;
+    transform: none !important;
+  }
+  img:hover,
+  .group:hover img,
+  a:hover img {
+    transform: none !important;
+  }
+}
+
+/* ---------- Decorative clipping only own section ---------- */
+/* (no global overflow hidden) */
+
+/* Keep the experience badge within the tablet viewport. */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #about [class~="-right-8"] {
+    right: 0;
+  }
+}

@@ -1,0 +1,401 @@
+/* =============================================
+   Angkor Drivers — Accessibility & Visual Enhancement Layer
+   Loaded after any compiled Tailwind CSS.
+   This second-pass CSS fixes concrete issues; it does NOT mask overflow.
+   ============================================= */
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* B4: Remove overflow-x:hidden from body.  We fix real overflow causes,
+   so the document must report its true scrollWidth. */
+body {
+  /* No overflow-x masking here. */
+}
+
+/* ---------- Focus visibility (global) ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #944926 !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(148, 73, 38, 0.25) !important;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: #154212;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Hero readability (V1) ---------- */
+/* Mobile: stronger scrim behind the paragraph band; drop the text-shadow
+   once contrast passes 4.5:1 against the scrim. */
+@media (max-width: 767px) {
+  #home .absolute.inset-0.bg-gradient-to-r {
+    background: linear-gradient(
+      to bottom,
+      rgba(252, 249, 242, 0.95) 0%,
+      rgba(252, 249, 242, 0.85) 35%,
+      rgba(252, 249, 242, 0.55) 65%,
+      rgba(252, 249, 242, 0) 100%
+    ) !important;
+  }
+  #home h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    line-height: 1.15;
+    color: #154212;
+    text-shadow: none;
+  }
+  #home p {
+    font-size: 1rem;
+    color: #1c1c18;
+    text-shadow: none;
+    max-width: 34ch;
+  }
+}
+
+/* Desktop: keep original horizontal gradient but strengthen slightly. */
+@media (min-width: 768px) {
+  #home .absolute.inset-0.bg-gradient-to-r {
+    background: linear-gradient(
+      to right,
+      rgba(252, 249, 242, 0.95) 0%,
+      rgba(252, 249, 242, 0.55) 45%,
+      rgba(252, 249, 242, 0) 100%
+    ) !important;
+  }
+}
+
+/* ---------- Hero CTAs (V2) ---------- */
+/* Mobile: equal full-width stacking, 44px min height, visible Call Now
+   outline in jungle green instead of low-contrast surface-container-highest. */
+@media (max-width: 767px) {
+  #home .flex.flex-wrap.gap-4 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  #home .flex.flex-wrap.gap-4 a {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  /* Call Now — jungle green outline on cream */
+  #home a[href^="tel:"] {
+    background: transparent;
+    color: #154212;
+    border: 2px solid #154212;
+  }
+  #home a[href^="tel:"]:hover {
+    background: rgba(21, 66, 18, 0.06);
+  }
+}
+
+/* ---------- Sticky controls + FAB clearance (V3) ---------- */
+#mobile-book-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Floating WhatsApp FAB — raise above sticky bar; never overlap nav icons. */
+.floating-whatsapp {
+  z-index: 9990;  /* below sticky bar's 9998 so they stack cleanly */
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+  .floating-whatsapp {
+    bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+    width: 56px;
+    height: 56px;
+  }
+}
+@media (min-width: 768px) {
+  .floating-whatsapp {
+    bottom: 24px !important;
+  }
+}
+
+/* ---------- Hamburger drawer ---------- */
+.mobile-drawer,
+#mobileDrawer {
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.mobile-drawer.open,
+#mobileDrawer.open {
+  display: flex;
+}
+.drawer-panel {
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+}
+.mobile-drawer.open .drawer-panel,
+#mobileDrawer.open .drawer-panel {
+  transform: translateX(0);
+}
+
+/* RTL: drawer slides from right */
+[dir="rtl"] .drawer-panel {
+  transform: translateX(100%);
+}
+[dir="rtl"] .mobile-drawer.open .drawer-panel,
+[dir="rtl"] #mobileDrawer.open .drawer-panel {
+  transform: translateX(0);
+}
+
+/* Drawer link targets >=44px */
+.drawer-panel a,
+.drawer-close {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.drawer-close {
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+/* ---------- Language bar (V7) ---------- */
+.lang-bar {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 44px;
+}
+.lang-arrow {
+  min-width: 44px;   /* 44px touch target */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang-bar a {
+  min-height: 44px;  /* V7: chip hit area to 44px */
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 13px;
+  gap: 6px;
+}
+
+/* Desktop: hide arrows, native scroll remains dense but all 18 visible */
+@media (min-width: 769px) {
+  .lang-arrow {
+    display: none;
+  }
+  .lang-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ---------- Testimonial section ---------- */
+/* Arrow buttons were removed in HTML; this space is now a static grid. */
+
+/* ---------- Form (B2, mobile padding) ---------- */
+label[for] {
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  font: inherit;
+}
+/* Mobile: min-height 44px and reduced p-12 padding. */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+  .p-12 {
+    padding: 1.25rem;   /* 20px — replaces over-wide 48px on mobile */
+  }
+  .lg\:w-1\/2.p-12,
+  .lg\:w-1\/2.p-12 {
+    padding: 1.25rem;
+  }
+}
+
+/* ---------- Bento / grid fixes ---------- */
+.group.relative.overflow-hidden.rounded-2xl > a.absolute {
+  position: absolute;
+  inset: 0;
+}
+.group.relative.overflow-hidden.rounded-2xl > a.absolute + .absolute {
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .grid.md\:h-\[700px\] {
+    height: auto;
+  }
+  .grid.md\:h-\[700px\] > * {
+    height: 220px !important;
+  }
+}
+.rounded-2xl,
+.rounded\[2rem\] {
+  border-radius: 16px;
+}
+
+/* ---------- Vertical rhythm ---------- */
+section.py-24,
+section.py-20 {
+  padding-top: 3.5rem;   /* 56px */
+  padding-bottom: 3.5rem;
+}
+@media (min-width: 1024px) {
+  section.py-24,
+  section.py-20 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.mb-32 {
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 1024px) {
+  .mb-32 {
+    margin-bottom: 6rem;
+  }
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Noto Serif', serif;
+  line-height: 1.2;
+}
+body, p, a, button, input, select, textarea {
+  font-family: 'Manrope', sans-serif;
+}
+/* Remove Playfair fallback in Jeep section */
+[style*="Playfair Display"] {
+  font-family: 'Noto Serif', serif !important;
+}
+
+/* ---------- Color tokenisation (V6) ---------- */
+/* The brand gold #c9a84c stays as the explicit gold accent across nav,
+   drawer, language strip and Jeep cards.  Jungle, terracotta, cream are
+   then used consistently everywhere else. */
+.bg-\[\#1a2e1a\],
+section#jeep {
+  background-color: #1a3a2a !important;
+}
+.bg-\[\#243824\] {
+  background-color: #1a3a2a !important;
+}
+.bg-emerald-950 {
+  background-color: #154212 !important;
+}
+.bg-stone-100 {
+  background-color: #fcf9f2 !important;
+}
+
+/* The npm-compiled Tailwind CSS already tokens these; this layer just
+   prevents stray inline hex surprises for the Jeep section. */
+
+/* ---------- RTL support ---------- */
+[dir="rtl"] .lang-bar {
+  direction: rtl;
+}
+[dir="rtl"] .lang-arrow.left {
+  right: 0;
+  left: auto;
+  transform: translateY(-50%) rotate(180deg);
+}
+[dir="rtl"] .lang-arrow.right {
+  left: 0;
+  right: auto;
+  transform: translateY(-50%) rotate(180deg);
+}
+[dir="rtl"] .nav-inner {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  img:hover,
+  .group:hover img,
+  a:hover img {
+    transform: none !important;
+  }
+  .drawer-panel {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Broken guest images (D5) ---------- */
+/* Neutral tile fallback — never a stranger photo.  Original alt is shown as
+   the only text and related to the missing file by the asset report. */
+.guest-photo-cell {
+  position: relative;
+  overflow: hidden;
+  background-color: #f1eee7;
+}
+.guest-photo-cell.img-error .guest-photo {
+  display: none;
+}
+.guest-photo-cell.img-error::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fcf9f2 0%, #e5e2db 100%);
+  border-radius: 16px;
+}
+.guest-photo-cell.img-error::before {
+  content: attr(data-alt);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #42493e;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ---------- No-JS fallback (supports the noscript block) ---------- */
+/* The noscript block in <head> shows .nav-links when JS is absent.  This
+   styles it consistently with the enhanced JS experience. */
+
+/* ---------- Safe-area bottom padding for sticky bar ---------- */
+#mobile-book-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

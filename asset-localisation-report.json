@@ -1,0 +1,74 @@
+{
+  "generated": "2026-11-05",
+  "image_localisation": {
+    "successful": {
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/vZCckfuofaKcSgCS.jpg": "/assets/local/images/d568c6cfa569.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/tQxmWuMifWpTMlAz.jpeg": "/assets/local/images/e94e002bd1ea.jpeg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/OMtBikkqreOFewLd.jpg": "/assets/local/images/bc916b76c738.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/NvZbsEnUJKBhfFhN.jpg": "/assets/local/images/886ab488ece9.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/PEqIicgumEDgoRwg.jpg": "/assets/local/images/9e762ac3c2bc.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/KZhmwTFxqyLwHjvX.jpg": "/assets/local/images/7600f6aff63b.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/sbbiYcbZUZpqhuDH.jpg": "/assets/local/images/d26c1dc718bf.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/sMtNGofYMDALWnUN.jpg": "/assets/local/images/8cc84022384e.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/JQiBemTAwbtrsjrU.jpg": "/assets/local/images/4d1954971e1e.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/osYFrywFWvMyehXZ.jpg": "/assets/local/images/9ef2cb9c8499.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/NZxTdznbSLtCzrex.jpg": "/assets/local/images/90566ee35fea.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/GiMMdlYQExunoYDQ.jpg": "/assets/local/images/512159cfd606.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663082775454/YUDKgNjvPfXHQdJH.jpg": "/assets/local/images/61dc636cfc2f.jpg"
+    },
+    "failed": {
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-airport1_492cfe83.jpeg": "download failed or empty response",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-airport2_33fde0f5.jpeg": "download failed or empty response",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-airport3_509b5f90.jpeg": "download failed or empty response",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-hotel_c33675cc.jpeg": "download failed or empty response",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/clients-shop_b4052a1d.jpeg": "download failed or empty response",
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663082775454/GQgBcDybkWFAzatrraqA3Q/favicon-32x32_528a2b2e.png": "download failed or empty response"
+    },
+    "notes": [
+      "All successful downloads are stored under assets/local/images with deterministic md5-prefixed names.",
+      "Guest photos formerly served from d2xsxph8kpxj0f.cloudfront.net returned 403 and could not be localised.",
+      "No human images were substituted. CSS neutral tiles remain the fallback for missing guest photos."
+    ]
+  },
+  "font_localisation": {
+    "css_files": {
+      "https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap": "/assets/local/css/fonts-05bb0977fd.css",
+      "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap": "/assets/local/css/fonts-a39f5c6fcb.css"
+    },
+    "font_files": {
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggqxSuXd.woff2": "/assets/local/fonts/font-a07b82c39b.woff2",
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggOxSuXd.woff2": "/assets/local/fonts/font-9f286813e9.woff2",
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggSxSuXd.woff2": "/assets/local/fonts/font-306e49d1f2.woff2",
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggixSuXd.woff2": "/assets/local/fonts/font-2c51341adb.woff2",
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggmxSuXd.woff2": "/assets/local/fonts/font-4f18573e82.woff2",
+      "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSg.woff2": "/assets/local/fonts/font-66cfc06567.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cFrqvyzw.woff2": "/assets/local/fonts/font-5aaa2d4fb0.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cMrqvyzw.woff2": "/assets/local/fonts/font-03e77808be.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cErqvyzw.woff2": "/assets/local/fonts/font-300e86a4a9.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cLrqvyzw.woff2": "/assets/local/fonts/font-041a0100f2.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_d0rqvyzw.woff2": "/assets/local/fonts/font-16838666c0.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cHrqvyzw.woff2": "/assets/local/fonts/font-9b40324dc8.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cGrqvyzw.woff2": "/assets/local/fonts/font-0cea22c2b0.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6saw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_FXP0RgnaOg9MYBNLg_cIrqs.woff2": "/assets/local/fonts/font-39b726d324.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf3D33Esw.woff2": "/assets/local/fonts/font-d2d32d9f99.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf-D33Esw.woff2": "/assets/local/fonts/font-94439f984b.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf2D33Esw.woff2": "/assets/local/fonts/font-7523348a69.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf5D33Esw.woff2": "/assets/local/fonts/font-deee47f712.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYeGD33Esw.woff2": "/assets/local/fonts/font-42e69b656e.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf1D33Esw.woff2": "/assets/local/fonts/font-e558e7a28a.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf0D33Esw.woff2": "/assets/local/fonts/font-a5162cbea2.woff2",
+      "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf6D30.woff2": "/assets/local/fonts/font-0433122ac7.woff2",
+      "https://fonts.gstatic.com/s/materialsymbolsoutlined/v383/kJEPBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzBwG-RpA6RzaxHMPdY40KH8nGzv3fzfVJO1Q.woff2": "/assets/local/fonts/font-973ac8dc31.woff2"
+    }
+  },
+  "guest_gallery": {
+    "replacement_files": [
+      "/images/jeep-couple-bayon.jpg",
+      "/images/jeep-driver-angkor.jpg",
+      "/images/jeep-girl-temple.jpg",
+      "/images/jeep-two-forest.jpg",
+      "/images/jeep-fleet-street.jpg"
+    ],
+    "reason": "User requested reuse of these five genuine Git photographs for the broken gallery slots. Original photos remain unchanged; existing localized Jeep descriptions reused. No generated or placeholder guest photographs."
+  }
+}
