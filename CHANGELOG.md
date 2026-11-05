@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-05 — Tripadvisor badge vertical centering
+
+Vertically centered the official logo, rating, and review count within the badge's main row using a narrowly scoped alignment rule from Qwen3 Coder 480B. Preserved the dated snapshot, date/arrow alignment, desktop one-row and mobile two-row layouts, RTL behavior, all content and photos, and GitHub Pages-only hosting. A fresh open-weight vision review checks the corrected badge with all 18 language pages.
+
 ## 2026-11-05 — New original photos and Tripadvisor icon
 
 Featured the supplied airport-family photograph in Moments with Guests and placed the supplied van-at-Angkor photograph with private transport/tour content. Replaced the Meet Leng Cheaheng profile photo with the supplied photograph of Leng beside his Hyundai van across all 18 language pages. Original files are committed under `images/`, without AI edits or changed pixels. The reference screenshot is not published.
