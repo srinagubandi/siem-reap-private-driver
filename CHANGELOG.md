@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-05 — Hero rating badge refinement
+
+Added an above-the-fold, localized Tripadvisor rating badge linking to the supplied listing. It shows the verified 5.0/5 rating from 6 reviews with a dated snapshot label, not a live-widget claim. The unconfigured Google Reviews heading and setup area are intentionally hidden, with their copy retained for later configuration and the inactive Elfsight request removed.
+
+The owner explicitly requires GitHub Pages only for this project, never Railway. All rendering assets, including those used by the legacy design document, thank-you page, and 404 page, are now committed local resources. No Manus branding script or visible “Made with Manus” text is present in the public site. Existing booking services, contacts, photographs, and marketing copy are preserved.
+
+The badge change is developed with two DeepSeek V4 Pro 0813 maximum-reasoning passes and two design-only reviews. Scoped mobile/desktop and RTL checks verify above-the-fold placement, overflow, Google-section hiding, and public-site branding.
+
 ## 2026-11-05
 
 ### Tripadvisor

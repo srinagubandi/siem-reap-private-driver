@@ -26,8 +26,7 @@
     },
     "notes": [
       "All successful downloads are stored under assets/local/images with deterministic md5-prefixed names.",
-      "Guest photos formerly served from d2xsxph8kpxj0f.cloudfront.net returned 403 and could not be localised.",
-      "No human images were substituted. CSS neutral tiles remain the fallback for missing guest photos."
+      "Guest photos formerly served from d2xsxph8kpxj0f.cloudfront.net returned 403 and could not be localised."
     ]
   },
   "font_localisation": {
@@ -70,5 +69,45 @@
       "/images/jeep-fleet-street.jpg"
     ],
     "reason": "User requested reuse of these five genuine Git photographs for the broken gallery slots. Original photos remain unchanged; existing localized Jeep descriptions reused. No generated or placeholder guest photographs."
+  },
+  "ancillary_pages": {
+    "pages": [
+      "code.html",
+      "thank-you.html",
+      "404.html"
+    ],
+    "image_mapping": {
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBjerOeiYy5H85CTHy4MTsuivgjXeRgEJWBr-OrveU93G39QM0eX9Li6Dypig67W6_ORpbW1wGIk28xexIcfkTl7VkHDiUx309mE2OGI-S_6poxR3G5X0Xo6fBXggXGv1qW_d_rNEyZcriIsSYiYBw1_rZrvju7rweGMWzOX-2C66xupD0gnEqebAWKteoYPltZYMSI8GdvV1-UysxCYf8thj2taINmi5iZQgNUqpgV9r_elAejmr2EdfniEpdvFnUIzCf5CD3l7pc": "/assets/local/images/cec37fe877bb.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCHCA_DMRC4TgX7Gi4aSWGCYgj1ZeJg772p18-Q7KzgbAqIU53Nee5EssIdc3i4RbwqE8pgmkH-YOLzmI4-qK3c78buZFCdOA2RtfrstdFqzgtk4Mq-11kYXf_cf-87rttRe6iFWQnbkZjkEZIlQUHjQpwbUaJ-pSBRW0yJvfmPWKNexfW2X-QuUGwoI5wENgszSsEfdqRauBuw4v4_Zr9GghmKcJ197vXr3cUzxWqEHp18IvEnV22cWK5u4XHiBD_9ppTRSaNMkiQ": "/assets/local/images/f04ca8e6bc20.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBAICdNoqdN8CjW7wlRtcspQcp07jO20dh6mtymUDXeBh_VblHOuwiH4c2nKOH3T0wlAfLuX1uu4AU032cPEQxGMKVE4vxxRDTfMK7MD-nUeuh3-yd05PH3A1fUAbSbX0wL3nPfas4nrVym_5zRmoVtUweZ3XChzKqR-5VRZ7QRD4FJOY32uxRHtPGDB1lYz7oWqnpoj54yN-RMIyARVb6hrrmlmwVW_TVcGw9sMXSJDgsyhjA5RINE4HJwJkxsRMKpT1jFLsX36G0": "/assets/local/images/24408b7aba15.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDqfuHBKdO8KLJ4H3W9txqz3gIJjvxMXWgTxWw7QZXJNa64Y_KKXti3Og9hmUzWFmr-1sCi6h0v76UlXeqmMrNFVgrYd1scDp09ZBMUn_qFDuPtaUPRVnlAeiaERdub9WnRnvLwtRFJ_b6IXI7BgHfPxItoal-mfRodUrxtRNLV3HGEedRjoA54Sao5BBN12b9RUiFJHVtH_KiaMQyeYYMS0cEnR-NaMSHyowafCU6_ugzqqs6SGAeo4italMzdqkAhPXAp-AcHNH0": "/assets/local/images/fc9965df1931.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA6K2CwWZ0Go5a1pbwfuwXOaiMbSw2W3vcNQbEM6jH6h0UVa_SUflXn7d4uS29uEhyCltqCUOaXo1WlbI4Gr6jbD8rH-lJwEEXzOzQiVuxLagJDPKiVLOVzujCdImQMRtSyxiM7o8wIgpswCKWw8hlTuNWqBMgjDSEJOyva62wXkRBke8gYYNNpfVppSk4MFl_0uAVuXkXPIDoV8vX33hgYBMmMuoxsOKXdE8PdCGtxBbvbCcRS0DMmPX0cOIhhpxUZTma6n1hWhhw": "/assets/local/images/f9cacb4b2819.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCEucB4DmomSVyhV0YEKDniGwso7tToytPhTlRT1IHclL9IUeLg6mRsxsN1bspbyrlb0kZJtSGctFKxF4JVNEMtrxWJ7LbKURFMWaHBRmzLBzLfGUu1Mlwud2jXvSOMJ4xbDH-IkU1PQ0LMMIeuHtbKOU6zI5iwfCi8dRS0WD7N3mX5oZ-RiDN2KyI3pPwLTLzpUNg2uxCFntRhkdlSECVYTh0TTi9qZG_zEqsp9mYWC8QQgLwsVHYE0mb6AOa2hVUMcF7-Hc13uNY": "/assets/local/images/4717a7d6a69c.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDIFV_avNzs_RDOBsLblz9rQ9vJxOlYxXeE8BUIe3VqQkq7OMJ1xkzZpOge6c3FCuov54YCptzZKtVRKRZdW2E8npZjIwPwbQl5oBrlyRfiWcQTv4JcaudWn4eyHF5rAWa8z-3h9JSCROoOeIiZVdsXprrAPE_PIKw9FujeXQdoPB7R0ZUwFM-Ggr-E3LZSCScpj10ZNEilqGYwPhrXp4RukxbYxfPn9YRASmGaQwWLqm83TBYiGsU9tjtP4VW7wqg8wjPBII92sac": "/assets/local/images/75d537a0c179.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCAwPF2037wy1Y7xFMHgsnOrutuxGPGtCyyYGISA7HeeGOLJwTH4B-dqWfsjrHvEmwyZGspQt_YluwNrphfAmg4DKWPrNY5yYmFbcs8WsOwdp_zuDhYEsmm7sKbTcpfXU2T6EZYJpA7LIa3G1VX3z0dY9_Qf_8QxJz0z14ZpGJXzFxvnEM32cMTGtclCeTkdVktmxBaBVEQ7WZx1IQNfRLYGlZGLbOvhjvq_5a-48V4FIFWV61Wcja-ktMoGKF9CnvOlm2KCwjr-_I": "/assets/local/images/62c8a9ce01f2.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDQxzh7TaD5T09vQj3CnbbkFyP6aYQ2O-EUAvblOJc3Zy1b8eIp81cb5Mq8ef6ccC_ife7SrdinkKpjyV97bDMISi1gKwdq2WiiJsJF8nKG1j7s7TCe4H3YzYCi0aeLt4rRifPgPG2ryOuHH2oW4dlnq6fEhEjoCUPwzU0qSa3ihPOSIuxTEc01ZeLId3uXC4-0Igv5TC0ndPAB-ooVdOE8DnJs_2gsIFLCnicSqjU_Qtj2xtdAx0MZq5WMZcTWh7w3AdMtPdobFzo": "/assets/local/images/a15e4464fa8f.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDG0xyxFYUUpgBbeuFRsj8-PSkPGpHMv7EDxQxnq-wkcWPf3YcZircvI4_WOWG_OL9CEl9aBdQCVZhQk14uStcvrJL6GoTttSvoNhJTknb0d3pnw9R6clC5DkGI3mXw2AVBEi2Fakq-3BSYestP09Vu1o9YHqgMP35qtKuRkF8QK_Dzx57I3wLQHKY_Q_2z6uNn7i5S-DyaPAocx2REH91B1mBm2nkgvuk_Jyj7GaNXORyAPgqGizId3-7pOcLFoS7sNDRczP812W8": "/assets/local/images/1e3ff85a8a05.png",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAmL4ZkWadFDpl5FSVw8hsRoW6rwuww4reu_UZxkrsnDRd0ForfqKubZ7EYiS8_sQXQVh_6eOUraBhRDuzoZjII3Zmlk1ov9wZrnq1OnaPEhd35OzrWUqH0rMiXB0-WMDywf9XlYinVR_imxz1ySbN99TEuO6XfbwikvUwKYbMIfLVgIHCmu0rVOBNzb-D6g-4Pn44KO0sP32y4s5XcTFm8etSJ1a8xT5suAOKEZ4YJjxPf0UuHwDmcMfLebIefS1SzYOWLKb_DUHM": "/assets/local/images/010927e04d74.png"
+    },
+    "failed": {},
+    "font_css": {
+      "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap": "/assets/local/css/fonts-a39f5c6fcb.css",
+      "https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap": "/assets/local/css/fonts-05bb0977fd.css",
+      "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap": "/assets/local/css/fonts-be925351e0.css"
+    },
+    "font_files": {
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": "/assets/local/fonts/font-ec84a3760f.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": "/assets/local/fonts/font-4ee8fc9834.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2": "/assets/local/fonts/font-f55b8d3974.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2": "/assets/local/fonts/font-eef1e49772.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2": "/assets/local/fonts/font-983e909462.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2": "/assets/local/fonts/font-395290514d.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": "/assets/local/fonts/font-567244088c.woff2",
+      "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDTbtPY_Q.woff2": "/assets/local/fonts/font-99826a45e0.woff2",
+      "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDYbtPY_Q.woff2": "/assets/local/fonts/font-399c3b63a8.woff2",
+      "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDZbtPY_Q.woff2": "/assets/local/fonts/font-6fda4ba152.woff2",
+      "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtM.woff2": "/assets/local/fonts/font-5aa2c980e6.woff2"
+    },
+    "notes": "Remaining legacy pages use committed static CSS, images, fonts and favicons. No marketing copy or original image pixels reauthored."
   }
 }

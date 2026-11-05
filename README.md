@@ -2,6 +2,8 @@
 
 Angkor Drivers is a standalone multilingual static website. GitHub Pages publishes the root of the `deploy` branch at https://angkordrivers.com/. The `main` branch is older source and must not overwrite production.
 
+**Project policy: GitHub Pages only. Never deploy this project to Railway.** All production rendering resources must remain in the repository and be served by GitHub Pages. Do not add Manus badges, branding scripts, or runtime dependencies to the public site. Development tools and private previews are not production hosting.
+
 ## Production
 
 The 18 language pages remain ordinary HTML. Production needs no package install or build service. CSS, JavaScript, working photographs, fonts, SVG/PNG/ICO favicons, and touch icons are committed to Git and served directly by GitHub Pages. Booking still uses the original Formspree endpoint; WhatsApp and telephone links retain the original contacts.
@@ -36,4 +38,6 @@ Python migration/validation dependencies are Beautiful Soup and Pillow. Raster i
 
 ## Remaining setup
 
-The existing Google Reviews/Elfsight setup placeholder remains unchanged. It is not a working Google review feed. The legacy `code.html` design page is not part of the canonical-language release tests. No live booking request or third-party form submission is made by validation.
+Google Reviews is intentionally hidden at the owner's request. Its heading and setup copy remain in the hidden `google-reviews-section` wrapper, with no layout space or unconfigured Elfsight request. Restore the wrapper only after a real widget is configured. The dated Tripadvisor rating badge appears before the hero heading on all 18 language pages and links to the supplied listing.
+
+The legacy `code.html` design page is not part of the canonical-language release tests, but its rendering resources, together with those on the thank-you and 404 pages, are also localized to GitHub Pages. No live booking request or third-party form submission is made by validation.

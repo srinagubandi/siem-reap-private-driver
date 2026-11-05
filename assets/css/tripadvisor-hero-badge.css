@@ -1,0 +1,30 @@
+#tripadvisor-hero-badge.tripadvisor-hero-badge{display:flex;flex-wrap:nowrap;align-items:center;gap:.45rem .5rem;max-width:100%;min-height:44px;box-sizing:border-box;padding:.45rem .75rem;margin:0 0 1rem;border:1px solid rgba(8,73,53,.2);border-radius:999px;background:#fffdf5;color:#0b3d2e;text-decoration:none;box-shadow:0 10px 24px rgba(11,61,46,.16);font-family:inherit;transition:box-shadow .2s ease,border-color .2s ease}
+#tripadvisor-hero-badge:hover{border-color:rgba(8,73,53,.38);box-shadow:0 12px 26px rgba(11,61,46,.26)}
+#tripadvisor-hero-badge:focus-visible{outline:3px solid #0b6e4f;outline-offset:3px}
+.tripadvisor-hero-badge__main{display:inline-flex;align-items:baseline;gap:.4rem;min-width:0}
+.tripadvisor-hero-badge__brand{font-weight:800;font-size:1rem;line-height:1.15;color:#0b5d43;white-space:nowrap}
+.tripadvisor-hero-badge__rating{font-weight:800;color:#0b3d2e;white-space:nowrap}
+.tripadvisor-hero-badge__count{font-weight:600;color:#1f4d3a;white-space:nowrap}
+.tripadvisor-hero-badge__date{font-size:.72rem;line-height:1.35;color:#335a4b;white-space:nowrap}
+.tripadvisor-hero-badge__date-value{unicode-bidi:isolate}
+.tripadvisor-hero-badge__arrow{font-size:.9rem;line-height:1;color:#0b5d43;min-width:1em;text-align:center}
+[dir=rtl] .tripadvisor-hero-badge__arrow{transform:scaleX(-1)}
+#google-reviews-section[hidden]{display:none!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;visibility:hidden!important}
+@media(max-width:30em){
+ #tripadvisor-hero-badge.tripadvisor-hero-badge{flex-wrap:wrap;min-height:56px;padding:.4rem .65rem;row-gap:.2rem;column-gap:.45rem}
+ .tripadvisor-hero-badge__main{flex:1 1 auto;min-width:0}
+ .tripadvisor-hero-badge__brand{font-size:.94rem}
+ .tripadvisor-hero-badge__rating{font-size:.94rem}
+ .tripadvisor-hero-badge__count{font-size:.9rem}
+ .tripadvisor-hero-badge__date{order:2;flex-basis:100%;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ .tripadvisor-hero-badge__arrow{order:1;margin-inline-start:auto}
+}
+@media(min-width:64em){
+ #home .max-w-2xl{position:relative;isolation:isolate}
+ #home .max-w-2xl::before{content:'';position:absolute;inset:-1rem -1.5rem;z-index:-1;background:linear-gradient(90deg,rgba(252,249,242,.96),rgba(252,249,242,.88) 55%,rgba(252,249,242,.68));border-radius:1.5rem;pointer-events:none}
+ #home a[href^='tel:']{background-color:rgba(255,253,245,.95);color:#0b3d2e;border-color:rgba(11,61,46,.85);box-shadow:inset 0 0 0 1px rgba(11,61,46,.8),0 8px 20px rgba(11,61,46,.18)}
+ #home a[href^='tel:']:hover{background-color:#fffdf5;border-color:#0b3d2e}
+}
+@media(prefers-reduced-motion:reduce){
+ #tripadvisor-hero-badge{transition:none}
+}
