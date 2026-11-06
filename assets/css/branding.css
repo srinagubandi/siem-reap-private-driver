@@ -1,0 +1,84 @@
+/* Approved Option A brand lockup. Local SVG is a true transparent silhouette.
+   Dark navigation uses a light presentation of the same mark; no white box.
+   Icon dimensions reserve space before loading and preserve the original ratio. */
+.brand-mark {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+  background: transparent;
+}
+.nav-inner .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  flex: 0 0 auto;
+  direction: ltr;
+  line-height: 1.1;
+}
+.nav-inner .nav-logo .brand-mark {
+  /* Exact approved silhouette, white on dark green for clear contrast. */
+  filter: brightness(0) invert(1);
+}
+.nav-wordmark {
+  display: inline-flex;
+  gap: .22em;
+  align-items: baseline;
+  white-space: nowrap;
+}
+/* User preference is physical upper-left, including Arabic. Language-link
+   content keeps RTL direction; icon-only controls need no text reversal. */
+[dir="rtl"] .nav-inner { direction: ltr; flex-direction: row; }
+[dir="rtl"] .nav-inner .nav-links { direction: rtl; }
+/* Added logo width and translated navigation labels exceed smaller tablets.
+   Keep the existing accessible drawer until the desktop layout has room. */
+@media (max-width: 1023px) {
+  .nav-inner .nav-links { display: none !important; }
+}
+@media (max-width: 767px) {
+  .nav-inner .nav-logo { gap: 6px; }
+  .nav-inner .nav-logo .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+  .nav-wordmark { display: flex; flex-direction: column; gap: 0; line-height: 1.05; }
+}
+@media (max-width: 420px) {
+  .nav-inner { padding-inline: 12px; gap: 8px; }
+  .nav-inner > div:last-child { gap: 4px !important; }
+}
+/* Light AI/FAQ headers preserve the same green asset; scoped names avoid
+   inheriting the older generic '.brand span' subtitle presentation. */
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  direction: ltr;
+}
+.site-header .brand .brand-copy {
+  display: block;
+  font-size: 1.2rem;
+  color: #154212;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-header .brand .brand-location {
+  display: block;
+  color: #475345;
+  font-size: .75rem;
+  font-family: Manrope, sans-serif;
+  font-weight: 500;
+  margin-top: 3px;
+}
+header .brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  direction: ltr;
+}
+header .brand-link .brand-mark { width: 36px; height: 36px; flex-basis: 36px; }
+.brand-mark:hover { transform: none !important; }

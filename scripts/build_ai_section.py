@@ -3,6 +3,7 @@
 from pathlib import Path
 import json
 from html import escape as h
+from brand_common import ICONS, BRAND_IMAGE, BRAND_STYLE
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://angkordrivers.com'
@@ -36,12 +37,13 @@ def page(title, description, canonical, markdown, body):
 <link rel="canonical" href="{ORIGIN}{canonical}"><meta name="theme-color" content="#154212">
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="{h(title)} | Angkor Drivers"><meta property="og:description" content="{h(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{ORIGIN}{canonical}"><meta property="og:image" content="{ORIGIN}/images/leng-cheaheng-private-driver.jpg">
-<link rel="icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+{ICONS}
 <link rel="stylesheet" href="/assets/local/css/fonts-05bb0977fd.css"><link rel="stylesheet" href="/assets/css/ai-info.css">
+{BRAND_STYLE}
 <link rel="alternate" type="text/markdown" href="{markdown}"><link rel="describedby" href="/llms.txt">
 <script type="application/ld+json">{safe_schema}</script></head>
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header"><a class="brand" href="/">Angkor Drivers<span>Siem Reap, Cambodia</span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/faq/">FAQ</a><a href="/ai/">AI information</a><a href="/#contact">Contact Leng</a></nav></header>
+<header class="site-header"><a class="brand" href="/">{BRAND_IMAGE}<span class="brand-copy">Angkor Drivers<small class="brand-location">Siem Reap, Cambodia</small></span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/faq/">FAQ</a><a href="/ai/">AI information</a><a href="/#contact">Contact Leng</a></nav></header>
 <main id="main-content" tabindex="-1">{body}</main>
 <footer class="site-footer"><div><strong>Angkor Drivers</strong><p>Private driver and local guide · Siem Reap</p></div><nav aria-label="Help and public resources"><a href="/#contact">Contact</a><a href="/faq/">FAQ</a><a href="/ai/">AI information</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">Sitemap</a></nav></footer>
 </body></html>'''

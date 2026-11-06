@@ -1,0 +1,285 @@
+{
+  "version": "option-a-20261106",
+  "approved_option": "A",
+  "native_alpha_source": "assets/brand/source/option-a-transparent-master.png",
+  "browser_png_sizes": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128,
+    256
+  ],
+  "apple_touch_sizes": [
+    57,
+    60,
+    72,
+    76,
+    114,
+    120,
+    144,
+    152,
+    167,
+    180
+  ],
+  "ico_sizes": [
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "files": [
+    {
+      "path": "favicon-16x16.png",
+      "purpose": "browser PNG",
+      "sha256": "a19e12d3b79a23a53f84cc61dcf64edb386a081a806591b433283f22ce1bdb92",
+      "width": 16,
+      "height": 16
+    },
+    {
+      "path": "favicon-24x24.png",
+      "purpose": "browser PNG",
+      "sha256": "4e3d71dbfd2cabf8651daa5e15c8dd031382b1ed75f5154b60894a709f1a0950",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "path": "favicon-32x32.png",
+      "purpose": "browser PNG",
+      "sha256": "ebf9ce161ecda58029ace5d9b853e6157f616c3e3b8acc1b211e4090b6d45380",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "favicon-48x48.png",
+      "purpose": "browser PNG",
+      "sha256": "644bf64ab75d6898172b0a290fe99f93a260e0691e0ada0cf5fe41bacab6d7bc",
+      "width": 48,
+      "height": 48
+    },
+    {
+      "path": "favicon-64x64.png",
+      "purpose": "browser PNG",
+      "sha256": "7238bdd3da30a44c7c49a11a681f9f78b95b8a3d35dbf4869a7e3d5ba37a5ad3",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "favicon-96x96.png",
+      "purpose": "browser PNG",
+      "sha256": "c317dd9fa55b502b11324ef04e7000be59bf50e00b7024f02ca910a9d5870d48",
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "favicon-128x128.png",
+      "purpose": "browser PNG",
+      "sha256": "37fe7b0d84e4da712547935b2e75be19beb030f15ea6ebc3e0e17412edd8ef54",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "favicon-256x256.png",
+      "purpose": "browser PNG",
+      "sha256": "7df07e9979887b57a3c8e28212b3ff081233e071ad8a17b26343fc1388ffab4c",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "favicon.ico",
+      "purpose": "legacy browser ICO:16/24/32/48/64",
+      "sha256": "63324c8158e18cc883d208470f2c59c5e12a47dbaa8bd95e7dfe1b19f830a7a1",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "apple-touch-icon-57x57.png",
+      "purpose": "Apple touch icon",
+      "sha256": "64991c571bf86a7d82556998fc8ceb85bce9814927583b1f7d4e9dd6e9e5a473",
+      "width": 57,
+      "height": 57
+    },
+    {
+      "path": "apple-touch-icon-60x60.png",
+      "purpose": "Apple touch icon",
+      "sha256": "2cfa08d0858f4cd02ee6cbf95424308062bfc64ca5109e9e17de1643faa33971",
+      "width": 60,
+      "height": 60
+    },
+    {
+      "path": "apple-touch-icon-72x72.png",
+      "purpose": "Apple touch icon",
+      "sha256": "bffe85b0c78f5a8ade0dbff63a82afe14149ba43252f60632475ce22b62fe356",
+      "width": 72,
+      "height": 72
+    },
+    {
+      "path": "apple-touch-icon-76x76.png",
+      "purpose": "Apple touch icon",
+      "sha256": "31939f1452f8fc83f44b80db932f5d27d1836e30cf97650050182845328ffbba",
+      "width": 76,
+      "height": 76
+    },
+    {
+      "path": "apple-touch-icon-114x114.png",
+      "purpose": "Apple touch icon",
+      "sha256": "3de46b204a813b85c0cec3cb6e9506f642e4d261a18d225c91a6d422ac19e2a2",
+      "width": 114,
+      "height": 114
+    },
+    {
+      "path": "apple-touch-icon-120x120.png",
+      "purpose": "Apple touch icon",
+      "sha256": "a1f7e6b93a8f589c3237bac6fe2d69242fb18bc7fa8a9d86afd6a8a8097235ee",
+      "width": 120,
+      "height": 120
+    },
+    {
+      "path": "apple-touch-icon-144x144.png",
+      "purpose": "Apple touch icon",
+      "sha256": "fb64aee0dc78099338eb47eb42b7623f715486d1eda7c99f5b6501aef968dca8",
+      "width": 144,
+      "height": 144
+    },
+    {
+      "path": "apple-touch-icon-152x152.png",
+      "purpose": "Apple touch icon",
+      "sha256": "556764a0214ba3b5e80bdbab6424b141b10b2a5940ddcdb322c706fac663d3ef",
+      "width": 152,
+      "height": 152
+    },
+    {
+      "path": "apple-touch-icon-167x167.png",
+      "purpose": "Apple touch icon",
+      "sha256": "c7edce8f31d04053c26dd87616fea3a97da86a4fca9f967cb5f63166edf2d13f",
+      "width": 167,
+      "height": 167
+    },
+    {
+      "path": "apple-touch-icon-180x180.png",
+      "purpose": "Apple touch icon",
+      "sha256": "9519299bf18f6efa4d5c9c756f84767e000dc5777694cd2833ff14701cb19b67",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "purpose": "default Apple touch icon180x180",
+      "sha256": "9519299bf18f6efa4d5c9c756f84767e000dc5777694cd2833ff14701cb19b67",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "path": "android-chrome-192x192.png",
+      "purpose": "Android/PWA any icon",
+      "sha256": "fdea347a639465d2dc17252c546b51fc0954a5a7d3d7b35a617f495eca72679d",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "maskable-icon-192x192.png",
+      "purpose": "PWA maskable safe-area icon",
+      "sha256": "c9d42ac9cad5e882e2217acbc0dff6081bf1d7d199f08e598f77f3eb6936cf72",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "android-chrome-512x512.png",
+      "purpose": "Android/PWA any icon",
+      "sha256": "c5608ca062ef9b660248ed67555bed9b438b7548675cb9f749e2c594183758e1",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "maskable-icon-512x512.png",
+      "purpose": "PWA maskable safe-area icon",
+      "sha256": "5fefea938316a87b0195c44417cbbfc25ef34c45b767bd84b46863c1fbdcee87",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "mstile-70x70.png",
+      "purpose": "Windows tile",
+      "sha256": "116bf99e0cbb32672b830ff5c1469e923273fa4fd33fbde4e2471a62b9c64d47",
+      "width": 70,
+      "height": 70
+    },
+    {
+      "path": "mstile-144x144.png",
+      "purpose": "Windows tile",
+      "sha256": "e70cf7dbef8cc89220c53d870858201148d29250f060e1768e2f3422fcd8afdf",
+      "width": 144,
+      "height": 144
+    },
+    {
+      "path": "mstile-150x150.png",
+      "purpose": "Windows tile",
+      "sha256": "fb198d2d9013ef605e3fd96153f7a57c8ee6bbe94e7ce6eb326e9887c6bf66df",
+      "width": 150,
+      "height": 150
+    },
+    {
+      "path": "mstile-310x310.png",
+      "purpose": "Windows tile",
+      "sha256": "684ae4054661cebf353e52b429aaa6fa4f73e418462725682debf21e4732c0e1",
+      "width": 310,
+      "height": 310
+    },
+    {
+      "path": "mstile-310x150.png",
+      "purpose": "Windows wide tile",
+      "sha256": "f8939248bc484eaf82efc29a070c0ec226aafbed0707c1742c72f24e7338203e",
+      "width": 310,
+      "height": 150
+    },
+    {
+      "path": "assets/brand/angkor-drivers-logo-96.png",
+      "purpose": "transparent website logo",
+      "sha256": "b899a501904e525848d3188792c945e2f27d3d4ae39cc88dc10fb2c288e81ffe",
+      "width": 96,
+      "height": 96
+    },
+    {
+      "path": "assets/brand/angkor-drivers-logo-192.png",
+      "purpose": "transparent website logo",
+      "sha256": "00108656e66e0e85336fe2e5234fd493505299f239c93ae83748213c4ea22d46",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "assets/brand/angkor-drivers-logo-512.png",
+      "purpose": "transparent website logo",
+      "sha256": "ab0b440505734a0fab90d05be3492584f8e6d4967ea62caf83c9b966467b58f1",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "assets/brand/angkor-drivers-logo.svg",
+      "purpose": "true vector logo traced from approved silhouette",
+      "sha256": "20b2fc7055788d64f0e6dd5df79d57540db59c398ed7b072d6b27587fb5945dd"
+    },
+    {
+      "path": "safari-pinned-tab.svg",
+      "purpose": "Safari monochrome pinned-tab mask",
+      "sha256": "afb327d18dc1e280a6df1c90035d9813a49e014117268dbb7de5caa501559f05"
+    },
+    {
+      "path": "favicon.svg",
+      "purpose": "color-adaptive vector browser favicon",
+      "sha256": "ae0bc6ca62af34cb9c324b781cf2537368b2618ecfb65fd0f16c96330b4e513e"
+    },
+    {
+      "path": "site.webmanifest",
+      "purpose": "static app icon manifest; does not promise offline functionality",
+      "sha256": "da51127018cbfcd8e44a9ed57b8baeb68a7baa7d9a03f6776d18d82e840e3bc1"
+    },
+    {
+      "path": "browserconfig.xml",
+      "purpose": "Windows browser tile config",
+      "sha256": "ad2438be7af084863fb806857a737392be200b90dcef48aae7e4a3cb16980470"
+    }
+  ]
+}

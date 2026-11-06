@@ -8,6 +8,14 @@ Angkor Drivers is a standalone multilingual static website. GitHub Pages publish
 
 The 18 language pages remain ordinary HTML. Production needs no package install or build service. CSS, JavaScript, working photographs, fonts, SVG/PNG/ICO favicons, and touch icons are committed to Git and served directly by GitHub Pages. Booking still uses the original Formspree endpoint; WhatsApp and telephone links retain the original contacts.
 
+## Approved Option A brand and icons
+
+The owner selected Option A after two Nano Banana Pro concept/refinement loops. `assets/brand/source/` retains the approved ivory-background artwork and its native-alpha preparation. The transparent, traced vector mark is displayed upper-left beside the existing wordmark: light on the dark main navigation and green on light auxiliary headers. `assets/css/branding.css` reserves dimensions, supports compact wordmark layouts, and keeps the physical upper-left placement on Arabic pages. No solid white logo box is used.
+
+`assets/brand/asset-manifest.json` lists every generated icon, its size/purpose, and hash. Browser PNGs, multi-resolution ICO, adaptive SVG, Safari pinned mask, Apple touch, Android/PWA, maskable, and Windows tile files are all committed. The web manifest is only a static icon catalogue; it does not add offline support or a service worker. `scripts/brand_common.py` supplies the versioned declarations to the static builders.
+
+To regenerate after an approved artwork change, install Pillow and Potrace as development tools, then run `python3 scripts/generate_option_a_brand_assets.py` and `python3 scripts/apply_option_a_branding.py` from the repository root. Review the outputs before committing on a branch. No production package install, image API, external asset hosting, or Railway deployment is required.
+
 ## Tripadvisor
 
 The website links to the supplied Angkordrivers listing:

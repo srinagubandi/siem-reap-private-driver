@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-06 — Approved Option A logo and complete icon package
+
+Applied the owner's selected Option A to the upper-left main-site header in all 18 languages and the public AI/FAQ and thank-you branding. The dark navigation uses a light rendition of the same transparent silhouette; light headers use green. The selected original and native-alpha preparation are retained in Git, and a real vector version is traced from the approved silhouette. Compact phones use a stacked wordmark; tablet navigation retains the existing menu until 1024px to keep translated labels within the viewport.
+
+Regenerated browser PNGs at 16/24/32/48/64/96/128/256px, a five-resolution ICO, a light/dark adaptive SVG favicon, a Safari pinned-tab mask, ten Apple touch sizes from 57px to 180px, Android/PWA 192/512px icons, separate safe-area maskable 192/512px icons, and Windows square/wide tiles. All 23 public HTML files share cache-versioned icon declarations. Static builders import the shared declarations so old favicon tags do not return on future builds. No Railway, runtime image service, service worker, public Manus badge, review/photo changes, or booking-form changes are introduced.
+
 ## 2026-11-06 — Google section temporarily hidden
 
 At the owner's request, hid the Google Business Profile/reviews card and Google CTAs across all 18 main-site languages. The hidden components reserve no layout space and are unavailable to keyboard focus. The verified Google profile URL and source records remain in Git for later restoration, controlled by `display_on_site` in `data/google-business-profile.json`. Tripadvisor cards, ratings, original photos, responsive breakpoints, and booking controls are unchanged.
