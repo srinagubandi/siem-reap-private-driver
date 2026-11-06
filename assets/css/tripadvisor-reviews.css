@@ -136,6 +136,15 @@
   border-radius: 1rem;
 }
 
+/* Keep the supplied portrait guest photo fully visible without creating an
+   unusually tall gallery column on desktop. */
+.ta-traveler-photo.guest-group-photo img {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: contain;
+  background: #f5f5f4;
+}
+
 .ta-traveler-photo figcaption {
   font-size: 0.875rem;
   line-height: 1.5;
