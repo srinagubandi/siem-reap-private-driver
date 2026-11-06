@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-06 — Additional device breakpoints and three refinement loops
+
+Added scoped spacing and layout refinements for compact phones, ordinary phones, large phones, tablets, desktops, wide displays, and short landscape viewports. Reviews use one column below 640px, two columns with a full-row third card from 640px to 1023px, and three columns from 1024px. Contact panel padding adapts without changing the form's display structure; original profile and van images remain paired and uncropped. The shared stylesheet is served locally from Git and loaded after the existing fixes.
+
+Completed exactly three requested post-breakpoint review loops using Qwen3 VL 235B A22B Instruct, with Qwen3 Coder 480B for implementation; no DeepSeek was used. The first model suggestion was constrained to a safe tablet-only rule after measured evidence showed the original third card already spanned the row. The second and third reviews passed with no further justified changes. All 18 language pages were measured at 22 widths from 320px to 1920px in every loop. Final 396 width-language cases show no page/review/badge overflow and correct review columns; keyboard/text-spacing checks passed 10 additional device sizes. Evidence and limits are recorded in `docs/genuine-reviews-device-refinement-2026-11-06.md`.
+
 ## 2026-11-06 — Genuine Tripadvisor reviews and source photos
 
 Replaced unsupported testimonial names and quotes with short, verbatim excerpts from Sam C, BigMac666, and Fearless64391184385. Each card records the public display name, actual review date, five-bubble rating, original source avatar, and a permalink to that specific Tripadvisor review. Review quotations remain in English and are marked with their language; surrounding labels are localized for all 18 main-site languages. No reviewer handles are expanded into invented legal names, and default source avatars are not presented as photographs of the reviewers.

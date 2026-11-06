@@ -1,0 +1,208 @@
+/* Base review grid: 3 columns above 900px, 1 below */
+.ta-review-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .ta-review-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Review card base styles */
+.ta-review-card {
+  padding: 2rem;
+  min-width: 0;
+}
+
+.ta-review-person-body {
+  min-width: 0;
+}
+
+.ta-review-name {
+  overflow-wrap: anywhere;
+}
+
+/* Profile vehicle media layout */
+#about .profile-vehicle-media {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+#about .profile-vehicle-media img {
+  height: auto;
+}
+
+#about .profile-vehicle-media .guest-van-photo {
+  margin: 0 !important;
+}
+
+/* Traveler photo grid: 2 columns above 600px, 1 below */
+.ta-traveler-photo-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ta-traveler-photo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 601px) {
+  .ta-traveler-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Responsive breakpoints for various devices */
+
+/* Compact phones <= 359px */
+@media (max-width: 359px) {
+  .ta-review-card,
+  .ta-review-grid .ta-review-card {
+    padding: 1.25rem;
+  }
+  
+  /* Small profile spacing */
+  #about .profile-vehicle-media {
+    gap: 0.5rem;
+  }
+  
+  /* Contact panel mobile padding */
+  #contact .p-12 {
+    padding: 1.5rem;
+  }
+}
+
+/* Ordinary phones 360px - 479px */
+@media (min-width: 360px) and (max-width: 479px) {
+  .ta-review-card,
+  .ta-review-grid .ta-review-card {
+    padding: 1.5rem;
+  }
+  
+  /* Small profile spacing */
+  #about .profile-vehicle-media {
+    gap: 0.65rem;
+  }
+  
+  /* Contact panel mobile padding */
+  #contact .p-12 {
+    padding: 1.5rem;
+  }
+}
+
+/* Large phones/small landscape phones 480px - 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .ta-review-card,
+  .ta-review-grid .ta-review-card {
+    padding: 1.75rem;
+  }
+  
+  /* Force single column for reviews and photos up to 639px */
+  .ta-review-grid,
+  .ta-traveler-photo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  
+  /* Small profile spacing */
+  #about .profile-vehicle-media {
+    gap: 0.85rem;
+  }
+  
+  /* Contact panel medium padding */
+  #contact .p-12 {
+    padding: 2rem;
+  }
+}
+
+/* Tablets 640px - 1023px */
+@media (min-width: 640px) and (max-width: 1023px) {
+  /* Review grid becomes 2 columns */
+  .ta-review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  
+  /* Photo grid also 2 columns */
+  .ta-traveler-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  
+  /* If exactly 3 cards, make last span both columns */
+  .ta-review-grid .ta-review-card:last-child:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  
+  .ta-review-card {
+    padding: 1.5rem;
+  }
+  
+  /* Small profile spacing */
+  #about .profile-vehicle-media {
+    gap: 1rem;
+  }
+  
+  /* Contact panel tablet padding */
+  #contact .p-12 {
+    padding: 2.5rem;
+  }
+  
+  /* Vertical section padding for short viewports on tablets */
+  @media (max-height: 500px) and (min-width: 480px) and (max-width: 1023px) {
+    #guest-reviews {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+
+/* Desktop 1024px - 1599px */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .ta-review-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  /* Reset any previous span behavior from tablet */
+  .ta-review-grid .ta-review-card:last-child:nth-child(3) {
+    grid-column: auto;
+  }
+  
+  .ta-review-card {
+    padding: 2rem;
+  }
+  
+  /* Small profile spacing */
+  #about .profile-vehicle-media {
+    gap: 1rem;
+  }
+}
+
+/* Wide desktop >= 1600px */
+@media (min-width: 1600px) {
+  .ta-review-grid {
+    gap: 2rem;
+  }
+  
+  .ta-review-card {
+    padding: 2.25rem;
+  }
+  
+  .ta-traveler-photo-grid {
+    gap: 2rem;
+  }
+  
+  /* Small profile spacing remains same as desktop */
+  #about .profile-vehicle-media {
+    gap: 1rem;
+  }
+}
+
+/* Short landscape viewports retain full text with less decorative spacing. */
+@media (max-height: 500px) and (min-width: 480px) and (max-width: 1023px) {
+  #guest-reviews { padding-block: 2.5rem; }
+}
