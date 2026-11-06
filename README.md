@@ -75,6 +75,8 @@ Python migration/validation dependencies are Beautiful Soup and Pillow. Raster i
 
 The real **Angkor Driver** Google Business Profile has been verified against its website, phone, and street address. Its actual Google Maps place URL is recorded in `data/google-business-profile.json`, with localized link labels in `data/google-profile-ui-labels.json`. A static profile card and truthful profile-opening CTA replace the old unconfigured Elfsight block and broken Google review link. There is no Google rating claim, copied Google review content, live sync, iframe, or API dependency. `scripts/link_verified_google_profile.py` records this migration. The dated Tripadvisor rating badge remains unchanged above the hero heading.
 
+**Current display state: Google is temporarily hidden at the owner's request.** Both the profile/reviews card and Google CTAs are hidden without reserving layout space. Keep the verified information in Git. To restore it later with owner approval, set `display_on_site` to `true` in `data/google-business-profile.json` and run `python3 scripts/link_verified_google_profile.py`; then verify and publish the resulting HTML.
+
 The decorative, pointer-styled aerial image in the contact panel was removed because it was not a useful working map. Real contact links and all inquiry form controls and submission settings are unchanged.
 
 The legacy `code.html` design page is not part of the canonical-language release tests, but its rendering resources, together with those on the thank-you and 404 pages, are also localized to GitHub Pages. No live booking request or third-party form submission is made by validation.

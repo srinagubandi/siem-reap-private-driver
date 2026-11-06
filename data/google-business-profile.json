@@ -8,5 +8,7 @@
   "google_cid": "16979893969475656585",
   "verified_at": "2026-11-06",
   "verification": "Google search and Maps both link to the site and display its matching phone; Google Maps Share dialog resolved the full place URL",
-  "review_sync": "None; static external profile link only"
+  "review_sync": "None; static external profile link only",
+  "display_on_site": false,
+  "display_status": "Temporarily hidden at owner request 2026-11-06; retain verified source URL for later"
 }

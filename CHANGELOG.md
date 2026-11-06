@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-06 — Google section temporarily hidden
+
+At the owner's request, hid the Google Business Profile/reviews card and Google CTAs across all 18 main-site languages. The hidden components reserve no layout space and are unavailable to keyboard focus. The verified Google profile URL and source records remain in Git for later restoration, controlled by `display_on_site` in `data/google-business-profile.json`. Tripadvisor cards, ratings, original photos, responsive breakpoints, and booking controls are unchanged.
+
 ## 2026-11-06 — Additional device breakpoints and three refinement loops
 
 Added scoped spacing and layout refinements for compact phones, ordinary phones, large phones, tablets, desktops, wide displays, and short landscape viewports. Reviews use one column below 640px, two columns with a full-row third card from 640px to 1023px, and three columns from 1024px. Contact panel padding adapts without changing the form's display structure; original profile and van images remain paired and uncropped. The shared stylesheet is served locally from Git and loaded after the existing fixes.

@@ -176,3 +176,9 @@
 }
 .ta-review-card { min-width: 0; }
 .ta-review-link { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Owner-requested pause: override author flex utilities as well as the
+   native hidden attribute; keep verified Google details in Git for later. */
+[data-google-profile-paused="true"][hidden] {
+  display: none !important;
+}

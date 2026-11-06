@@ -39,7 +39,17 @@ def process(text,labels):
         opening=opening.replace('https://g.page/r/REPLACE_WITH_GOOGLE_REVIEW_LINK/review',url)
         logo=re.search(r'<svg\b.*?</svg>',source,re.S)
         return opening+(logo.group() if logo else '')+escape(labels['google_link'])+'</a>'
-    return re.sub(pattern,cta,text,flags=re.S)
+    text = re.sub(pattern,cta,text,flags=re.S)
+    def visibility(match):
+        opening = match.group()
+        opening = re.sub(r'\s+data-google-profile-paused="true"', '', opening)
+        opening = re.sub(r'\s+hidden(?=[\s>])', '', opening)
+        if not DATA.get('display_on_site', True):
+            opening = opening[:-1]+' data-google-profile-paused="true" hidden>'
+        return opening
+    text = re.sub(r'<div\b(?=[^>]*\bid="google-business-profile")[^>]*>', visibility, text)
+    text = re.sub(r'<a\b(?=[^>]*\bhref="'+re.escape(url)+r'")[^>]*>', visibility, text)
+    return text
 
 
 def main():
