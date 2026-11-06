@@ -82,3 +82,40 @@ header .brand-link {
 }
 header .brand-link .brand-mark { width: 36px; height: 36px; flex-basis: 36px; }
 .brand-mark:hover { transform: none !important; }
+
+/* White destination-brand row beneath the footer content. */
+.siem-reap-love-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 1.35rem 1rem 1.5rem;
+  background: #fff;
+  border-top: 1px solid #e7e5e4;
+  text-align: center;
+}
+
+.siem-reap-love-row img {
+  display: block;
+  width: min(220px, 62vw);
+  height: auto;
+  aspect-ratio: 1000 / 850;
+  object-fit: contain;
+}
+
+.siem-reap-love-row p {
+  margin: 0;
+  color: #625c56;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
+
+@media (max-width: 380px) {
+  .siem-reap-love-row { padding-inline: 0.75rem; }
+  .siem-reap-love-row img { width: min(190px, 70vw); }
+}
