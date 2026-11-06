@@ -1,0 +1,104 @@
+{
+  "name": "Angkor Drivers",
+  "website": "https://angkordrivers.com/",
+  "contact_url": "https://angkordrivers.com/#contact",
+  "telephone": "+855976453855",
+  "whatsapp": "https://wa.me/855976453855",
+  "telegram": "https://t.me/LengCheaHeng",
+  "location": "Siem Reap, Cambodia",
+  "language": "en",
+  "updated": "2026-11-06",
+  "source_url": "https://angkordrivers.com/",
+  "website_languages": [
+    {
+      "language": "en",
+      "name": "English",
+      "url": "https://angkordrivers.com/"
+    },
+    {
+      "language": "fr",
+      "name": "Français",
+      "url": "https://angkordrivers.com/fr.html"
+    },
+    {
+      "language": "zh-Hans",
+      "name": "简体中文",
+      "url": "https://angkordrivers.com/zh.html"
+    },
+    {
+      "language": "ko",
+      "name": "한국어",
+      "url": "https://angkordrivers.com/ko.html"
+    },
+    {
+      "language": "ja",
+      "name": "日本語",
+      "url": "https://angkordrivers.com/ja.html"
+    },
+    {
+      "language": "vi",
+      "name": "Tiếng Việt",
+      "url": "https://angkordrivers.com/vi.html"
+    },
+    {
+      "language": "th",
+      "name": "ไทย",
+      "url": "https://angkordrivers.com/th.html"
+    },
+    {
+      "language": "de",
+      "name": "Deutsch",
+      "url": "https://angkordrivers.com/de.html"
+    },
+    {
+      "language": "es",
+      "name": "Español",
+      "url": "https://angkordrivers.com/es.html"
+    },
+    {
+      "language": "it",
+      "name": "Italiano",
+      "url": "https://angkordrivers.com/it.html"
+    },
+    {
+      "language": "pt",
+      "name": "Português",
+      "url": "https://angkordrivers.com/pt.html"
+    },
+    {
+      "language": "ru",
+      "name": "Русский",
+      "url": "https://angkordrivers.com/ru.html"
+    },
+    {
+      "language": "nl",
+      "name": "Nederlands",
+      "url": "https://angkordrivers.com/nl.html"
+    },
+    {
+      "language": "pl",
+      "name": "Polski",
+      "url": "https://angkordrivers.com/pl.html"
+    },
+    {
+      "language": "ar",
+      "name": "العربية",
+      "url": "https://angkordrivers.com/ar.html"
+    },
+    {
+      "language": "id",
+      "name": "Bahasa Indonesia",
+      "url": "https://angkordrivers.com/id.html"
+    },
+    {
+      "language": "sv",
+      "name": "Svenska",
+      "url": "https://angkordrivers.com/sv.html"
+    },
+    {
+      "language": "cs",
+      "name": "Čeština",
+      "url": "https://angkordrivers.com/cs.html"
+    }
+  ]
+}

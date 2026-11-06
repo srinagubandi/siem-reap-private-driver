@@ -1,0 +1,40 @@
+# Angkor Drivers
+
+> Private driver and local guide in Siem Reap, Cambodia. Tours of Angkor, airport transfers, city visits, day trips, and vintage Jeep options with Leng Cheaheng.
+
+English public information is a reviewed website snapshot, not a live booking or AI service. Confirm prices, availability, and unpublished details directly with Leng. Cite the original public source links in each FAQ record. The main website has 18 language versions; this does not imply 18 spoken tour languages.
+
+## Information resources
+
+- [Public information guide](https://angkordrivers.com/ai/agent.md): Scope, source citation, and contact fallback.
+- [Trip FAQ](https://angkordrivers.com/ai/faq.md): Source-linked answers with stable record IDs.
+- [Information hub](https://angkordrivers.com/ai/index.md): Resource formats and limitations.
+
+## Main website languages
+
+- [English](https://angkordrivers.com/): Main website in English.
+- [Français](https://angkordrivers.com/fr.html): Main website in Français.
+- [简体中文](https://angkordrivers.com/zh.html): Main website in 简体中文.
+- [한국어](https://angkordrivers.com/ko.html): Main website in 한국어.
+- [日本語](https://angkordrivers.com/ja.html): Main website in 日本語.
+- [Tiếng Việt](https://angkordrivers.com/vi.html): Main website in Tiếng Việt.
+- [ไทย](https://angkordrivers.com/th.html): Main website in ไทย.
+- [Deutsch](https://angkordrivers.com/de.html): Main website in Deutsch.
+- [Español](https://angkordrivers.com/es.html): Main website in Español.
+- [Italiano](https://angkordrivers.com/it.html): Main website in Italiano.
+- [Português](https://angkordrivers.com/pt.html): Main website in Português.
+- [Русский](https://angkordrivers.com/ru.html): Main website in Русский.
+- [Nederlands](https://angkordrivers.com/nl.html): Main website in Nederlands.
+- [Polski](https://angkordrivers.com/pl.html): Main website in Polski.
+- [العربية](https://angkordrivers.com/ar.html): Main website in العربية.
+- [Bahasa Indonesia](https://angkordrivers.com/id.html): Main website in Bahasa Indonesia.
+- [Svenska](https://angkordrivers.com/sv.html): Main website in Svenska.
+- [Čeština](https://angkordrivers.com/cs.html): Main website in Čeština.
+
+## Optional
+
+- [FAQ JSON dataset](https://angkordrivers.com/ai/faq.json): English static dataset.
+- [Business facts](https://angkordrivers.com/ai/business.json): Public contacts and location.
+- [Contact Leng](https://angkordrivers.com/#contact): Confirm prices, availability, and uncovered questions.
+- [Robots directives](https://angkordrivers.com/robots.txt): Existing crawler policy.
+- [XML sitemap](https://angkordrivers.com/sitemap.xml): Canonical public HTML routes.

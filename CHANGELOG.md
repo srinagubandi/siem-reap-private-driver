@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-06 — Static AI resources, accessibility, and localized SEO
+
+Added an English `/ai/` information hub, readable `/faq/`, 18 source-linked JSON FAQ records, business facts, a static resource catalogue, Markdown/plain-text FAQ and agent guides, and `llms.txt`. All 18 existing main-site language versions remain available and are linked from the new resources. English-only AI resources were approved after primary-source research found no requirement to translate these files into every website language. There is no new backend, hosted API, model call, private data access, or automated booking service.
+
+Added localized skip links and landmark labels, decorative icon ARIA, semantic heading-order fixes, scoped contrast corrections, robust photo-text underlays, and wrapping footer resource links. Preserved original main copy, photographs, contacts, and booking settings.
+
+Preserved each language page's own title and description while aligning its Open Graph, Twitter, and structured-data text/URLs. Consolidated reciprocal hreflang annotations to one 19-entry family per main page, removed unsupported inventory-style offer markup, and regenerated the sitemap for 20 canonical HTML routes. Kept the existing robots policy unchanged; marked ancillary design, thank-you, and error pages noindex. Added `.nojekyll` so Markdown and other static files are served verbatim.
+
+Completed two open-weight review-and-fix loops: Qwen3 Coder 480B for the first review and initial implementation, and Qwen3 VL 235B for the second visual/content review. Integration corrections made repeated builds stable and cleaned the plain-text guide. Scoped image-overlay contrast calculations cover the manually reviewed variable-photo contexts. Final automated checks report no axe rule violations on the 20 indexable pages; keyboard and responsive checks cover the existing language pages and new resource pages. These checks are not a full accessibility conformance claim or a guarantee of indexing, ranking, or AI citations.
+
 ## 2026-11-05 — All identified language-audit issues repaired
 
 Resolved the 320px Spanish, Portuguese, and Swedish bio benefit-label overflow with a shared, scoped shrink-and-wrap rule. Labels remain fully readable without hidden overflow, ellipses, or smaller text; icons retain their size.

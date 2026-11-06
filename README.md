@@ -24,6 +24,31 @@ Three additional original photographs supplied on 5 November 2026 are kept under
 
 Other working legacy CDN images and the Google Fonts files have been copied into `assets/local/`. `asset-localisation-report.json` records their original URLs and local mapping. Production does not need the original media CDNs or Google Fonts endpoints.
 
+## Public AI information and FAQ
+
+The English-only `/ai/` hub, `/faq/`, `llms.txt`, and JSON/text/Markdown resources are ordinary committed files. The owner approved English for this new information section after reviewing language guidance; all 18 existing main-site translations remain intact and are linked from the hub. These optional files do not guarantee AI citations or search rankings.
+
+`ai/faq.json` contains 18 source-linked English answers. Individual JSON records are under `ai/faq/`. `ai/business.json` contains only public business contacts and location; `ai/manifest.json` is a static resource catalogue, not an MCP or A2A discovery card. `ai/agent.md`, `ai/agent.txt`, `ai/faq.md`, and `ai/faq.txt` provide equivalent readable guidance. HTML pages have exact Markdown counterparts at `/ai/index.md` and `/faq/index.md`.
+
+There is no live AI server, POST question endpoint, model call, booking confirmation, private customer access, or site-level question queue in this section. Ordinary hosting access logs may exist. Model-assisted development and test tools do not run in production. Do not place API keys or account credentials in these public files.
+
+To maintain the information, edit the source-linked English answers and snapshot date in `ai/data.json`, then run:
+
+```bash
+python3 scripts/build_ai_section.py
+python3 scripts/apply_accessibility_seo.py
+```
+
+Both scripts use Python's standard library and make no network calls. Review the generated HTML and JSON before committing. If Tripadvisor changes, update its visible values/date and the dated FAQ answer together; the snapshot is not a live feed.
+
+## Accessibility and language-specific SEO
+
+The shared fixes add localized skip links and landmark labels, hide decorative icon text from assistive technology, correct heading order, improve identified contrast failures, and allow the footer resource link to wrap. `ai/ui-labels.json` contains only the small translated accessibility/navigation labels; it is not a translated AI dataset.
+
+Each of the 18 main pages keeps its existing localized title and description. Open Graph, Twitter, and structured-data names/descriptions use that page's language, with its own canonical URL and one reciprocal 19-entry hreflang family, including `x-default`. The new AI/FAQ pages are labelled English and have no non-existent translation alternates. Unsupported inventory-style offer markup is removed. The XML sitemap lists the 20 canonical HTML routes; the existing `robots.txt` allow/crawl policy is preserved. Legacy design, thank-you, and 404 pages are marked `noindex, follow` and excluded from the sitemap.
+
+Automated checks and keyboard/reflow sampling are release evidence, not a full WCAG conformance claim, legal certification, or proof of indexing. Live booking submissions, real screen-reader testing, and Search Console indexing verification require separate checks.
+
 ## Development tools
 
 `scripts/apply_update.py` and `scripts/localize_assets.py` record the HTML and asset migration. They are migration aids, not a CMS: do not rerun the migration blindly on an edited production page. `scripts/validate_site.py` checks the canonical pages, form labels and endpoint, local resources, icon sizes, Tripadvisor summary, and JSON-LD structure. It is not a full accessibility or search-engine conformance test.

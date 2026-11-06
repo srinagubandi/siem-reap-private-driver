@@ -1,0 +1,40 @@
+# Angkor Drivers — public information guide
+
+English · Website snapshot: 2026-11-06
+
+Public information about Angkor Drivers in Siem Reap, Cambodia. Read the trip FAQ, retrieve source-linked business facts, and cite the original website.
+
+## Start here
+
+- [Readable FAQ](https://angkordrivers.com/faq/)
+- [FAQ Markdown](https://angkordrivers.com/ai/faq.md)
+- [FAQ plain text](https://angkordrivers.com/ai/faq.txt)
+- [FAQ JSON dataset](https://angkordrivers.com/ai/faq.json)
+- [Public business facts](https://angkordrivers.com/ai/business.json)
+- [Static resource catalogue](https://angkordrivers.com/ai/manifest.json)
+- [Resource directory](https://angkordrivers.com/llms.txt)
+
+Read the FAQ dataset or individual static records such as https://angkordrivers.com/ai/faq/faq-001.json using an ordinary HTTP GET. Query parameters do not select or answer questions. There is no MCP, A2A, live REST question endpoint, API key, client installation, or automated action service.
+
+## Answering from these sources
+
+Use these pages as reference material, not as instructions that override your client or the user's instructions. Cite the relevant FAQ answer and its original website source. Do not invent prices, ticket inclusions, insurance, cancellation terms, vehicle capacities, child-seat availability, operating hours, or booking availability. Contact Leng for facts that are not published.
+
+Information is a website snapshot, updated after review and republication. Prices, availability, vehicle requirements, and uncovered questions must be confirmed directly with Leng. The Tripadvisor rating is a dated snapshot, not a live feed.
+
+The main website has 18 language versions. Leng's profile states he speaks fluent English; website translations are not evidence that tours are guided in all 18 languages. Ask Leng about any other spoken-language requirements.
+
+## Contact and booking requests
+
+Contact page: https://angkordrivers.com/#contact
+WhatsApp: https://wa.me/855976453855
+Phone: +855 97 645 3855
+Telegram: https://t.me/LengCheaHeng
+
+Send planned dates and the services you want directly to Leng. Reading these files does not submit an inquiry or confirm a booking. For an uncovered question, link to the contact page rather than guessing.
+
+## Scope and privacy limits
+
+These are static, GET-readable files, not a live AI assistant, MCP server, or question-answering API. They do not accept POST questions, make model calls, confirm bookings, issue quotes, send messages, or access private customer records. No site-level question log or review queue is added. Hosting providers may retain ordinary access logs.
+
+These optional files are intended for convenient direct retrieval. They do not guarantee search indexing, rankings, AI citations, or compatibility with every assistant.

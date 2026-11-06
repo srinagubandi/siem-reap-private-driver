@@ -1,0 +1,128 @@
+{
+  "en": {
+    "skip": "Skip to main content",
+    "language_nav": "Choose website language",
+    "quick_contact": "Quick contact",
+    "booking": "Booking options",
+    "ai_link": "AI information (English)"
+  },
+  "fr": {
+    "skip": "Aller au contenu principal",
+    "language_nav": "Choisir la langue du site",
+    "quick_contact": "Contact rapide",
+    "booking": "Options de réservation",
+    "ai_link": "Informations sur l'IA (anglais)"
+  },
+  "zh": {
+    "skip": "跳转到主要内容",
+    "language_nav": "选择网站语言",
+    "quick_contact": "快速联系",
+    "booking": "预订选项",
+    "ai_link": "人工智能信息（英语）"
+  },
+  "ko": {
+    "skip": "본문 내용으로 건너뛰기",
+    "language_nav": "웹사이트 언어 선택",
+    "quick_contact": "빠른 연락처",
+    "booking": "예약 옵션",
+    "ai_link": "AI 정보 (영어)"
+  },
+  "ja": {
+    "skip": "メインコンテンツへスキップ",
+    "language_nav": "ウェブサイトの言語を選択",
+    "quick_contact": "クイックコンタクト",
+    "booking": "予約オプション",
+    "ai_link": "AI情報（英語）"
+  },
+  "vi": {
+    "skip": "Chuyển đến nội dung chính",
+    "language_nav": "Chọn ngôn ngữ trang web",
+    "quick_contact": "Liên hệ nhanh",
+    "booking": "Tùy chọn đặt chỗ",
+    "ai_link": "Thông tin AI (Tiếng Anh)"
+  },
+  "th": {
+    "skip": "ข้ามไปยังเนื้อหาหลัก",
+    "language_nav": "เลือกภาษาเว็บไซต์",
+    "quick_contact": "ติดต่อด่วน",
+    "booking": "ตัวเลือกการจอง",
+    "ai_link": "ข้อมูล AI (ภาษาอังกฤษ)"
+  },
+  "de": {
+    "skip": "Zum Hauptinhalt springen",
+    "language_nav": "Website-Sprache auswählen",
+    "quick_contact": "Schnellkontakt",
+    "booking": "Buchungsoptionen",
+    "ai_link": "KI-Informationen (Englisch)"
+  },
+  "es": {
+    "skip": "Saltar al contenido principal",
+    "language_nav": "Elegir idioma del sitio web",
+    "quick_contact": "Contacto rápido",
+    "booking": "Opciones de reserva",
+    "ai_link": "Información de IA (inglés)"
+  },
+  "it": {
+    "skip": "Salta al contenuto principale",
+    "language_nav": "Scegli lingua del sito",
+    "quick_contact": "Contatto rapido",
+    "booking": "Opzioni di prenotazione",
+    "ai_link": "Informazioni sull'IA (inglese)"
+  },
+  "pt": {
+    "skip": "Pular para o conteúdo principal",
+    "language_nav": "Escolher idioma do site",
+    "quick_contact": "Contato rápido",
+    "booking": "Opções de reserva",
+    "ai_link": "Informações de IA (inglês)"
+  },
+  "ru": {
+    "skip": "Перейти к основному содержимому",
+    "language_nav": "Выбрать язык веб-сайта",
+    "quick_contact": "Быстрый контакт",
+    "booking": "Варианты бронирования",
+    "ai_link": "Информация об ИИ (английский)"
+  },
+  "nl": {
+    "skip": "Doorgaan naar hoofdinhoud",
+    "language_nav": "Kies websitetaal",
+    "quick_contact": "Snelle contactgegevens",
+    "booking": "Boekingsopties",
+    "ai_link": "AI-informatie (Engels)"
+  },
+  "pl": {
+    "skip": "Przejdź do treści głównej",
+    "language_nav": "Wybierz język strony",
+    "quick_contact": "Szybki kontakt",
+    "booking": "Opcje rezerwacji",
+    "ai_link": "Informacje o sztucznej inteligencji (język angielski)"
+  },
+  "ar": {
+    "skip": "تخطي إلى المحتوى الرئيسي",
+    "language_nav": "اختر لغة الموقع",
+    "quick_contact": "اتصال سريع",
+    "booking": "خيارات الحجز",
+    "ai_link": "معلومات الذكاء الاصطناعي (الإنجليزية)"
+  },
+  "id": {
+    "skip": "Lewati ke konten utama",
+    "language_nav": "Pilih bahasa situs web",
+    "quick_contact": "Kontak cepat",
+    "booking": "Opsi pemesanan",
+    "ai_link": "Informasi AI (Bahasa Inggris)"
+  },
+  "sv": {
+    "skip": "Hoppa till huvudinnehåll",
+    "language_nav": "Välj webbplatsspråk",
+    "quick_contact": "Snabbkontakt",
+    "booking": "Bokningsalternativ",
+    "ai_link": "AI-information (engelska)"
+  },
+  "cs": {
+    "skip": "Přeskočit na hlavní obsah",
+    "language_nav": "Vybrat jazyk webové stránky",
+    "quick_contact": "Rychlý kontakt",
+    "booking": "Možnosti rezervace",
+    "ai_link": "Informace o umělé inteligenci (angličtina)"
+  }
+}

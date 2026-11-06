@@ -1,0 +1,76 @@
+{
+  "format": "static-http-resource-catalog",
+  "name": "Angkor Drivers public information",
+  "language": "en",
+  "updated": "2026-11-06",
+  "access": "Public static HTTP GET files",
+  "limitations": "These are static, GET-readable files, not a live AI assistant, MCP server, or question-answering API. They do not accept POST questions, make model calls, confirm bookings, issue quotes, send messages, or access private customer records. No site-level question log or review queue is added. Hosting providers may retain ordinary access logs.",
+  "resources": [
+    {
+      "name": "Full readable FAQ",
+      "url": "https://angkordrivers.com/faq/",
+      "format": "HTML"
+    },
+    {
+      "name": "FAQ dataset",
+      "url": "https://angkordrivers.com/ai/faq.json",
+      "format": "JSON"
+    },
+    {
+      "name": "FAQ in Markdown",
+      "url": "https://angkordrivers.com/ai/faq.md",
+      "format": "MD"
+    },
+    {
+      "name": "FAQ in plain text",
+      "url": "https://angkordrivers.com/ai/faq.txt",
+      "format": "TXT"
+    },
+    {
+      "name": "Agent guide in Markdown",
+      "url": "https://angkordrivers.com/ai/agent.md",
+      "format": "MD"
+    },
+    {
+      "name": "Agent guide in plain text",
+      "url": "https://angkordrivers.com/ai/agent.txt",
+      "format": "TXT"
+    },
+    {
+      "name": "Public business facts",
+      "url": "https://angkordrivers.com/ai/business.json",
+      "format": "JSON"
+    },
+    {
+      "name": "Resource catalogue",
+      "url": "https://angkordrivers.com/ai/manifest.json",
+      "format": "JSON"
+    },
+    {
+      "name": "Resource directory",
+      "url": "https://angkordrivers.com/llms.txt",
+      "format": "TXT"
+    }
+  ],
+  "individual_record_pattern": "https://angkordrivers.com/ai/faq/faq-NNN.json",
+  "record_ids": [
+    "faq-001",
+    "faq-002",
+    "faq-003",
+    "faq-004",
+    "faq-005",
+    "faq-006",
+    "faq-007",
+    "faq-008",
+    "faq-009",
+    "faq-010",
+    "faq-011",
+    "faq-012",
+    "faq-013",
+    "faq-014",
+    "faq-015",
+    "faq-016",
+    "faq-017",
+    "faq-018"
+  ]
+}

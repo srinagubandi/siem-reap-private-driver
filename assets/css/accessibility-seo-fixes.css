@@ -1,0 +1,23 @@
+/* Scoped fixes from the November 2026 accessibility review. */
+#langBar a.active { color: #ffe69a !important; }
+#langBar a:focus-visible { outline-color: #ffffff !important; outline-offset: -3px; }
+#jeep a[style*="25d366" i] { background: #087443 !important; color: white !important; }
+[class~="text-on-surface-variant/60"] { color: #596052 !important; }
+#contact [class~="text-white/50"] { color: #d8e4d3 !important; }
+#tripadvisor-summary a.bg-emerald-600 { background-color: #047857 !important; color: white !important; }
+footer [class~="text-stone-400"] { color: #625c56 !important; }
+footer .flex.gap-8 { flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; }
+footer .flex.gap-8 a { display: inline-flex; align-items: center; min-height: 32px; }
+.skip-link { position: fixed !important; inset-block-start: 1rem !important; inset-inline-start: 1rem !important; top: 1rem !important; left: auto; z-index: 10050 !important; transform: translateY(-200%); background: #154212 !important; color: white !important; padding: .75rem 1.25rem; }
+.skip-link:focus { transform: none; }
+main#main-content { scroll-margin-block-start: 9rem; }
+main#main-content:focus { outline: none; }
+main section[id] { scroll-margin-block-start: 9rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #944926 !important; outline-offset: 3px; }
+.quick-contact-landmark { margin: 0; padding: 0; }
+@media (prefers-reduced-motion: reduce) { .skip-link { transition: none; } }
+
+/* Stable contrast for text over variable photographs; no image edits or layout changes. */
+#home .max-w-2xl { background-color: rgba(252, 249, 242, .96); box-shadow: 0 0 2rem 1rem rgba(252, 249, 242, .96); }
+#tours .absolute.bottom-0.left-0.p-8 { background: rgba(15, 34, 20, .92) !important; }
+#jeep .absolute.bottom-0 { background: rgba(15, 34, 20, .92) !important; }
