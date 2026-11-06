@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-06 — Genuine Tripadvisor reviews and source photos
+
+Replaced unsupported testimonial names and quotes with short, verbatim excerpts from Sam C, BigMac666, and Fearless64391184385. Each card records the public display name, actual review date, five-bubble rating, original source avatar, and a permalink to that specific Tripadvisor review. Review quotations remain in English and are marked with their language; surrounding labels are localized for all 18 main-site languages. No reviewer handles are expanded into invented legal names, and default source avatars are not presented as photographs of the reviewers.
+
+Stored five available reviewer-avatar images and eight original review-attached traveler photos under `images/tripadvisor/`, alongside source URLs, creator display names, hashes, and explicit owner-confirmed reuse permission. Featured two appropriately selected traveler photos with credits and review links in Moments with Guests, using optimized, aspect-ratio-preserving WebP copies. Other original downloads remain available in Git but are not added indiscriminately to the marketing gallery. The source listing has no traveler questions; its single tip is explicitly labelled as BigMac666's tip, not presented as a Q&A post.
+
+Removed the decorative pointer-styled aerial image from the contact area; it was not a functioning map. The real contact links, booking fields, labels, and submission endpoint remain unchanged. Removed unsupported testimonial names from the noindex legacy design HTML as well.
+
+Resolved the supplied Google share link to the real Angkor Driver Google Maps profile and verified its matching website, phone, and street address. Replaced the unconfigured Elfsight area and broken Google review URL with localized, truthful profile links across all 18 languages. No Google ratings, review text, live syncing, new script, API, or iframe is added. Source identity and the actual Maps URL are recorded in `data/google-business-profile.json`.
+
+Moved the original van-at-Angkor image out of the tour-card area and into the Meet Leng photo group across all 18 languages. Preserved its original file and complete image, localized its new caption, and kept the existing driver photo and experience badge. Qwen3 Coder 480B supplied layout implementation guidance, localized labels, and scoped card styling; integration repairs preserve HTML and ensure repeatable builds. Production remains plain GitHub Pages with no new external runtime requests, backend, or public Manus branding.
+
 ## 2026-11-06 — Static AI resources, accessibility, and localized SEO
 
 Added an English `/ai/` information hub, readable `/faq/`, 18 source-linked JSON FAQ records, business facts, a static resource catalogue, Markdown/plain-text FAQ and agent guides, and `llms.txt`. All 18 existing main-site language versions remain available and are linked from the new resources. English-only AI resources were approved after primary-source research found no requirement to translate these files into every website language. There is no new backend, hosted API, model call, private data access, or automated booking service.

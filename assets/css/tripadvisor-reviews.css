@@ -1,0 +1,178 @@
+/* Guest Reviews Section Styling */
+#guest-reviews {
+  background-color: #f8f5ec; /* Brand cream background */
+  color: #1e3627; /* Brand green text color */
+}
+
+/* Grid container for review cards - 3 equal columns on desktop >= 900px, 1 column on mobile */
+.ta-review-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* Responsive columns with minimum size of 0 and max 1fr */
+  gap: 1.5rem; /* Space between grid items */
+}
+
+/* Media query for desktop view (>=900px) - Force exactly 3 columns */
+@media screen and (min-width: 900px) {
+  .ta-review-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Review card styling */
+.ta-review-card {
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid #e2e4dc;
+  border-radius: 1.25rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure consistent height across cards */
+}
+
+/* Rating display */
+.ta-review-rating {
+  color: #1e3627; /* Dark accessible green */
+  font-size: 1.25rem;
+}
+
+/* Blockquote for the review excerpt */
+.ta-review-card blockquote {
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #394437;
+  flex-grow: 1; /* Allow blockquote to take remaining space */
+}
+
+/* Person info section layout */
+.ta-review-person {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Avatar image styling */
+.ta-review-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #eee;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Body content area for person name/meta */
+.ta-review-person-body {
+  min-width: 0; /* Enable overflow wrapping */
+}
+
+/* Name styling */
+.ta-review-name {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  unicode-bidi: isolate;
+}
+
+/* Meta information (date/location/etc.) */
+.ta-review-meta {
+  font-size: 0.8rem;
+  color: #54604e;
+  word-wrap: break-word; /* Wrap long words if needed */
+}
+
+/* Link to read full review */
+.ta-review-link {
+  display: inline-flex;
+  min-height: 44px; /* Accessible tap target */
+  align-items: center;
+  color: #1e3627;
+  text-decoration: underline;
+  margin-block-start: 1rem;
+  font-weight: 600;
+}
+
+/* Focus state for accessibility */
+.ta-review-link:focus-visible, #tripadvisor-traveler-photos a:focus-visible {
+  outline: 3px solid #1e3627;
+  outline-offset: 4px;
+}
+
+/* Source note below review link */
+.ta-review-source-note {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-inline-start: 1.5rem;
+}
+
+/* Hidden star ratings for screen readers */
+.ta-review-card .ta-review-stars[aria-hidden="true"] {
+  display: none;
+}
+
+.ta-review-card .ta-review-stars[aria-label]::before {
+  content: attr(aria-label);
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Traveler photo gallery grid */
+.ta-traveler-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 1.5rem;
+}
+
+/* Individual photo styling */
+.ta-traveler-photo {
+  margin: 0;
+}
+
+.ta-traveler-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.ta-traveler-photo figcaption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #54604e;
+  margin: 0.5rem 0;
+}
+
+/* Mobile adjustments for photo grid (< 600px) */
+@media screen and (max-width: 600px) {
+  .ta-traveler-photo-grid {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
+
+/* Optional override for review grid on small screens */
+@media screen and (max-width: 899px) {
+  .ta-review-grid {
+    grid-template-columns: minmax(0, 1fr); /* Allow long names to shrink and wrap */
+  }
+}
+.ta-review-rating { margin-bottom: 1rem; }
+.ta-review-card blockquote p { margin: 0; }
+#guest-reviews .ta-review-source-note { margin-inline-start: 0; }
+#tripadvisor-traveler-photos .ta-review-link { margin-block-start: 0; }
+
+/* The static stylesheet predates these new attribution spans. Define their
+   accessible hiding locally rather than relying on a runtime CSS compiler. */
+#guest-reviews .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.ta-review-card { min-width: 0; }
+.ta-review-link { max-width: 100%; overflow-wrap: anywhere; }

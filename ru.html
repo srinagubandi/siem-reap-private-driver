@@ -124,6 +124,8 @@
 <link rel="alternate" hreflang="sv" href="https://angkordrivers.com/sv.html">
 <link rel="alternate" hreflang="cs" href="https://angkordrivers.com/cs.html">
 <link rel="alternate" hreflang="x-default" href="https://angkordrivers.com/">
+<link rel="stylesheet" href="/assets/css/profile-vehicle.css">
+<link rel="stylesheet" href="/assets/css/tripadvisor-reviews.css">
 </head>
 <body class="bg-background text-on-surface font-sans selection:bg-secondary-container selection:text-on-secondary-container">
 <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
@@ -258,9 +260,15 @@
 <div class="max-w-7xl mx-auto px-6">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="relative">
+<div class="profile-vehicle-media" id="profile-vehicle-media">
 <div class="rounded-2xl overflow-hidden shadow-2xl">
 <!-- Original photo: Leng Chea Heng with his Hyundai H1 minivan -->
 <img alt='Leng Chea Heng with his Hyundai H1 minivan' class='profile-photo-original w-full h-auto' src='/images/leng-cheaheng-private-driver.jpg' width='1195' height='896' loading='lazy' decoding='async'>
+</div>
+<figure class='guest-van-photo' id='guest-van-angkor-photo'>
+  <img src='/images/private-van-angkor-gate.jpg' alt='Частный минивэн припаркован у ворот ангкорского храма' width='960' height='1280' loading='lazy' decoding='async'>
+  <figcaption>Мой личный фургон в Ангкоре</figcaption>
+</figure>
 </div>
 <div class="hidden sm:block absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl shadow-xl max-w-xs">
 <p class="font-serif text-2xl text-on-secondary-container">Более 12 лет опыта</p>
@@ -350,11 +358,8 @@
 <p class="text-white/70 text-sm mb-4">Однодневные поездки на гору Кулен, озеро Тонлесап или отдалённый храм Кох Кер.</p>
 </div>
 </a>
-</div><!-- guest-van-angkor-photo (idempotent marker) -->
-<figure class='guest-van-photo' id='guest-van-angkor-photo'>
-  <img src='/images/private-van-angkor-gate.jpg' alt='Частный минивэн припаркован у ворот ангкорского храма' width='960' height='1280' loading='lazy' decoding='async'>
-  <figcaption>Трансферы из аэропорта</figcaption>
-</figure>
+</div>
+
 
 </div>
 </section>
@@ -493,6 +498,15 @@
 <img alt="Fleet of vintage military Jeeps parked outside our Siem Reap base" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="/images/jeep-fleet-street.jpg" />
 </div>
 </div>
+<div id="tripadvisor-traveler-photos" class="mt-12"><h3 class="text-2xl font-serif text-primary mb-6">Фотографии путешественников с Tripadvisor</h3><div class="ta-traveler-photo-grid"><figure class="ta-traveler-photo">
+<a href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">
+<img src="/images/tripadvisor/web/traveler-34-d9-0f-e4.webp" width="1200" height="900" alt="Travelers enjoying a boat trip beside floating-village houses" lang="en" loading="lazy" decoding="async"></a>
+<figcaption>Фото поделился(-ась) <bdi>Sam C</bdi> · <a class="ta-review-link" href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Tripadvisor</a></figcaption>
+</figure><figure class="ta-traveler-photo">
+<a href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">
+<img src="/images/tripadvisor/web/traveler-34-d9-10-04.webp" width="1200" height="900" alt="Travelers posing in front of an Angkor temple tower" lang="en" loading="lazy" decoding="async"></a>
+<figcaption>Фото поделился(-ась) <bdi>Sam C</bdi> · <a class="ta-review-link" href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Tripadvisor</a></figcaption>
+</figure></div></div>
 </div>
 </section>
 
@@ -717,73 +731,42 @@
 </section>
 
 <!-- Testimonials -->
-<section class="py-24 bg-surface-container-low overflow-hidden">
+<section class="py-24 bg-surface-container-low" id="guest-reviews">
 <div class="max-w-7xl mx-auto px-6">
-<div class="flex justify-between items-end mb-16">
-<div>
-<h2 class="text-4xl font-serif text-primary mb-2">Что говорят гости</h2>
-<p class="text-on-surface-variant">Их собственными словами.</p>
-</div>
-
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<p class="italic text-on-surface-variant mb-6 text-lg">«Лучшее решение за всё путешествие. Пунктуальный, добрый, прекрасно говорит по-английски. Знал все лучшие места, чтобы избежать толп в Ангкор-Вате.»</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-stone-200 rounded-full"></div>
-<div>
-<p class="font-bold">Sarah &amp; James</p>
-<p class="text-xs text-on-surface-variant/60">London, UK</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<p class="italic text-on-surface-variant mb-6 text-lg">«Больше чем водитель — он чувствовался как друг. Он отвёз нас в места, которые мы никогда бы не нашли сами. По-настоящему аутентичный опыт.»</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-stone-200 rounded-full"></div>
-<div>
-<p class="font-bold">David Chen</p>
-<p class="text-xs text-on-surface-variant/60">Singapore</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<p class="italic text-on-surface-variant mb-6 text-lg">«Машина была безупречно чистой, а кондиционер спасал жизнь в камбоджийскую жару. Он всегда держал наготове холодную воду и влажные полотенца.»</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-stone-200 rounded-full"></div>
-<div>
-<p class="font-bold">Elena Rodriguez</p>
-<p class="text-xs text-on-surface-variant/60">Madrid, Spain</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+<div class="mb-16"><h2 class="text-4xl font-serif text-primary mb-2">Что говорят гости</h2><p class="text-on-surface-variant">Выдержки из отзывов путешественников на Tripadvisor. Оригинальные отзывы на английском языке.</p></div>
+<div class="ta-review-grid"><article class="ta-review-card" data-review-id="1081105893">
+<p class="ta-review-rating"><span aria-hidden="true">★★★★★</span> <span dir="ltr">5/5</span></p>
+<blockquote lang="en" dir="ltr" cite="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html"><p>“Reasonably priced, very polite, on time, good understanding off Cambodian history, willing to help and good communication.”</p></blockquote>
+<div class="ta-review-person"><img class="ta-review-avatar" src="/images/tripadvisor/reviewers/reviewer-1081105893.jpg" width="100" height="100" alt="" loading="lazy" decoding="async"><div class="ta-review-person-body">
+<p class="ta-review-meta">Путешественник Tripadvisor</p>
+<p class="ta-review-name"><bdi>Sam C</bdi></p><p class="ta-review-meta" lang="en" dir="ltr">Sydney, Australia</p>
+<p class="ta-review-meta">Написано <time datetime="2026-10-09" dir="ltr">2026-10-09</time></p>
+</div></div>
+<a class="ta-review-link" href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Прочитать полный отзыв на Tripadvisor<span class="sr-only"> — <bdi>Sam C</bdi></span></a>
+</article>
+<article class="ta-review-card" data-review-id="1080418499">
+<p class="ta-review-rating"><span aria-hidden="true">★★★★★</span> <span dir="ltr">5/5</span></p>
+<blockquote lang="en" dir="ltr" cite="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1080418499-Angkordrivers-Siem_Reap_Siem_Reap_Province.html"><p>“Driver replied promptly and was always on time.”</p></blockquote>
+<div class="ta-review-person"><img class="ta-review-avatar" src="/images/tripadvisor/reviewers/reviewer-1080418499.jpg" width="100" height="100" alt="" loading="lazy" decoding="async"><div class="ta-review-person-body">
+<p class="ta-review-meta">Путешественник Tripadvisor</p>
+<p class="ta-review-name"><bdi>BigMac666</bdi></p><p class="ta-review-meta" lang="en" dir="ltr">Melbourne, Australia</p>
+<p class="ta-review-meta">Написано <time datetime="2026-10-04" dir="ltr">2026-10-04</time></p>
+</div></div>
+<a class="ta-review-link" href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1080418499-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Прочитать полный отзыв на Tripadvisor<span class="sr-only"> — <bdi>BigMac666</bdi></span></a>
+</article>
+<article class="ta-review-card" data-review-id="1079650212">
+<p class="ta-review-rating"><span aria-hidden="true">★★★★★</span> <span dir="ltr">5/5</span></p>
+<blockquote lang="en" dir="ltr" cite="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html"><p>“The car was always clean, and there was more than enough drinking water for us.”</p></blockquote>
+<div class="ta-review-person"><img class="ta-review-avatar" src="/images/tripadvisor/reviewers/reviewer-1079650212.jpg" width="100" height="100" alt="" loading="lazy" decoding="async"><div class="ta-review-person-body">
+<p class="ta-review-meta">Путешественник Tripadvisor</p>
+<p class="ta-review-name"><bdi>Fearless64391184385</bdi></p>
+<p class="ta-review-meta">Написано <time datetime="2026-09-28" dir="ltr">2026-09-28</time></p>
+</div></div>
+<a class="ta-review-link" href="https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Прочитать полный отзыв на Tripadvisor<span class="sr-only"> — <bdi>Fearless64391184385</bdi></span></a>
+</article></div>
+<p class="ta-review-source-note"><a class="ta-review-link" href="https://www.tripadvisor.co.uk/Attraction_Review-g297390-d34664961-Reviews-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener noreferrer">Посмотреть все отзывы на Tripadvisor</a></p>
+<p class="ta-review-source-note">Совет путешественника: <q lang="en" dir="ltr">Contact direct via WhatsApp</q> — <bdi>BigMac666</bdi></p>
+</div></section>
 <!-- Contact Section -->
 <section class="py-24" id="contact">
 <div class="max-w-7xl mx-auto px-6">
@@ -822,11 +805,7 @@
 </div>
 </div>
 </div>
-<div class="pt-12">
-<div class="w-full h-48 rounded-xl overflow-hidden opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer">
-<img alt="Map" class="w-full h-full object-cover" data-alt="abstract artistic map showing the layout of siem reap and angkor archaeological park with golden lines on dark background" data-location="Siem Reap" src="/assets/local/images/61dc636cfc2f.jpg"/>
-</div>
-</div>
+
 </div>
 <div class="lg:w-1/2 p-12">
 <!-- Formspree: submissions are emailed to henglengchea592@gmail.com -->
@@ -882,14 +861,7 @@
 </div>
 </section>
 
-<!-- =============================================
-     REVIEWS SECTION
-     — Elfsight Google Reviews widget (replace YOUR_ELFSIGHT_APP_ID
-       with your real ID after registering at https://elfsight.com)
-     — TripAdvisor official widget (replace YOUR_TRIPADVISOR_WIDGET_CODE
-       with the code from https://www.tripadvisor.com/Widgets after
-       your listing is live)
-     ============================================= -->
+
 <section class="py-24 bg-surface-container-low" id="reviews">
 <div class="max-w-7xl mx-auto px-6">
   <div class="text-center mb-14">
@@ -898,26 +870,15 @@
     <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Вот что прошлые гости говорили о своих поездках с Леном.</p>
   </div>
 
-  <!-- Google Reviews — powered by Elfsight -->
-  <div class="mb-16" id="google-reviews-section" hidden>
-    <div class="flex items-center gap-3 mb-6">
-      <!-- Google colour logo SVG -->
-      <svg width="28" height="28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
-      <span class="font-serif text-xl text-primary">Google Reviews</span>
-    </div>
-    <!-- IMPORTANT: Replace 'YOUR_ELFSIGHT_APP_ID' below with your real Elfsight widget app ID.
-         Register free at https://elfsight.com/google-reviews-widget/
-         After creating your widget, the app ID looks like: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --><!-- Placeholder shown until Elfsight widget is configured -->
-    <div id="google-reviews-placeholder" class="bg-white rounded-2xl shadow-sm border border-outline-variant p-10 text-center">
-      <div class="flex justify-center gap-1 mb-4">
-        <span class="text-yellow-400 text-3xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      </div>
-      <p class="text-on-surface-variant text-lg mb-2">Отзывы Google появятся здесь после настройки виджета Elfsight.</p>
-      <a class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-container transition-all" href="https://elfsight.com/google-reviews-widget/" target="_blank" rel="noopener">Set Up Google Reviews Widget</a>
-    </div>
-  </div>
-
-  <!-- TripAdvisor Reviews -->
+  <!-- Verified Google business profile: static external link, no review feed -->
+<div id="google-business-profile" class="mb-16">
+<div class="flex items-center gap-3 mb-6"><svg width="28" height="28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg><h3 class="font-serif text-xl text-primary">Профиль Google Business</h3></div>
+<div class="bg-white rounded-2xl shadow-sm border border-outline-variant p-10">
+<p class="text-lg font-bold text-primary" lang="en">Angkor Driver</p>
+<p class="text-on-surface-variant mt-2">Просмотрите компанию на Google Картах. На этом сайте не загружаются живые отзывы Google.</p>
+<a class="ta-review-link" href="https://www.google.com/maps/place/Angkor+Driver/@13.33845,103.8510175,17z/data=!3m1!4b1!4m6!3m5!1s0x311019bbc4a744f9:0xeba4b39a1664db89!8m2!3d13.33845!4d103.8510175!16s%2Fg%2F11nhd1wfj7" target="_blank" rel="noopener noreferrer">Открыть профиль Google</a>
+</div></div>
+<!-- TripAdvisor Reviews -->
   <div>
     <div class="flex items-center gap-3 mb-6">
       <!-- TripAdvisor owl logo colour -->
@@ -939,10 +900,7 @@
     <h3 class="text-2xl font-serif text-white mb-3">Были в поездке с Леном?</h3>
     <p class="text-white/70 mb-8 max-w-xl mx-auto">Оставить отзыв займёт две минуты и поможет другим путешественникам найти его. Это очень много значит для его семьи.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a class="inline-flex items-center gap-2 px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-stone-100 transition-all" href="https://g.page/r/REPLACE_WITH_GOOGLE_REVIEW_LINK/review" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        Leave a Google Review
-      </a>
+      <a class="inline-flex items-center gap-2 px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-stone-100 transition-all" href="https://www.google.com/maps/place/Angkor+Driver/@13.33845,103.8510175,17z/data=!3m1!4b1!4m6!3m5!1s0x311019bbc4a744f9:0xeba4b39a1664db89!8m2!3d13.33845!4d103.8510175!16s%2Fg%2F11nhd1wfj7" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Открыть профиль Google</a>
       <a class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-400 text-emerald-950 rounded-lg font-semibold hover:bg-emerald-300 transition-all" href="https://www.tripadvisor.co.uk/Attraction_Review-g297390-d34664961-Reviews-Angkordrivers-Siem_Reap_Siem_Reap_Province.html" target="_blank" rel="noopener">
         Review on TripAdvisor
       </a>

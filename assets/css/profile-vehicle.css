@@ -1,0 +1,32 @@
+/* The original driver and van photos now form one related media group.
+   Their natural aspect ratios are preserved; the experience badge stays in
+   the existing outer positioning context. Keep two columns on narrow screens
+   to avoid recreating the disconnected, oversized portrait tile. */
+#about .profile-vehicle-media {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+#about .profile-vehicle-media > * { min-width: 0; }
+#about .profile-vehicle-media .guest-van-photo {
+  margin: 0 !important;
+  padding: 0;
+  max-width: none;
+}
+#about .profile-vehicle-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#about .profile-vehicle-media figcaption {
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #54604e;
+  margin-top: .5rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 480px) {
+  #about .profile-vehicle-media { gap: .65rem; }
+}

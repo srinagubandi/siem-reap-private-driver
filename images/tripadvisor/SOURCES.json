@@ -1,0 +1,201 @@
+{
+  "verified_at": "2026-11-06",
+  "permission": {
+    "confirmed_by_owner": true,
+    "confirmed_at": "2026-11-06",
+    "scope": "Review excerpts, public reviewer avatars, and traveler photos, including public Git storage",
+    "basis": "Explicit user confirmation in this task; no independent legal certification"
+  },
+  "assets": [
+    {
+      "name": "reviewer-1081105893.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e8/91/default-avatar-2020-62.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34672921-r1081105893-Private_Angkor_Wat_Tour-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Sam C",
+      "type": "reviewer avatar; may be Tripadvisor default imagery",
+      "dimensions": [
+        100,
+        100
+      ],
+      "sha256": "0d1b8467c11c1f980d0eae2eef74e576bef2abe2852e3fe616ff702c076cbf62",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/reviewers/reviewer-1081105893.jpg"
+    },
+    {
+      "name": "reviewer-1080418499.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e2/a7/default-avatar-2020-44.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1080418499-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "BigMac666",
+      "type": "reviewer avatar; may be Tripadvisor default imagery",
+      "dimensions": [
+        100,
+        100
+      ],
+      "sha256": "a060d85ce3087125bbe22a59ab72a33d7c12e73254b886512ad1dfd843d5a2d8",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/reviewers/reviewer-1080418499.jpg"
+    },
+    {
+      "name": "reviewer-1079650212.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/32/default-avatar-2020-12.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34672921-r1079650212-Private_Angkor_Wat_Tour-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "reviewer avatar; may be Tripadvisor default imagery",
+      "dimensions": [
+        100,
+        100
+      ],
+      "sha256": "1d8ed6ff163eb51e62bc59e16f77a2080ac19abfca2770d6ad3634da7a2058dd",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/reviewers/reviewer-1079650212.jpg"
+    },
+    {
+      "name": "reviewer-1078843799.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ee/10/default-avatar-2020-8.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34672921-r1078843799-Private_Angkor_Wat_Tour-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Matěj M",
+      "type": "reviewer avatar; may be Tripadvisor default imagery",
+      "dimensions": [
+        100,
+        100
+      ],
+      "sha256": "62fd3b858c0002cc6c7634cb06c6232a430da18d347bfeedecae82b72cdb9474",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/reviewers/reviewer-1078843799.jpg"
+    },
+    {
+      "name": "reviewer-1076415526.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f1/b8/default-avatar-2020-22.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1076415526-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Mislav M",
+      "type": "reviewer avatar; may be Tripadvisor default imagery",
+      "dimensions": [
+        100,
+        100
+      ],
+      "sha256": "0c1469483e4e887437c4c240a3e43c8d9065753060792ec31a0e7ea8c701c937",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/reviewers/reviewer-1076415526.jpg"
+    },
+    {
+      "name": "traveler-34-d9-0f-e4.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/d9/0f/e4/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/d9/0f/e4/caption.jpg?w=200&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Sam C",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sha256": "6bcf9ef63d84bdd3fa3ce81a8b6629a27eab987fcd348e942f519657eb31dc6a",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-d9-0f-e4.jpg"
+    },
+    {
+      "name": "traveler-34-d9-10-04.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/d9/10/04/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/d9/10/04/caption.jpg?w=200&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1081105893-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Sam C",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sha256": "22a74bdbaaec69204948b56406be266224b28665b8bc973cd4a8e7b9038bdf27",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-d9-10-04.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3a.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3a/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3a/caption.jpg?w=200&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        3789,
+        2998
+      ],
+      "sha256": "e02559849ca3b56f5e11d466a2bfd1a5e062ba0db1074caee84f180ff7bd94e7",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3a.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3b.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3b/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3b/caption.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        2998,
+        3611
+      ],
+      "sha256": "abec6fcd3abe96eccbf39440b3331e4239d9d851b92efd1bdcc12cfeb097dd1d",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3b.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3c.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3c/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3c/caption.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        2950,
+        3871
+      ],
+      "sha256": "ed7e4863d798d1531bed8e6b9159485130d4974c011f1d0dafdff271228a8c23",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3c.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3d.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3d/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3d/caption.jpg?w=200&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        1986,
+        1301
+      ],
+      "sha256": "69a8f187ba7f7ecd460465efcaef03fa1177016f3006f00d4b568ad50b64c3fe",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3d.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3e.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3e/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3e/caption.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        2825,
+        3585
+      ],
+      "sha256": "2d766dee236e9a9c027a76a8e67c3050dd3821ef327f68015252144c9e19ceb8",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3e.jpg"
+    },
+    {
+      "name": "traveler-34-bd-2a-3f.jpg",
+      "source_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3f/caption.jpg",
+      "observed_thumbnail_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/bd/2a/3f/caption.jpg?w=100&h=-1&s=1",
+      "source_page": "https://www.tripadvisor.co.uk/ShowUserReviews-g297390-d34664961-r1079650212-Angkordrivers-Siem_Reap_Siem_Reap_Province.html",
+      "creator_display_name": "Fearless64391184385",
+      "type": "review-attached traveler photo",
+      "dimensions": [
+        2998,
+        4000
+      ],
+      "sha256": "843516b3994cb830a095a7073b29b94f94f536613feb736014fc87c252d6e4b0",
+      "permission_status": "Owner confirmed permission in conversation 2026-11-06",
+      "git_path": "images/tripadvisor/originals/traveler-34-bd-2a-3f.jpg"
+    }
+  ]
+}

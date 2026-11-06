@@ -1,0 +1,92 @@
+{
+  "en": {
+    "google_heading": "Google Business Profile",
+    "google_link": "Open Google profile",
+    "google_note": "View the business on Google Maps. No live Google reviews are loaded on this website."
+  },
+  "fr": {
+    "google_heading": "Profil Google Business",
+    "google_link": "Ouvrir le profil Google",
+    "google_note": "Voir l'entreprise sur Google Maps. Aucun avis Google en direct n'est chargé sur ce site Web."
+  },
+  "zh": {
+    "google_heading": "Google 商务档案",
+    "google_link": "打开 Google 档案",
+    "google_note": "在 Google 地图上查看企业。此网站不加载实时 Google 评论。"
+  },
+  "ko": {
+    "google_heading": "Google 비즈니스 프로필",
+    "google_link": "Google 프로필 열기",
+    "google_note": "Google 지도에서 기업을 확인하세요. 이 웹사이트에는 실시간 Google 리뷰가 로드되지 않습니다."
+  },
+  "ja": {
+    "google_heading": "Googleビジネスプロフィール",
+    "google_link": "Googleプロフィールを開く",
+    "google_note": "Googleマップで事業を表示します。このウェブサイトにはライブのGoogleレビューは読み込まれません。"
+  },
+  "vi": {
+    "google_heading": "Hồ sơ Doanh nghiệp Google",
+    "google_link": "Mở hồ sơ Google",
+    "google_note": "Xem doanh nghiệp trên Google Maps. Không có đánh giá Google trực tiếp nào được tải trên trang web này."
+  },
+  "th": {
+    "google_heading": "โปรไฟล์ธุรกิจ Google",
+    "google_link": "เปิดโปรไฟล์ Google",
+    "google_note": "ดูธุรกิจบน Google Maps ไม่มีการโหลดรีวิว Google แบบสดบนเว็บไซต์นี้"
+  },
+  "de": {
+    "google_heading": "Google Business-Profil",
+    "google_link": "Google-Profil öffnen",
+    "google_note": "Sehen Sie sich das Unternehmen auf Google Maps an. Auf dieser Website werden keine Live-Google-Bewertungen geladen."
+  },
+  "es": {
+    "google_heading": "Perfil de Google Business",
+    "google_link": "Abrir perfil de Google",
+    "google_note": "Ver la empresa en Google Maps. No se cargan reseñas de Google en vivo en este sitio web."
+  },
+  "it": {
+    "google_heading": "Profilo Google Business",
+    "google_link": "Apri profilo Google",
+    "google_note": "Visualizza l'azienda su Google Maps. Nessuna recensione Google dal vivo viene caricata su questo sito web."
+  },
+  "pt": {
+    "google_heading": "Perfil do Google Business",
+    "google_link": "Abrir perfil do Google",
+    "google_note": "Veja a empresa no Google Maps. Nenhuma avaliação ao vivo do Google é carregada neste site."
+  },
+  "ru": {
+    "google_heading": "Профиль Google Business",
+    "google_link": "Открыть профиль Google",
+    "google_note": "Просмотрите компанию на Google Картах. На этом сайте не загружаются живые отзывы Google."
+  },
+  "nl": {
+    "google_heading": "Google Zakelijk Profiel",
+    "google_link": "Google-profiel openen",
+    "google_note": "Bekijk het bedrijf op Google Maps. Er worden geen live Google-reviews geladen op deze website."
+  },
+  "pl": {
+    "google_heading": "Profil Google Business",
+    "google_link": "Otwórz profil Google",
+    "google_note": "Zobacz firmę w Mapach Google. Na tej stronie nie są ładowane żadne aktualne recenzje Google."
+  },
+  "ar": {
+    "google_heading": "ملف جوجل للأعمال",
+    "google_link": "فتح ملف جوجل",
+    "google_note": "عرض الشركة على خرائط جوجل. لا يتم تحميل أي مراجعات حية من جوجل على هذا الموقع الإلكتروني."
+  },
+  "id": {
+    "google_heading": "Profil Bisnis Google",
+    "google_link": "Buka profil Google",
+    "google_note": "Lihat bisnis di Google Maps. Tidak ada ulasan Google langsung yang dimuat di situs web ini."
+  },
+  "sv": {
+    "google_heading": "Google Business-profil",
+    "google_link": "Öppna Google-profil",
+    "google_note": "Visa företaget på Google Maps. Inga direkta Google-recensioner laddas på denna webbplats."
+  },
+  "cs": {
+    "google_heading": "Profil firmy Google",
+    "google_link": "Otevřít profil Google",
+    "google_note": "Zobrazte si podnik na Mapách Google. Na tomto webu nejsou načteny žádné živé recenze Google."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "en": {
+    "subtitle": "Excerpts from Tripadvisor traveler reviews. Original reviews in English.",
+    "read_review": "Read full review on Tripadvisor",
+    "all_reviews": "See all reviews on Tripadvisor",
+    "source": "Tripadvisor traveler",
+    "written": "Written",
+    "photos_heading": "Traveler photos from Tripadvisor",
+    "photo_credit": "Photo shared by",
+    "tip_label": "Traveler tip",
+    "van_caption": "My private van at Angkor"
+  },
+  "fr": {
+    "subtitle": "Extraits des avis de voyageurs sur Tripadvisor. Avis originaux en anglais.",
+    "read_review": "Lire l'avis complet sur Tripadvisor",
+    "all_reviews": "Voir tous les avis sur Tripadvisor",
+    "source": "Voyageur Tripadvisor",
+    "written": "Écrit",
+    "photos_heading": "Photos de voyageurs depuis Tripadvisor",
+    "photo_credit": "Photo partagée par",
+    "tip_label": "Conseil de voyageur",
+    "van_caption": "Mon van privé à Angkor"
+  },
+  "zh": {
+    "subtitle": "来自Tripadvisor旅行者评论的摘录。原始评论为英文。",
+    "read_review": "在Tripadvisor上阅读完整评论",
+    "all_reviews": "查看Tripadvisor上的所有评论",
+    "source": "Tripadvisor旅行者",
+    "written": "撰写于",
+    "photos_heading": "来自Tripadvisor的旅行者照片",
+    "photo_credit": "照片分享自",
+    "tip_label": "旅行者提示",
+    "van_caption": "我在吴哥的私人面包车"
+  },
+  "ko": {
+    "subtitle": "Tripadvisor 여행자 리뷰 발췌. 원본 리뷰는 영어입니다.",
+    "read_review": "Tripadvisor에서 전체 리뷰 보기",
+    "all_reviews": "Tripadvisor의 모든 리뷰 보기",
+    "source": "Tripadvisor 여행자",
+    "written": "작성일",
+    "photos_heading": "Tripadvisor의 여행자 사진",
+    "photo_credit": "사진 제공",
+    "tip_label": "여행자 팁",
+    "van_caption": "앙코르에서의 제 개인 밴"
+  },
+  "ja": {
+    "subtitle": "Tripadvisorの旅行者のレビューからの抜粋。元のレビューは英語です。",
+    "read_review": "Tripadvisorで完全なレビューを読む",
+    "all_reviews": "Tripadvisorのすべてのレビューを見る",
+    "source": "Tripadvisorの旅行者",
+    "written": "記入日",
+    "photos_heading": "Tripadvisorからの旅行者写真",
+    "photo_credit": "写真提供者：",
+    "tip_label": "旅行者アドバイス",
+    "van_caption": "アンコールでの私のプライベートバン"
+  },
+  "vi": {
+    "subtitle": "Trích dẫn từ đánh giá của du khách trên Tripadvisor. Đánh giá gốc bằng tiếng Anh.",
+    "read_review": "Đọc đánh giá đầy đủ trên Tripadvisor",
+    "all_reviews": "Xem tất cả đánh giá trên Tripadvisor",
+    "source": "Du khách Tripadvisor",
+    "written": "Viết vào",
+    "photos_heading": "Ảnh du khách từ Tripadvisor",
+    "photo_credit": "Ảnh được chia sẻ bởi",
+    "tip_label": "Mẹo du lịch",
+    "van_caption": "Xe van riêng của tôi tại Angkor"
+  },
+  "th": {
+    "subtitle": "ข้อความที่ได้รับจากบทวิจารณ์ของนักเดินทางใน Tripadvisor บทวิจารณ์ต้นฉบับเป็นภาษาอังกฤษ",
+    "read_review": "อ่านบทวิจารณ์เต็มบน Tripadvisor",
+    "all_reviews": "ดูบทวิจารณ์ทั้งหมดบน Tripadvisor",
+    "source": "นักเดินทาง Tripadvisor",
+    "written": "เขียนเมื่อ",
+    "photos_heading": "รูปภาพของนักเดินทางจาก Tripadvisor",
+    "photo_credit": "รูปภาพแบ่งปันโดย",
+    "tip_label": "คำแนะนำจากนักเดินทาง",
+    "van_caption": "รถตู้ส่วนตัวของฉันที่แองคอร์"
+  },
+  "de": {
+    "subtitle": "Auszüge aus Reisebewertungen bei Tripadvisor. Ursprüngliche Bewertungen auf Englisch.",
+    "read_review": "Vollständige Bewertung auf Tripadvisor lesen",
+    "all_reviews": "Alle Bewertungen auf Tripadvisor ansehen",
+    "source": "Tripadvisor-Reisender",
+    "written": "Geschrieben",
+    "photos_heading": "Reisefotos von Tripadvisor",
+    "photo_credit": "Foto geteilt von",
+    "tip_label": "Tipp eines Reisenden",
+    "van_caption": "Mein privater Van in Angkor"
+  },
+  "es": {
+    "subtitle": "Extractos de reseñas de viajeros en Tripadvisor. Reseñas originales en inglés.",
+    "read_review": "Leer reseña completa en Tripadvisor",
+    "all_reviews": "Ver todas las reseñas en Tripadvisor",
+    "source": "Viajero de Tripadvisor",
+    "written": "Escrito",
+    "photos_heading": "Fotos de viajeros desde Tripadvisor",
+    "photo_credit": "Foto compartida por",
+    "tip_label": "Consejo de viajero",
+    "van_caption": "Mi furgoneta privada en Angkor"
+  },
+  "it": {
+    "subtitle": "Estratti dalle recensioni dei viaggiatori su Tripadvisor. Recensioni originali in inglese.",
+    "read_review": "Leggi la recensione completa su Tripadvisor",
+    "all_reviews": "Guarda tutte le recensioni su Tripadvisor",
+    "source": "Viaggiatore di Tripadvisor",
+    "written": "Scritto",
+    "photos_heading": "Foto di viaggiatori da Tripadvisor",
+    "photo_credit": "Foto condivisa da",
+    "tip_label": "Consiglio del viaggiatore",
+    "van_caption": "Il mio pulmino privato ad Angkor"
+  },
+  "pt": {
+    "subtitle": "Trechos das avaliações de viajantes no Tripadvisor. Avaliações originais em inglês.",
+    "read_review": "Ler avaliação completa no Tripadvisor",
+    "all_reviews": "Ver todas as avaliações no Tripadvisor",
+    "source": "Viajante do Tripadvisor",
+    "written": "Escrito",
+    "photos_heading": "Fotos de viajantes do Tripadvisor",
+    "photo_credit": "Foto compartilhada por",
+    "tip_label": "Dica de viajante",
+    "van_caption": "Minha van particular em Angkor"
+  },
+  "ru": {
+    "subtitle": "Выдержки из отзывов путешественников на Tripadvisor. Оригинальные отзывы на английском языке.",
+    "read_review": "Прочитать полный отзыв на Tripadvisor",
+    "all_reviews": "Посмотреть все отзывы на Tripadvisor",
+    "source": "Путешественник Tripadvisor",
+    "written": "Написано",
+    "photos_heading": "Фотографии путешественников с Tripadvisor",
+    "photo_credit": "Фото поделился(-ась)",
+    "tip_label": "Совет путешественника",
+    "van_caption": "Мой личный фургон в Ангкоре"
+  },
+  "nl": {
+    "subtitle": "Fragmenten uit beoordelingen van reizigers op Tripadvisor. Originele beoordelingen in het Engels.",
+    "read_review": "Volledige beoordeling lezen op Tripadvisor",
+    "all_reviews": "Bekijk alle beoordelingen op Tripadvisor",
+    "source": "Tripadvisor-reiziger",
+    "written": "Geschreven",
+    "photos_heading": "Foto's van reizigers vanaf Tripadvisor",
+    "photo_credit": "Foto gedeeld door",
+    "tip_label": "Tip van een reiziger",
+    "van_caption": "Mijn privébusje in Angkor"
+  },
+  "pl": {
+    "subtitle": "Fragmenty opinii podróżników z Tripadvisor. Oryginalne opinie w języku angielskim.",
+    "read_review": "Przeczytaj pełną opinię na Tripadvisor",
+    "all_reviews": "Zobacz wszystkie opinie na Tripadvisor",
+    "source": "Podróżnik z Tripadvisor",
+    "written": "Napisano",
+    "photos_heading": "Zdjęcia podróżników z Tripadvisor",
+    "photo_credit": "Zdjęcie udostępnione przez",
+    "tip_label": "Wskazówka podróżnika",
+    "van_caption": "Mój prywatny bus w Angkorze"
+  },
+  "ar": {
+    "subtitle": "مقتطفات من تقييمات المسافرين على موقع Tripadvisor. التقييمات الأصلية باللغة الإنجليزية.",
+    "read_review": "اقرأ التقييم الكامل على Tripadvisor",
+    "all_reviews": "عرض جميع التقييمات على Tripadvisor",
+    "source": "مسافر Tripadvisor",
+    "written": "مكتوب",
+    "photos_heading": "صور المسافرين من Tripadvisor",
+    "photo_credit": "الصورة شاركها",
+    "tip_label": "نصيحة مسافر",
+    "van_caption": "الفان الخاص بي في أنغكور"
+  },
+  "id": {
+    "subtitle": "Kutipan dari ulasan pelancong di Tripadvisor. Ulasan asli dalam bahasa Inggris.",
+    "read_review": "Baca ulasan lengkap di Tripadvisor",
+    "all_reviews": "Lihat semua ulasan di Tripadvisor",
+    "source": "Pelanggan Tripadvisor",
+    "written": "Ditulis",
+    "photos_heading": "Foto pelancong dari Tripadvisor",
+    "photo_credit": "Foto dibagikan oleh",
+    "tip_label": "Tips pelancong",
+    "van_caption": "Van pribadi saya di Angkor"
+  },
+  "sv": {
+    "subtitle": "Utdrag från resenärernas omdömen på Tripadvisor. Ursprungliga omdömen på engelska.",
+    "read_review": "Läs hela omdömet på Tripadvisor",
+    "all_reviews": "Se alla omdömen på Tripadvisor",
+    "source": "Tripadvisor-resenär",
+    "written": "Skriven",
+    "photos_heading": "Resenärsbilder från Tripadvisor",
+    "photo_credit": "Foto delat av",
+    "tip_label": "Resenärens tips",
+    "van_caption": "Min privata minibuss i Angkor"
+  },
+  "cs": {
+    "subtitle": "Výňatky z recenzí cestovatelů na Tripadvisoru. Původní recenze v angličtině.",
+    "read_review": "Přečíst celou recenzi na Tripadvisoru",
+    "all_reviews": "Zobrazit všechny recenze na Tripadvisoru",
+    "source": "Cestovatel z Tripadvisoru",
+    "written": "Napsáno",
+    "photos_heading": "Fotografie cestovatelů z Tripadvisoru",
+    "photo_credit": "Fotografii sdílel(a)",
+    "tip_label": "Tip cestovatele",
+    "van_caption": "Má soukromá dodávka v Angkoru"
+  }
+}
