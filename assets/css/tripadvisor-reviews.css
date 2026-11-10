@@ -191,3 +191,59 @@
 [data-google-profile-paused="true"][hidden] {
   display: none !important;
 }
+
+/* Static gallery system: stable frames, local WebP with JPEG fallback, and no face-cropping. */
+.ta-traveler-photo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
+}
+
+.ta-traveler-photo > a,
+.ta-traveler-photo > picture {
+  display: block;
+}
+
+.ta-traveler-photo > a {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #f5f5f4;
+  aspect-ratio: 4 / 3;
+}
+
+.ta-traveler-photo > a picture,
+.ta-traveler-photo > a img,
+.ta-traveler-photo > picture,
+.ta-traveler-photo > picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ta-traveler-photo > a img,
+.ta-traveler-photo > picture img {
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.ta-traveler-photo > a:hover img,
+.ta-traveler-photo > a:focus-visible img {
+  transform: scale(1.03);
+}
+
+.ta-traveler-photo.guest-group-photo > a {
+  aspect-ratio: 4 / 5;
+}
+
+.ta-traveler-photo.guest-group-photo > a img {
+  object-fit: contain;
+}
+
+.ta-traveler-photo figcaption {
+  max-inline-size: 42rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ta-traveler-photo > a img { transition: none; }
+  .ta-traveler-photo > a:hover img,
+  .ta-traveler-photo > a:focus-visible img { transform: none; }
+}
