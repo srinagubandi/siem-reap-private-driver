@@ -91,6 +91,35 @@
       });
     }
 
+    // ---------- Gallery image prefetch ----------
+    // Keep the first visible image as the priority image; warm the remaining
+    // local cards only while the browser is idle and the connection allows it.
+    function scheduleGalleryPrefetch(selector, skipFirst) {
+      var links = Array.prototype.slice.call(document.querySelectorAll(selector + ' a[href]'));
+      var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (!links.length || (connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType || '')))) return;
+      var urls = links.slice(skipFirst ? 1 : 0).map(function (link) {
+        try {
+          var url = new URL(link.getAttribute('href'), window.location.href);
+          return url.origin === window.location.origin && /\.(?:avif|jpe?g|png|webp)(?:\?.*)?$/i.test(url.pathname) ? url.href : null;
+        } catch (error) {
+          return null;
+        }
+      }).filter(Boolean);
+      if (!urls.length) return;
+      var warmImages = function () {
+        urls.forEach(function (url) {
+          var image = new Image();
+          image.decoding = 'async';
+          image.src = url;
+        });
+      };
+      if ('requestIdleCallback' in window) window.requestIdleCallback(warmImages, { timeout: 2500 });
+      else window.setTimeout(warmImages, 900);
+    }
+    scheduleGalleryPrefetch('.guest-gallery-cards', false);
+    scheduleGalleryPrefetch('.ta-traveler-photo-grid', true);
+
     // ---------- Static traveler gallery lightbox ----------
     // Progressive enhancement: without JS, every card remains a normal image link.
     var galleryGrid = document.querySelector('.ta-traveler-photo-grid');

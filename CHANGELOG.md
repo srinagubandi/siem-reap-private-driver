@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-10 — Thumbsup-style gallery cards and safe image prefetch
+
+Applied the GitHub Pages Gallery-inspired card treatment to the remaining photos in both Moments with Guests and Traveler photo gallery across all 18 language pages. The existing first image remains first and unchanged in each section: the family-at-airport photo in Moments with Guests and the guest-welcome photo in Traveler photo gallery. The migration is repeatable and changed 18 pages once, then 0 pages on its second run.
+
+Added connection-aware background prefetching for six later same-origin local images during browser idle time. Prefetching is skipped when Save-Data, 2g, or slow-2g is detected; external Tripadvisor URLs are never prefetched. The verified regression passed 54 responsive page states, 18 lightbox states, exact first-image DOM preservation, six unique local prefetches, connection suppression, no JavaScript errors, and zero horizontal overflow.
+
 ## 2026-11-10 — Discoverable multilingual traveler gallery
 
 Added a visible gallery toolbar above the existing traveler-photo grid on all 18 language pages. It provides a localized gallery heading, short description, photo count, Open Gallery action, keyboard guidance, and coarse-pointer swipe guidance. The no-JavaScript view keeps the heading and description plus four native full-image links, while JS-only controls remain hidden until the shared lightbox initializes.
