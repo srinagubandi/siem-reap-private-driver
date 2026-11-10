@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-10 — Discoverable multilingual traveler gallery
+
+Added a visible gallery toolbar above the existing traveler-photo grid on all 18 language pages. It provides a localized gallery heading, short description, photo count, Open Gallery action, keyboard guidance, and coarse-pointer swipe guidance. The no-JavaScript view keeps the heading and description plus four native full-image links, while JS-only controls remain hidden until the shared lightbox initializes.
+
+Connected the toolbar to the existing GitHub Pages-safe vanilla-JS lightbox without adding a backend, database, external library, CDN, or runtime image service. The idempotent `scripts/add_gallery_toolbar.py` migration and `data/gallery-toolbar-translations.json` make future photo additions maintainable. The release passed 54 JS responsive states across 18 pages at 320/390/768px, 18 no-JS states, keyboard/hash/focus/inert restoration, Arabic RTL, coarse/fine pointer behavior, zero overflow, native-link fallback, and repeat-run idempotency. Planning and skeptic gates used Claude Opus 5.5; the final independent test gate used Claude Sonnet 5.5; Meta's open `muse-spark-open` supplied the toolbar copy after the preferred `muse-ember` response was unusable. No DeepSeek dependency is present in the site.
+
 ## 2026-11-10 — Static traveler gallery controls
 
 Added progressive-enhancement controls to the traveler-photo gallery across all 18 language pages. Each card remains a native local image link without JavaScript; when the shared enhancement script loads, the gallery adds a keyboard- and touch-friendly lightbox with previous/next, close, Escape, focus containment, URL hash deep links, accessible captions, reduced-motion handling, and Arabic-safe layout. No backend, external gallery library, runtime image service, or non-GitHub hosting is required.

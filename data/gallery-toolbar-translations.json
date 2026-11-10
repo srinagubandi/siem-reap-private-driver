@@ -1,0 +1,164 @@
+[
+  {
+    "filename": "index.html",
+    "heading": "Traveler photo gallery",
+    "lead": "Browse moments shared by guests and our local team",
+    "photos": "Photos",
+    "open": "Open gallery",
+    "keyboard": "Use left and right arrows to browse; press Escape to close",
+    "swipe": "Swipe to browse photos"
+  },
+  {
+    "filename": "fr.html",
+    "heading": "Galerie photo des voyageurs",
+    "lead": "Parcourez les moments partagés par nos invités et notre équipe locale",
+    "photos": "Photos",
+    "open": "Ouvrir la galerie",
+    "keyboard": "Utilisez les flèches gauche et droite pour naviguer ; appuyez sur Échap pour fermer",
+    "swipe": "Faites glisser pour parcourir les photos"
+  },
+  {
+    "filename": "zh.html",
+    "heading": "旅行者照片墙",
+    "lead": "浏览宾客与本地团队分享的精彩瞬间",
+    "photos": "照片",
+    "open": "打开图库",
+    "keyboard": "使用左右方向键浏览；按 Esc 关闭",
+    "swipe": "滑动浏览照片"
+  },
+  {
+    "filename": "ko.html",
+    "heading": "여행자 포토 갤러리",
+    "lead": "게스트와 현지 팀이 공유한 순간들을 둘러보세요",
+    "photos": "사진",
+    "open": "갤러리 열기",
+    "keyboard": "좌우 화살표로 이동하고 Esc 키로 닫으세요",
+    "swipe": "스와이프하여 사진 보기"
+  },
+  {
+    "filename": "ja.html",
+    "heading": "トラベラーフォトギャラリー",
+    "lead": "ゲストや現地チームがシェアした瞬間をご覧ください",
+    "photos": "写真",
+    "open": "ギャラリーを開く",
+    "keyboard": "左右の矢印キーで閲覧、Escキーで閉じる",
+    "swipe": "スワイプして写真を閲覧"
+  },
+  {
+    "filename": "vi.html",
+    "heading": "Thư viện ảnh du khách",
+    "lead": "Khám phá những khoảnh khắc được chia sẻ bởi du khách và đội ngũ địa phương",
+    "photos": "Hình ảnh",
+    "open": "Mở thư viện ảnh",
+    "keyboard": "Dùng phím mũi tên trái và phải để duyệt; nhấn Esc để đóng",
+    "swipe": "Vuốt để xem ảnh"
+  },
+  {
+    "filename": "th.html",
+    "heading": "แกลเลอรีภาพนักเดินทาง",
+    "lead": "ชมช่วงเวลาประทับใจที่แบ่งปันโดยผู้เข้าพักและทีมท้องถิ่นของเรา",
+    "photos": "รูปภาพ",
+    "open": "เปิดแกลเลอรี",
+    "keyboard": "ใช้ลูกศรซ้ายและขวาเพื่อเรียกดู กด Esc เพื่อปิด",
+    "swipe": "ปัดเพื่อเรียกดูรูปภาพ"
+  },
+  {
+    "filename": "de.html",
+    "heading": "Reisefotogalerie",
+    "lead": "Entdecke Momente, geteilt von Gästen und unserem lokalen Team",
+    "photos": "Fotos",
+    "open": "Galerie öffnen",
+    "keyboard": "Mit den Pfeiltasten links und rechts navigieren; mit Esc schließen",
+    "swipe": "Wischen, um Fotos anzuzeigen"
+  },
+  {
+    "filename": "es.html",
+    "heading": "Galería de fotos de viajeros",
+    "lead": "Explora los momentos compartidos por nuestros huéspedes y el equipo local",
+    "photos": "Fotos",
+    "open": "Abrir galería",
+    "keyboard": "Usa las flechas izquierda y derecha para navegar; pulsa Escape para cerrar",
+    "swipe": "Desliza para ver las fotos"
+  },
+  {
+    "filename": "it.html",
+    "heading": "Galleria foto dei viaggiatori",
+    "lead": "Sfoglia i momenti condivisi dagli ospiti e dal nostro team locale",
+    "photos": "Foto",
+    "open": "Apri galleria",
+    "keyboard": "Usa le frecce sinistra e destra per navigare; premi Esc per chiudere",
+    "swipe": "Scorri per sfogliare le foto"
+  },
+  {
+    "filename": "pt.html",
+    "heading": "Galeria de fotos dos viajantes",
+    "lead": "Veja os momentos compartilhados pelos hóspedes e nossa equipe local",
+    "photos": "Fotos",
+    "open": "Abrir galeria",
+    "keyboard": "Use as setas esquerda e direita para navegar; pressione Esc para fechar",
+    "swipe": "Deslize para ver as fotos"
+  },
+  {
+    "filename": "ru.html",
+    "heading": "Фотогалерея путешественников",
+    "lead": "Посмотрите моменты, которыми поделились гости и наша местная команда",
+    "photos": "Фото",
+    "open": "Открыть галерею",
+    "keyboard": "Используйте стрелки влево и вправо для просмотра; нажмите Esc, чтобы закрыть",
+    "swipe": "Проведите, чтобы просмотреть фото"
+  },
+  {
+    "filename": "nl.html",
+    "heading": "Reizigersfotogalerij",
+    "lead": "Bekijk momenten gedeeld door gasten en ons lokale team",
+    "photos": "Foto's",
+    "open": "Galerij openen",
+    "keyboard": "Gebruik de pijlen links en rechts om te bladeren; druk op Escape om te sluiten",
+    "swipe": "Veeg om foto's te bekijken"
+  },
+  {
+    "filename": "pl.html",
+    "heading": "Galeria zdjęć podróżników",
+    "lead": "Przeglądaj chwile udostępnione przez gości i nasz lokalny zespół",
+    "photos": "Zdjęcia",
+    "open": "Otwórz galerię",
+    "keyboard": "Użyj strzałek w lewo i w prawo do przeglądania; naciśnij Esc, aby zamknąć",
+    "swipe": "Przesuń, aby przeglądać zdjęcia"
+  },
+  {
+    "filename": "ar.html",
+    "heading": "معرض صور المسافرين",
+    "lead": "تصفح اللحظات التي شاركها الضيوف وفريقنا المحلي",
+    "photos": "الصور",
+    "open": "افتح المعرض",
+    "keyboard": "استخدم سهمي اليسار واليمين للتصفح؛ اضغط Esc للإغلاق",
+    "swipe": "اسحب لتصفح الصور"
+  },
+  {
+    "filename": "id.html",
+    "heading": "Galeri Foto Traveler",
+    "lead": "Jelajahi momen yang dibagikan oleh tamu dan tim lokal kami",
+    "photos": "Foto",
+    "open": "Buka galeri",
+    "keyboard": "Gunakan panah kiri dan kanan untuk menjelajah; tekan Escape untuk menutup",
+    "swipe": "Geser untuk melihat foto"
+  },
+  {
+    "filename": "sv.html",
+    "heading": "Resenärernas fotogalleri",
+    "lead": "Upptäck ögonblick delade av gäster och vårt lokala team",
+    "photos": "Foton",
+    "open": "Öppna galleri",
+    "keyboard": "Använd vänster- och högerpilarna för att bläddra; tryck på Esc för att stänga",
+    "swipe": "Svep för att bläddra bland foton"
+  },
+  {
+    "filename": "cs.html",
+    "heading": "Fotogalerie cestovatelů",
+    "lead": "Prohlédněte si okamžiky sdílené hosty a naším místním týmem",
+    "photos": "Fotky",
+    "open": "Otevřít galerii",
+    "keyboard": "K procházení použijte šipky vlevo a vpravo; stiskněte Esc pro zavření",
+    "swipe": "Přejeďte pro procházení fotek"
+  }
+]

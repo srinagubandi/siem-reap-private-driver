@@ -102,6 +102,7 @@
       if (galleryItems.length) {
         var lightbox = document.createElement('dialog');
         lightbox.className = 'gallery-lightbox';
+        lightbox.id = 'gallery-lightbox';
         lightbox.setAttribute('aria-labelledby', 'gallery-lightbox-title');
         lightbox.innerHTML = '' +
           '<div class="gallery-lightbox__panel" role="document">' +
@@ -125,10 +126,19 @@
         var closeViewer = lightbox.querySelector('.gallery-lightbox__close');
         var previousPhoto = lightbox.querySelector('.gallery-lightbox__prev');
         var nextPhoto = lightbox.querySelector('.gallery-lightbox__next');
+        var galleryToolbar = document.querySelector('[data-gallery-toolbar]');
+        var galleryOpenButton = galleryToolbar && galleryToolbar.querySelector('[data-gallery-open]');
+        var galleryCountGroup = galleryToolbar && galleryToolbar.querySelector('[data-gallery-count-group]');
+        var galleryCount = galleryToolbar && galleryToolbar.querySelector('[data-gallery-count]');
+        var galleryKeyboardHint = galleryToolbar && galleryToolbar.querySelector('[data-gallery-keyboard]');
+        var galleryTouchHint = galleryToolbar && galleryToolbar.querySelector('[data-gallery-touch]');
         var activeIndex = 0;
         var lastGalleryFocus = null;
         var lightboxOpen = false;
         var touchStartX = null;
+        var touchStartY = null;
+        var backgroundState = [];
+        lightbox.setAttribute('aria-modal', 'true');
 
         function galleryHash(index) { return '#gallery-' + (index + 1); }
 
@@ -150,10 +160,36 @@
           return lightboxOpen;
         }
 
+        function setBackgroundInert(inert) {
+          if (inert) {
+            backgroundState = Array.prototype.slice.call(document.body.children)
+              .filter(function (element) { return element !== lightbox; })
+              .map(function (element) {
+                return {
+                  element: element,
+                  ariaHidden: element.getAttribute('aria-hidden'),
+                  inert: Boolean(element.inert)
+                };
+              });
+            backgroundState.forEach(function (state) {
+              state.element.setAttribute('aria-hidden', 'true');
+              state.element.inert = true;
+            });
+          } else {
+            backgroundState.forEach(function (state) {
+              if (state.ariaHidden === null) state.element.removeAttribute('aria-hidden');
+              else state.element.setAttribute('aria-hidden', state.ariaHidden);
+              state.element.inert = state.inert;
+            });
+            backgroundState = [];
+          }
+        }
+
         function openGallery(index) {
           lastGalleryFocus = document.activeElement;
           renderGalleryPhoto(index, true);
           lightboxOpen = true;
+          setBackgroundInert(true);
           document.body.classList.add('gallery-lightbox-open');
           if (typeof lightbox.showModal === 'function') lightbox.showModal();
           else lightbox.setAttribute('open', '');
@@ -162,6 +198,7 @@
 
         function closeGallery(clearHash) {
           lightboxOpen = false;
+          setBackgroundInert(false);
           document.body.classList.remove('gallery-lightbox-open');
           if (typeof lightbox.close === 'function' && lightbox.open) lightbox.close();
           else lightbox.removeAttribute('open');
@@ -177,19 +214,41 @@
           });
         });
 
+        if (galleryOpenButton && galleryCount && galleryCountGroup) {
+          galleryOpenButton.setAttribute('aria-controls', lightbox.id);
+          galleryCount.textContent = String(galleryItems.length);
+          galleryCountGroup.removeAttribute('hidden');
+          galleryOpenButton.removeAttribute('hidden');
+          if (galleryKeyboardHint) galleryKeyboardHint.removeAttribute('hidden');
+          if (galleryTouchHint) galleryTouchHint.removeAttribute('hidden');
+          galleryOpenButton.addEventListener('click', function () { openGallery(0); });
+        }
+
         closeViewer.addEventListener('click', function () { closeGallery(true); });
         previousPhoto.addEventListener('click', function () { renderGalleryPhoto(activeIndex - 1, true); });
         nextPhoto.addEventListener('click', function () { renderGalleryPhoto(activeIndex + 1, true); });
         lightbox.addEventListener('click', function (event) {
           if (event.target === lightbox) closeGallery(true);
         });
+        lightbox.addEventListener('cancel', function (event) {
+          event.preventDefault();
+          closeGallery(true);
+        });
         lightbox.addEventListener('touchstart', function (event) {
           touchStartX = event.changedTouches[0].clientX;
+          touchStartY = event.changedTouches[0].clientY;
         }, { passive: true });
+        lightbox.addEventListener('touchmove', function (event) {
+          if (touchStartX === null || touchStartY === null) return;
+          var dx = event.changedTouches[0].clientX - touchStartX;
+          var dy = event.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 12) event.preventDefault();
+        }, { passive: false });
         lightbox.addEventListener('touchend', function (event) {
-          if (touchStartX === null) return;
+          if (touchStartX === null || touchStartY === null) return;
           var delta = event.changedTouches[0].clientX - touchStartX;
           touchStartX = null;
+          touchStartY = null;
           if (Math.abs(delta) < 48) return;
           renderGalleryPhoto(activeIndex + (delta < 0 ? 1 : -1), true);
         }, { passive: true });
@@ -210,7 +269,10 @@
 
         function openFromHash() {
           var match = window.location.hash.match(/^#gallery-(\d+)$/);
-          if (!match) return;
+          if (!match) {
+            if (isLightboxOpen()) closeGallery(false);
+            return;
+          }
           var index = parseInt(match[1], 10) - 1;
           if (index >= 0 && index < galleryItems.length) openGallery(index);
         }
