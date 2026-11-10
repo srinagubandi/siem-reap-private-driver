@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-10 — Static traveler gallery controls
+
+Added progressive-enhancement controls to the traveler-photo gallery across all 18 language pages. Each card remains a native local image link without JavaScript; when the shared enhancement script loads, the gallery adds a keyboard- and touch-friendly lightbox with previous/next, close, Escape, focus containment, URL hash deep links, accessible captions, reduced-motion handling, and Arabic-safe layout. No backend, external gallery library, runtime image service, or non-GitHub hosting is required.
+
+The gallery uses stable aspect-ratio frames, local WebP with JPEG fallback, lazy loading, intrinsic dimensions, and a maintainable semantic `figure`/`figcaption` card pattern. Future photos can be added through the repeatable migration scripts under `scripts/`, then validated at the same responsive checkpoints. OpenRouter catalog access was available, but both attempted chat models returned a provider-session `401 User not found` response; no external model dependency was added to the site.
+
 ## 2026-11-06 — Approved Option A logo and complete icon package
 
 Applied the owner's selected Option A to the upper-left main-site header in all 18 languages and the public AI/FAQ and thank-you branding. The dark navigation uses a light rendition of the same transparent silhouette; light headers use green. The selected original and native-alpha preparation are retained in Git, and a real vector version is traced from the approved silhouette. Compact phones use a stacked wordmark; tablet navigation retains the existing menu until 1024px to keep translated labels within the viewport.

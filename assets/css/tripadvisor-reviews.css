@@ -247,3 +247,51 @@
   .ta-traveler-photo > a:hover img,
   .ta-traveler-photo > a:focus-visible img { transform: none; }
 }
+
+/* Optional vanilla-JS lightbox; native image links remain the no-JS fallback. */
+body.gallery-lightbox-open { overflow: hidden; }
+.gallery-lightbox {
+  width: min(92vw, 72rem);
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 1.25rem;
+  color: #f8faf8;
+  background: #10271d;
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 45%);
+}
+.gallery-lightbox::backdrop { background: rgb(3 12 8 / 78%); }
+.gallery-lightbox:not([open]) { display: none; }
+.gallery-lightbox__panel { padding: clamp(0.75rem, 2vw, 1.5rem); }
+.gallery-lightbox__toolbar { display: flex; align-items: center; gap: 1rem; min-height: 2.75rem; }
+.gallery-lightbox__title { flex: 1; margin: 0; font-size: 1rem; font-weight: 700; }
+.gallery-lightbox__count { color: rgb(248 250 248 / 70%); font-size: .875rem; }
+.gallery-lightbox__close,
+.gallery-lightbox__nav {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 999px;
+  color: inherit;
+  background: rgb(255 255 255 / 10%);
+  cursor: pointer;
+}
+.gallery-lightbox__close { font-size: 1.75rem; line-height: 1; }
+.gallery-lightbox__nav { position: relative; z-index: 1; font-size: 2rem; line-height: 1; }
+.gallery-lightbox__close:hover,
+.gallery-lightbox__nav:hover { background: rgb(255 255 255 / 20%); }
+.gallery-lightbox__close:focus-visible,
+.gallery-lightbox__nav:focus-visible { outline: 3px solid #d8b55b; outline-offset: 3px; }
+.gallery-lightbox__nav:disabled { opacity: .45; cursor: default; }
+.gallery-lightbox__stage { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: clamp(.5rem, 2vw, 1.25rem); }
+.gallery-lightbox__image { display: block; width: 100%; max-height: min(72vh, 48rem); object-fit: contain; border-radius: .75rem; background: #07150e; }
+.gallery-lightbox__caption { margin: .75rem 3.5rem 0; color: rgb(248 250 248 / 82%); text-align: center; line-height: 1.5; }
+@media (max-width: 600px) {
+  .gallery-lightbox { width: 96vw; border-radius: 1rem; }
+  .gallery-lightbox__stage { gap: .25rem; }
+  .gallery-lightbox__nav { min-width: 2.5rem; min-height: 2.5rem; }
+  .gallery-lightbox__caption { margin-inline: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .gallery-lightbox__image { scroll-behavior: auto; } }

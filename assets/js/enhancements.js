@@ -90,6 +90,134 @@
         langBar.scrollBy({ left: isRTL ? -scrollAmount : scrollAmount, behavior: behavior });
       });
     }
+
+    // ---------- Static traveler gallery lightbox ----------
+    // Progressive enhancement: without JS, every card remains a normal image link.
+    var galleryGrid = document.querySelector('.ta-traveler-photo-grid');
+    if (galleryGrid) {
+      var galleryCards = Array.prototype.slice.call(galleryGrid.querySelectorAll('.ta-traveler-photo'));
+      var galleryLinks = galleryCards.map(function (card) { return card.querySelector('a[href]'); });
+      var galleryItems = galleryLinks.filter(Boolean);
+
+      if (galleryItems.length) {
+        var lightbox = document.createElement('dialog');
+        lightbox.className = 'gallery-lightbox';
+        lightbox.setAttribute('aria-labelledby', 'gallery-lightbox-title');
+        lightbox.innerHTML = '' +
+          '<div class="gallery-lightbox__panel" role="document">' +
+            '<div class="gallery-lightbox__toolbar">' +
+              '<h2 id="gallery-lightbox-title" class="gallery-lightbox__title">Traveler photo</h2>' +
+              '<span class="gallery-lightbox__count" aria-live="polite"></span>' +
+              '<button type="button" class="gallery-lightbox__close" aria-label="Close photo viewer">×</button>' +
+            '</div>' +
+            '<div class="gallery-lightbox__stage">' +
+              '<button type="button" class="gallery-lightbox__nav gallery-lightbox__prev" aria-label="Previous photo">‹</button>' +
+              '<img class="gallery-lightbox__image" alt="" decoding="async">' +
+              '<button type="button" class="gallery-lightbox__nav gallery-lightbox__next" aria-label="Next photo">›</button>' +
+            '</div>' +
+            '<p class="gallery-lightbox__caption"></p>' +
+          '</div>';
+        document.body.appendChild(lightbox);
+
+        var viewerImage = lightbox.querySelector('.gallery-lightbox__image');
+        var viewerCaption = lightbox.querySelector('.gallery-lightbox__caption');
+        var viewerCount = lightbox.querySelector('.gallery-lightbox__count');
+        var closeViewer = lightbox.querySelector('.gallery-lightbox__close');
+        var previousPhoto = lightbox.querySelector('.gallery-lightbox__prev');
+        var nextPhoto = lightbox.querySelector('.gallery-lightbox__next');
+        var activeIndex = 0;
+        var lastGalleryFocus = null;
+        var lightboxOpen = false;
+        var touchStartX = null;
+
+        function galleryHash(index) { return '#gallery-' + (index + 1); }
+
+        function renderGalleryPhoto(index, updateHash) {
+          activeIndex = (index + galleryItems.length) % galleryItems.length;
+          var card = galleryItems[activeIndex].closest('.ta-traveler-photo');
+          var sourceImage = card.querySelector('img');
+          var caption = card.querySelector('figcaption');
+          viewerImage.src = sourceImage.currentSrc || sourceImage.src;
+          viewerImage.alt = sourceImage.alt || '';
+          viewerCaption.textContent = caption ? caption.textContent.trim() : sourceImage.alt;
+          viewerCount.textContent = (activeIndex + 1) + ' / ' + galleryItems.length;
+          previousPhoto.disabled = galleryItems.length < 2;
+          nextPhoto.disabled = galleryItems.length < 2;
+          if (updateHash) history.replaceState(null, '', galleryHash(activeIndex));
+        }
+
+        function isLightboxOpen() {
+          return lightboxOpen;
+        }
+
+        function openGallery(index) {
+          lastGalleryFocus = document.activeElement;
+          renderGalleryPhoto(index, true);
+          lightboxOpen = true;
+          document.body.classList.add('gallery-lightbox-open');
+          if (typeof lightbox.showModal === 'function') lightbox.showModal();
+          else lightbox.setAttribute('open', '');
+          closeViewer.focus();
+        }
+
+        function closeGallery(clearHash) {
+          lightboxOpen = false;
+          document.body.classList.remove('gallery-lightbox-open');
+          if (typeof lightbox.close === 'function' && lightbox.open) lightbox.close();
+          else lightbox.removeAttribute('open');
+          if (clearHash && window.location.hash.indexOf('#gallery-') === 0) history.replaceState(null, '', window.location.pathname + window.location.search);
+          if (lastGalleryFocus && document.contains(lastGalleryFocus)) lastGalleryFocus.focus();
+        }
+
+        galleryItems.forEach(function (link, index) {
+          link.addEventListener('click', function (event) {
+            if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            openGallery(index);
+          });
+        });
+
+        closeViewer.addEventListener('click', function () { closeGallery(true); });
+        previousPhoto.addEventListener('click', function () { renderGalleryPhoto(activeIndex - 1, true); });
+        nextPhoto.addEventListener('click', function () { renderGalleryPhoto(activeIndex + 1, true); });
+        lightbox.addEventListener('click', function (event) {
+          if (event.target === lightbox) closeGallery(true);
+        });
+        lightbox.addEventListener('touchstart', function (event) {
+          touchStartX = event.changedTouches[0].clientX;
+        }, { passive: true });
+        lightbox.addEventListener('touchend', function (event) {
+          if (touchStartX === null) return;
+          var delta = event.changedTouches[0].clientX - touchStartX;
+          touchStartX = null;
+          if (Math.abs(delta) < 48) return;
+          renderGalleryPhoto(activeIndex + (delta < 0 ? 1 : -1), true);
+        }, { passive: true });
+
+        document.addEventListener('keydown', function (event) {
+          if (!isLightboxOpen()) return;
+          if (event.key === 'Escape') { event.preventDefault(); closeGallery(true); return; }
+          if (event.key === 'ArrowLeft') { event.preventDefault(); renderGalleryPhoto(activeIndex - 1, true); return; }
+          if (event.key === 'ArrowRight') { event.preventDefault(); renderGalleryPhoto(activeIndex + 1, true); return; }
+          if (event.key !== 'Tab') return;
+          var focusable = [closeViewer, previousPhoto, nextPhoto].filter(function (element) { return !element.disabled; });
+          if (event.shiftKey && document.activeElement === focusable[0]) {
+            event.preventDefault(); focusable[focusable.length - 1].focus();
+          } else if (!event.shiftKey && document.activeElement === focusable[focusable.length - 1]) {
+            event.preventDefault(); focusable[0].focus();
+          }
+        });
+
+        function openFromHash() {
+          var match = window.location.hash.match(/^#gallery-(\d+)$/);
+          if (!match) return;
+          var index = parseInt(match[1], 10) - 1;
+          if (index >= 0 && index < galleryItems.length) openGallery(index);
+        }
+        window.addEventListener('hashchange', openFromHash);
+        openFromHash();
+      }
+    }
   }
 
   if (document.readyState === 'loading') {
