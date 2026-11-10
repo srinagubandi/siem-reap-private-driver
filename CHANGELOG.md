@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-10 — Matching Moments and Traveler galleries
+
+Updated Moments with Guests to use the same visible toolbar and lightbox treatment as Traveler photo gallery. Both galleries now use the same localized message, photo count, Open gallery control, keyboard guidance, swipe guidance, independent URL hashes, and accessible focus behavior. Moments contains six images and opens at 1 / 6; Traveler photo gallery contains four images and opens at 1 / 4.
+
+The existing first image remains first in both sections: the family-at-airport photo for Moments with Guests and the guest-welcome photo for Traveler photo gallery. The shared multi-gallery controller keeps each gallery scoped independently, preserves no-JavaScript native links, and remains GitHub Pages-only. The regression passed 54 responsive JavaScript states plus 18 no-JavaScript states across all 18 language pages with zero overflow.
+
 ## 2026-11-10 — Thumbsup-style gallery cards and safe image prefetch
 
 Applied the GitHub Pages Gallery-inspired card treatment to the remaining photos in both Moments with Guests and Traveler photo gallery across all 18 language pages. The existing first image remains first and unchanged in each section: the family-at-airport photo in Moments with Guests and the guest-welcome photo in Traveler photo gallery. The migration is repeatable and changed 18 pages once, then 0 pages on its second run.
