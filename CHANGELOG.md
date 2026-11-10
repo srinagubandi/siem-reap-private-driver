@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-10 — People-first Moments with Guests gallery
+
+Moved the guest welcome and guest group photos into Moments with Guests on all 18 language pages. The existing family-at-airport photo remains first. Removed only the Jeep-only forest and fleet photos from Moments; they remain available in the separate Jeep tour section. The Moments gallery remains six photos, keeps the shared toolbar/lightbox, and uses full-image containment for the portrait guest group so faces are not cropped. Final QA passed 72 responsive states and 18 no-JavaScript states with independent Moments 1 / 6 and Traveler 1 / 4 controls.
+
 ## 2026-11-10 — Matching Moments and Traveler galleries
 
 Updated Moments with Guests to use the same visible toolbar and lightbox treatment as Traveler photo gallery. Both galleries now use the same localized message, photo count, Open gallery control, keyboard guidance, swipe guidance, independent URL hashes, and accessible focus behavior. Moments contains six images and opens at 1 / 6; Traveler photo gallery contains four images and opens at 1 / 4.
