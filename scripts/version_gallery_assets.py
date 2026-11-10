@@ -14,6 +14,6 @@ for filename in PAGES:
     path = ROOT / filename
     text = path.read_text(encoding='utf-8')
     text = text.replace('/assets/css/tripadvisor-reviews.css"', f'/assets/css/tripadvisor-reviews.css?v={VERSION}"')
-    text = text.replace('/assets/js/enhancements.js"', f'/assets/js/enhancements.js?v={VERSION}"')
+    text = text.replace('/assets/js/enhancements.js"', f'/assets/js/enhancements-gallery-20261110.js"')
     path.write_text(text, encoding='utf-8')
 print(f'versioned gallery assets on {len(PAGES)} pages as {VERSION}')

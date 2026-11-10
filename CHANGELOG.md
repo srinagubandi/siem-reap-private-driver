@@ -2,7 +2,7 @@
 
 ## 2026-11-10 — People-first Moments with Guests gallery
 
-Moved the guest welcome and guest group photos into Moments with Guests on all 18 language pages. The existing family-at-airport photo remains first. Removed only the Jeep-only forest and fleet photos from Moments; they remain available in the separate Jeep tour section. Removed the two supplied guest photos from Traveler photo gallery, leaving two Tripadvisor traveler photos there. The Moments gallery remains six photos, keeps the shared toolbar/lightbox, and uses full-image containment for the portrait guest group so faces are not cropped. Versioned the shared gallery CSS and JavaScript references to force GitHub Pages cache refresh. Final QA passed 72 responsive states and 18 no-JavaScript states with independent Moments 1 / 6 and Traveler 1 / 2 controls.
+Moved the guest welcome and guest group photos into Moments with Guests on all 18 language pages. The existing family-at-airport photo remains first. Removed only the Jeep-only forest and fleet photos from Moments; they remain available in the separate Jeep tour section. Removed the two supplied guest photos from Traveler photo gallery, leaving two Tripadvisor traveler photos there. The Moments gallery remains six photos, keeps the shared toolbar/lightbox, and uses full-image containment for the portrait guest group so faces are not cropped. Versioned the shared gallery CSS and served the lightbox from a new `enhancements-gallery-20261110.js` filename to force GitHub Pages cache refresh. Final QA passed 72 responsive states and 18 no-JavaScript states with independent Moments 1 / 6 and Traveler 1 / 2 controls.
 
 ## 2026-11-10 — Matching Moments and Traveler galleries
 
